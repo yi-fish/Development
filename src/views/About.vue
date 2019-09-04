@@ -1,5 +1,5 @@
 <template>
-  <div class="about" style="overflow:hidden">
+  <div class="about">
     <div class="imgarea">
       <img :src="img1" alt class="widthimg" />
       <div class="imgtext">
@@ -129,10 +129,13 @@ export default {
   }
 };
 </script>
-<style>
+<style scoped>
+* {
+  text-align: left;
+}
 .navBarWrap {
   position: fixed;
-  top: 0;
+  top: -30px;
   z-index: 999;
 }
 
@@ -169,7 +172,7 @@ export default {
   margin-bottom: 15px;
   text-align: center;
 }
-.aboutus{
+.aboutus {
   width: 100%;
   position: relative;
 }
