@@ -170,6 +170,7 @@ export default {
   text-align: center;
 }
 .imgright {
+  margin-top: 20px;
   margin-left: 20px;
   width: 50%;
 }
@@ -193,9 +194,18 @@ export default {
   flex-direction: row;
 }
 .widthimg {
+  display: flex;
   position: absolute;
   width: 100%;
   height: 100%;
+}
+.head p {
+  width: 90px;
+  padding-left: 18px;
+  display: flex;
+  justify-content: flex-start;
+  border-bottom: 1px solid rgb(121, 121, 121);
+  margin-bottom: -7px;
 }
 .imgrow {
   margin-top: 30px;
@@ -214,7 +224,7 @@ export default {
 }
 .leftmenu {
   width: 20%;
-  margin-left: 20px;
+  /* margin-left: 20px; */
   margin-top: 60px;
   display: flex;
   flex-direction: row;
@@ -224,12 +234,12 @@ export default {
   padding-left: 50px;
   margin-top: 60px;
   margin-left: 60px;
-  width: 70%;
+  width: 50%;
   position: absolute;
-  margin-left: 25%;
+  margin-left: 20%;
 }
 .leftmenu img {
-  height: 200px;
+  height: 300px;
 }
 .leftbutton {
   display: flex;
@@ -273,6 +283,6 @@ h2 {
   margin-top: -32px;
 }
 hr {
-  color: rgb(154, 154, 154);
+  color: rgb(215, 215, 215);
 }
 </style>

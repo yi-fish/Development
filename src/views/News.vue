@@ -57,6 +57,7 @@ import img1 from "../components/img/u305.jpg";
 import img2 from "../components/img/u313.png";
 import img3 from "../components/img/u314.png";
 import img4 from "../components/img/u315.png";
+// import img5 from ""
 export default {
   name: "News",
   //   props: {
@@ -109,16 +110,17 @@ export default {
   position: absolute;
   width: 100%;
   height: 100%;
+  display: flex;
 }
-.newslistdays{
-  color:rgb(204, 204, 204);
+.newslistdays {
+  color: rgb(204, 204, 204);
   font-weight: 600;
 }
-.newslistdays p{
+.newslistdays p {
   margin-top: 0px;
   margin-bottom: 0px;
 }
-.listcontent{
+.listcontent {
   margin-top: 30px;
   margin-left: 50px;
 }
@@ -126,8 +128,8 @@ p {
   font-size: 19px;
   padding-left: 10px;
 }
-.newscontent{
-  color: rgb(107,107,107);
+.newscontent {
+  color: rgb(107, 107, 107);
   font-size: 17px;
 }
 .newslist {
@@ -136,14 +138,14 @@ p {
   justify-content: space-between;
   padding-right: 20px;
 }
-.eachnews p{
+.eachnews p {
   margin-bottom: 0px;
 }
-.days{
+.days {
   color: rgb(174, 174, 174);
   font-size: 35px;
-  margin-top: 15px!important;
-  margin-bottom: 0px
+  margin-top: 15px !important;
+  margin-bottom: 0px;
 }
 .imgtext {
   position: absolute;
@@ -158,6 +160,14 @@ p {
 .newscenter {
   position: relative;
   margin-top: 0%;
+}
+.newscenterhead p{
+  width: 90px;
+  padding-left: 18px;
+  display: flex;
+  justify-content: flex-start;
+  border-bottom: 1px solid rgb(121, 121, 121);
+  margin-bottom: -7px;
 }
 .newsblock {
   position: relative;
