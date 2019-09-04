@@ -181,7 +181,7 @@
           </div>
       </div>
 
-      <div class="footer"></div>
+      <home-footer></home-footer>
      
   </div>
 </template>
@@ -430,19 +430,14 @@
 // @ is an alias to /src
 import HelloWorld from '@/components/HelloWorld.vue'
 
-// export default {
-//   name: 'home',
-//   components: {
-//     HelloWorld
-//   }
-// }
+import HomeFooter from '../components/footer.vue'
 
- 
- import img1 from "../views/images/u2.png"
- import img2 from "../views/images/u3.png"
- export default {
-                name: 'firstPage', 
-                data(){
+export default {
+  name: 'home',
+  components: {
+    HomeFooter
+  },
+  data(){
                   return{
                           timer: null, //定时器 
                           mark: 0, //比对图片索引的变量 
@@ -481,4 +476,50 @@ import HelloWorld from '@/components/HelloWorld.vue'
                       this.play() 
                     } 
     }
+
+
+ 
+ import img1 from "../views/images/u2.png"
+ import img2 from "../views/images/u3.png"
+//  export default {
+//                 name: 'firstPage', 
+//                 data(){
+//                   return{
+//                           timer: null, //定时器 
+//                           mark: 0, //比对图片索引的变量 
+//                           //轮播图数据
+//                           imgArray: 
+//                           [ 
+//                             img1,img2   
+//                           ] ,
+//                         }
+//                     },
+//                 //点击切换图片
+//                 methods:
+//                 { 
+//                       autoPlay ()
+//                     { 
+//                         this.mark++; 
+//                         if (this.mark === 2) 
+//                         { 
+//                           this.mark = 0 
+//                         } 
+//                     }, 
+//                     play () { 
+//                     this.timer = setInterval(this.autoPlay, 1500) 
+//                     }, 
+//                     change (i) { 
+//                     this.mark = i 
+//                     }, 
+//                     stop () { 
+//                     clearInterval(this.timer) 
+//                     }, 
+//                     move () { 
+//                     this.timer = setInterval(this.autoPlay, 1500) 
+//                     } 
+//                 }, 
+//                     created () { 
+//                       this.play() 
+//                     } 
+//     }
 </script>
