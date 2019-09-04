@@ -213,7 +213,7 @@ export default {
   height: 100%;
 }
 .head p {
-  width: 90px;
+  width:125px;
   padding-left: 18px;
   display: flex;
   justify-content: flex-start;
@@ -285,11 +285,18 @@ button {
 .imgtext h1 {
   color: rgb(0, 102, 255);
   font-size: 50px;
+  margin: auto;
+  font-weight: 600
 }
 .righttext h2 {
   color: rgb(22, 102, 255);
   font-weight: 100;
   font-size: 40px;
+  margin-left: 400px;
+  margin-top: -144px;
+}
+.head{
+  margin-top:30px;
 }
 .righttext {
   padding-left: 400px;
