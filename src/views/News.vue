@@ -175,7 +175,7 @@ p {
   margin-top:30px
 }
 .newscenterhead p{
-  width: 110px;
+  width: 127px;
   padding-left: 18px;
   display: flex;
   justify-content: flex-start;

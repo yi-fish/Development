@@ -141,7 +141,7 @@ export default {
 }
 .navBarWrap {
   position: fixed;
-  top: -30px;
+  top: -60px;
   z-index: 999;
 }
 
@@ -222,6 +222,8 @@ export default {
 }
 .imgrow {
   margin-top: 30px;
+  margin-left: 49px;
+  margin-right: 49px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -236,7 +238,8 @@ export default {
   height: 310px;
 }
 .leftmenu {
-  width: 20%;
+  width:300px;
+  /* width: 20%; */
   /* margin-left: 20px; */
   margin-top: 60px;
   display: flex;
@@ -247,7 +250,7 @@ export default {
   padding-left: 50px;
   margin-top: 60px;
   margin-left: 60px;
-  width: 60%;
+  width: 80%;
   position: absolute;
   margin-left: 20%;
 }
@@ -259,7 +262,7 @@ export default {
   flex-direction: column;
   justify-content: space-between;
 }
-p {
+p{
   font-size: 21px;
   padding-left: 10px;
   padding-right: 10px;
