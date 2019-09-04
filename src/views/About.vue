@@ -169,6 +169,10 @@ export default {
   margin-bottom: 15px;
   text-align: center;
 }
+.aboutus{
+  width: 100%;
+  position: relative;
+}
 .imgright {
   margin-top: 20px;
   margin-left: 20px;
@@ -234,7 +238,7 @@ export default {
   padding-left: 50px;
   margin-top: 60px;
   margin-left: 60px;
-  width: 50%;
+  width: 60%;
   position: absolute;
   margin-left: 20%;
 }
@@ -269,11 +273,11 @@ button {
   margin-top: 10px;
 }
 
-h1 {
+.imgtext h1 {
   color: rgb(0, 102, 255);
   font-size: 50px;
 }
-h2 {
+.righttext h2 {
   color: rgb(22, 102, 255);
   font-weight: 100;
   font-size: 40px;
