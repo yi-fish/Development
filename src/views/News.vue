@@ -100,7 +100,10 @@ export default {
   }
 };
 </script>
-<style>
+<style scoped>
+*{
+  text-align: left
+}
 .imgarea {
   position: relative;
   width: 100%;
