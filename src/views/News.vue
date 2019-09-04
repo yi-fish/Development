@@ -164,8 +164,11 @@ p {
   position: relative;
   margin-top: 0%;
 }
+.newscenterhead{
+  margin-top:30px
+}
 .newscenterhead p{
-  width: 90px;
+  width: 110px;
   padding-left: 18px;
   display: flex;
   justify-content: flex-start;
@@ -194,9 +197,16 @@ p {
 }
 .imgtext h1 {
   color: black;
+  margin: auto;
+  font-size: 60px;
+  margin-bottom: 25px;
+  font-weight: 600
 }
 .imgtext h2 {
   color: rgb(102, 102, 102);
+  margin: auto;
+  margin-top: 10px;
+  font-weight: 600
 }
 hr {
   color: rgb(154, 154, 154);
