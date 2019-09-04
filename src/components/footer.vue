@@ -39,10 +39,11 @@ export default{
 .footer{                    
     width: 1440px;
     background: #F6F6F6;
-    height: 368px;
+    /* height: 368px; */
     color: aliceblue;
    /* position: absolute;
     bottom:0px;  */
+    padding-top: 112px;
 }
 .footer .top{
     height: 305px;
@@ -51,7 +52,7 @@ export default{
 }
 .footer .top div h4{
     margin-left: 120px;
-    margin-top: 112px;
+    /* margin-top: 112px; */
     font-family: PingFangSC-Regular;
     font-size: 28px;
     color: #4A4A4A;
@@ -114,7 +115,7 @@ export default{
     color: black;
 }
 .footer .bottom{
-    /* height: 81px; */
+    height: 81px;
     /* background: black; */
     /* color: white; */
     color: black;

@@ -136,20 +136,26 @@
                     <li v-for="(goToArr,index) in goToArrs" :key="index"><img :src="goToArr" alt="优秀学员去向"></li>
                 </ul>
             </div>
-          </div>
+          <home-footer style="position: relative; left: -400px;top:20px"></home-footer> </div>
         </div>
     </div>
-    <users/>
+  
   </div>
 </template>
 
+ 
 <script>
 import img1 from ".//images/goto_1.png";
 import img2 from ".//images/goto_2.png";
 import img3 from ".//images/goto_3.png";
 import img4 from ".//images/goto_4.png";
+
+import HomeFooter from '../components/footer.vue'
 export default {
   name: 'edutation',
+    components: {
+    HomeFooter
+  },
   data(){
     return{
       "labels":["培训详情简介","考核&薪资","优秀学员寄语","实习生优秀项目展示","实习生毕业去向"],
@@ -206,7 +212,7 @@ export default {
 #right{
     width: 1440px;
     /* position: relative; */
-    margin-top: 17px;
+    /* margin-top: 17px; */
 }
 /*********头部*********/
 #right .title {

@@ -69,7 +69,7 @@
         </div>
       </div>
     </div>
-  </div>
+   <home-footer  style="position: relative; top: 2800px;"></home-footer></div>
 </template>
 
 
@@ -84,11 +84,17 @@ import img7 from "./images/u462.png";
 import img8 from "./images/u466.jpg";
 import img9 from "./images/u467.jpg";
 import img10 from "./images/u468.jpg";
+
+import HomeFooter from '../components/footer.vue'
+
 export default {
   name: "About",
   //   props: {
   //     msg: String
   //   }
+  components: {
+    HomeFooter
+  },
   data() {
     return {
       img1: img1,

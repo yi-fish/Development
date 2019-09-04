@@ -64,15 +64,21 @@
                         </li>
                     </ul>
         </div>
-        <users></users>
+        
       </div>
-      
-    </div>    
+      <home-footer style="position: relative; top: 2281px;"></home-footer>
+     </div>    
 </template>
 
 <script>
+import HomeFooter from '../components/footer.vue'
+
+
 export default {
   name: 'serve',
+    components: {
+    HomeFooter
+  },
   data(){
       return{
           "works1":["网站开发","系统开发","APP开发","微信公众号","微信小程序","手机网站"],
@@ -86,6 +92,7 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 /************************************整体样式********************************************/
+
 *{
     margin: 0px;
     padding: 0px;
@@ -104,7 +111,7 @@ export default {
     width: 100%;
     height: 400px;
     border: 1px solid black;
-    margin-top: 17px;
+    /* margin-top: 17px; */
     background: url(.//images//u136.jpg) no-repeat;
     background-size: 100%;
 }
@@ -287,4 +294,5 @@ export default {
     flex-direction: column;
     width: 1440px;
 }
+ 
 </style>
