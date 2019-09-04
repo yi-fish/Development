@@ -1,5 +1,5 @@
 <template>
-  <div class="about" style="overflow:hidden">
+  <div class="about">
     <div class="imgarea">
       <img :src="img1" alt class="widthimg" />
       <div class="imgtext">
@@ -129,10 +129,13 @@ export default {
   }
 };
 </script>
-<style>
+<style scoped>
+* {
+  text-align: left;
+}
 .navBarWrap {
   position: fixed;
-  top: 0;
+  top: -30px;
   z-index: 999;
 }
 
@@ -168,6 +171,10 @@ export default {
   margin-top: 0px;
   margin-bottom: 15px;
   text-align: center;
+}
+.aboutus {
+  width: 100%;
+  position: relative;
 }
 .imgright {
   margin-top: 20px;
@@ -234,7 +241,7 @@ export default {
   padding-left: 50px;
   margin-top: 60px;
   margin-left: 60px;
-  width: 50%;
+  width: 60%;
   position: absolute;
   margin-left: 20%;
 }
@@ -269,11 +276,11 @@ button {
   margin-top: 10px;
 }
 
-h1 {
+.imgtext h1 {
   color: rgb(0, 102, 255);
   font-size: 50px;
 }
-h2 {
+.righttext h2 {
   color: rgb(22, 102, 255);
   font-weight: 100;
   font-size: 40px;
