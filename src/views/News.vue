@@ -48,6 +48,7 @@
         <hr />
       </div>
     </div>
+    <home-footer></home-footer>
   </div>
 </template>
 
@@ -58,11 +59,17 @@ import img2 from "../components/img/u313.png";
 import img3 from "../components/img/u314.png";
 import img4 from "../components/img/u315.png";
 // import img5 from ""
+
+import HomeFooter from '../components/footer.vue'
+
 export default {
   name: "News",
   //   props: {
   //     msg: String
   //   }
+    components: {
+    HomeFooter
+  },
   data() {
     return {
       img1: img1,
@@ -100,7 +107,10 @@ export default {
   }
 };
 </script>
-<style>
+<style scoped>
+*{
+  text-align: left
+}
 .imgarea {
   position: relative;
   width: 100%;
