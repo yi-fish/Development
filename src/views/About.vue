@@ -69,11 +69,11 @@
         </div>
       </div>
     </div>
-   <home-footer  style="position: relative; top: 2800px;"></home-footer></div>
+   <ooo  style="position: relative; top: 2600px;"></ooo></div>
 </template>
 
-
 <script>
+/* eslint-disable */
 import img1 from "./images/u431.jpg";
 import img2 from "./images/20190830132652.png";
 import img3 from "./images/u472.png";
@@ -93,7 +93,7 @@ export default {
   //     msg: String
   //   }
   components: {
-    HomeFooter
+    "ooo":HomeFooter
   },
   data() {
     return {

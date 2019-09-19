@@ -25,24 +25,20 @@
 </template>
 
 <script>
-export default{
-    name:'HomeFooter'
+export default {
+    name: 'HomeFooter'
 }
-</script> 
-
+</script>
 
 <style scoped>
 *{
     margin: 0px;
     padding: 0px;
 }
-.footer{                    
-    width: 1440px;
+.footer{
+    width: 100%;
     background: #F6F6F6;
-    /* height: 368px; */
     color: aliceblue;
-   /* position: absolute;
-    bottom:0px;  */
     padding-top: 112px;
 }
 .footer .top{
@@ -69,7 +65,7 @@ export default{
     width: 140px;
 }
 .footer .top .tit{
-    width: 1200px;
+    width: 83.3%;
     height: 233px;
     border-top: 1px solid #E4E4E4;
     border-bottom: 1px solid #E4E4E4;
@@ -78,7 +74,7 @@ export default{
 }
 .footer .top .tit .contact{
     float: left;
-    width: 1023px;
+    width: 71%;
     height: 120px;
     margin-top: 42px;
     margin-left: 40px;
@@ -119,21 +115,17 @@ export default{
     /* background: black; */
     /* color: white; */
     color: black;
-   
 }
 .footer .bottom h4{
     padding: 0px;
     margin: 0px;
-    width: 1023px;
+    width: 71%;
     height: 30px;
     margin-left: 120px;
     margin-top: 23px;
     font-size: 16px;
     color: #999999;
     line-height: 30px;
-    /* text-align: center; */
-    /* line-height: 50px; */
-    /* font-size: 20px; */
 }
 
 </style>

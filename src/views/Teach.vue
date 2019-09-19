@@ -46,8 +46,8 @@
                         如通过考核并已参加我公司实际项目，每月会以个人综合能力、
                         工作态度以及贡献等方面进行考核，优异者的薪资将上不封顶。
                     </p>
-                </div>             
-                <h3>实习生招收岗位&招收对象</h3> 
+                </div>
+                <h3>实习生招收岗位&招收对象</h3>
                 <div class="job">
                     <h4>1、招收岗位</h4>
                     <ul>
@@ -139,12 +139,12 @@
           <home-footer style="position: relative; left: -400px;top:20px"></home-footer> </div>
         </div>
     </div>
-  
+
   </div>
 </template>
 
- 
 <script>
+ /* eslint-disable */
 import img1 from ".//images/goto_1.png";
 import img2 from ".//images/goto_2.png";
 import img3 from ".//images/goto_3.png";

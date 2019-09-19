@@ -13,12 +13,12 @@
                         <li v-for="(work1,index) in works1"  :key="index">{{work1}}</li>
                     </ul>
                 </p>
-                <p class="work2"><span>设计类</span> 
+                <p class="work2"><span>设计类</span>
                     <ul>
                         <li v-for="(work2,index) in works2"  :key="index">{{work2}}</li>
                     </ul>
                 </p>
-                <p class="work3"><span>其他服务</span> 
+                <p class="work3"><span>其他服务</span>
                     <ul>
                         <li v-for="(work3,index) in works3"  :key="index">{{work3}}</li>
                     </ul>
@@ -58,19 +58,18 @@
                                 <p><span>股票自动交易系统</span>
                                     – 将股票买卖的实盘操作完全交给程序自动完成。</p>
                                 <p><span>汽车行业互联网舆情监控系统</span>
-                                    – 已服务广汽丰田和江淮汽车。</p> 
-                                
+                                    – 已服务广汽丰田和江淮汽车。</p>
                             </div>
                         </li>
                     </ul>
         </div>
-        
       </div>
       <home-footer style="position: relative; top: 2281px;"></home-footer>
-     </div>    
+     </div>
 </template>
 
 <script>
+ /* eslint-disable */
 import HomeFooter from '../components/footer.vue'
 
 

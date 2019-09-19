@@ -52,8 +52,8 @@
   </div>
 </template>
 
-
 <script>
+/* eslint-disable */
 import img1 from "../components/img/u305.jpg";
 import img2 from "../components/img/u313.png";
 import img3 from "../components/img/u314.png";

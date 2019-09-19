@@ -1,105 +1,98 @@
 <template>
-  <div>
-    <div class="home">
-      <div id="banner">
-        <!-- <img alt="Vue logo" src="../assets/logo.png" /> -->
-        <HelloWorld msg="Welcome to Your Vue.js App" />
+  <div class="home">
+    <div id="banner">
+      <div id="u1" data-label="公司简介轮播图">
+        <div class="slide" v-on:mouseover="stop()" v-on:mouseout="move()">
+          <div class="slideshow">
+            <transition-group enter-active-class="animated bounceInLeft" leave-active-class="animated bounceOutRight"
+              tag="ul"
+              name="image"
+              style="width: 100%; padding:0px;max-height: 400px;overflow:hidden"
+            >
+              <li v-for="(item, index) in imgArray" v-show="index === mark" :key="item">
+                <img :src="item" v-show="index === mark" style="width: 100%; padding:0px" />
+                <!-- height: 400px; -->
+              </li>
+            </transition-group>
+          </div>
+          <!-- <div class="bullet">
+            <span
+              v-for="(item, index) in imgArray"
+              :class="{ active: index === mark }"
+              @click="change(index)"
+              :key="item"
+            ></span>
+          </div> -->
+        </div>
+      </div>
+    </div>
 
-        <div id="u1" data-label="公司简介轮播图">
-          <div class="slide" v-on:mouseover="stop()" v-on:mouseout="move()">
-            <div class="slideshow">
-              <transition-group tag="ul" name="image"  style="width: 1440px; height: 400px; padding:0px;overflow:hidden">
-                <li  v-for="(item, index) in imgArray"  v-show="index === mark"  :key="index" >
-                  <img :src="item" v-show="index === mark" style="width: 1440px; height: 400px; padding:0px" />
+    <div id="sale">
+      <p class="saletitle">致力于互联网创新技术服务</p>
+      <p class="salecontent">技术更跨界、创意更自由、服务更贴心</p>
+      <div style="display:flex;justify-content:space-between; flex-wrap:wrap;">
+        <div v-for="(item,index) in saleArray" :key="index">
+          <div id="box1">
+            <div id="box1-Up">
+              <img :src="item.src" alt style="margin-top: 38px !important;" />
+              <p style="margin-top: 20px !important;margin-bottom:20px;">{{item.title}}</p>
+            </div>
+            <div id="box1-Dn">
+              <ul>
+                <li v-for="(itemson,index) in item.content" :key="index">
+                  <div class="yuandian"></div>
+                  <span style="display:block;text-align:left">{{itemson.con}}</span>
                 </li>
-              </transition-group>
-            </div>
-            <div class="bullet">
-              <span
-                v-for="(item, index) in imgArray"
-                :class="{ active: index === mark }"
-                @click="change(index)"
-                :key="index"
-              ></span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div id="sale">
-        <p class="saletitle">致力于互联网创新技术服务</p>
-        <p class="salecontent">技术更跨界、创意更自由、服务更贴心</p>
-        <div style="display:flex">
-          <div id="box1">
-            <div id="box1-Up">
-              <img src="" alt="" />
-              <p>助力新零售</p>
-            </div>
-            <div id="box1-Dn">
-              <ul>
-                <li>结合优秀硬件团队</li>
-                <li>利用互联网优势</li>
-                <li>完成基于物联网技术的新零售体系建立或推广</li>
-              </ul>
-            </div>
-          </div>
-          <div id="box1">
-            <div id="box1-Up">
-              <img src="" alt="" />
-              <p>助力新零售</p>
-            </div>
-            <div id="box1-Dn">
-              <ul>
-                <li>结合优秀硬件团队</li>
-                <li>利用互联网优势</li>
-                <li>完成基于物联网技术的新零售体系建立或推广</li>
-              </ul>
-            </div>
-          </div>
-          <div id="box1">
-            <div id="box1-Up">
-              <img src="" alt="" />
-              <p>助力新零售</p>
-            </div>
-            <div id="box1-Dn">
-              <ul>
-                <li>结合优秀硬件团队</li>
-                <li>利用互联网优势</li>
-                <li>完成基于物联网技术的新零售体系建立或推广</li>
-              </ul>
-            </div>
-          </div>
-          <div id="box1">
-            <div id="box1-Up">
-              <img src="" alt="" />
-              <p>助力新零售</p>
-            </div>
-            <div id="box1-Dn">
-              <ul>
-                <li>结合优秀硬件团队</li>
-                <li>利用互联网优势</li>
-                <li>完成基于物联网技术的新零售体系建立或推广</li>
               </ul>
             </div>
           </div>
         </div>
       </div>
+    </div>
 
-      <div style="width: 1440px; margin-left: 119px;margin-top: 60px;">
-        <img
-          src="..\components\img\sannian.png"
-          alt=""
-          style="width: 1200px; height: 220px;"
-        />
+    <div
+      id="blurr"
+      style="display:flex;justify-content:space-between;margin-right:120px; flex-wrap:wrap;"
+    >
+      <div style="margin-left: 62px;">
+        <div class="blurrflex">
+          <p>3</p>
+          <p>年</p>
+        </div>
+        <div class="blurrtext">多年互联网创新服务经验</div>
       </div>
+      <div>
+        <div class="blurrflex">
+          <p style="letter-spacing: 0.4px;">20</p>
+          <p>+</p>
+        </div>
+        <div class="blurrtext">提供多样化服务类型</div>
+      </div>
+      <div>
+        <div class="blurrflex">
+          <p style="letter-spacing: 0.4px;">40</p>
+          <p>+</p>
+        </div>
+        <div class="blurrtext">持续服务更多用户</div>
+      </div>
+      <div>
+        <div class="blurrflex">
+          <p style="letter-spacing: 1px;">12000</p>
+          <p></p>
+        </div>
+        <div class="blurrtext">互联网创新业务市场庞大</div>
+      </div>
+    </div>
 
+    <div id="bigexploit">
       <div id="exploit">
         <p class="saletitle">全新的开发模式</p>
         <p class="salecontent">高效、快速、减少花费</p>
-        <div id="exploit-Box">
+        <div id="exploit-Box" style="display:flex;justify-content:space-between; flex-wrap:wrap;">
+          <!-- margin-right:120px; -->
           <div id="box2">
             <div id="box2-Up">
-              <img src="..\components\img\exploitpic1.png" alt="" />
+              <img src="..\components\img\exploitpic1.png" alt />
             </div>
             <div id="box2-Dn">
               <p>一流的开发团队</p>
@@ -107,97 +100,136 @@
           </div>
           <div id="box2">
             <div id="box2-Up">
-              <img src="..\components\img\exploitpic1.png" alt="" />
+              <img src="..\assets\插画2.png" alt />
             </div>
             <div id="box2-Dn">
-              <p>一流的开发团队</p>
+              <p>可见的项目成本</p>
             </div>
           </div>
           <div id="box2">
             <div id="box2-Up">
-              <img src="..\components\img\exploitpic1.png" alt="" />
+              <img src="..\assets\插画3.png" alt />
             </div>
             <div id="box2-Dn">
-              <p>一流的开发团队</p>
+              <p>可控的项目质量</p>
             </div>
           </div>
         </div>
       </div>
-
-      <div style="background-color: #FFFFFF;padding-top:80px;height:648px;">
-        <div id="fee">
-          <p class="saletitle">崭新的收费模式</p>
-          <p class="salecontent">确保收费简洁化、透明化</p>
-          <div id="box3">
-            <div id="box3-Left">
-              <img src="..\components\img\fee-left.png" alt="" />
-            </div>
-            <div id="box3-Right">
-              <img
-                src="..\components\img\fee-right.png"
-                alt=""
-                style="margin-bottom: 40px;"
-              />
-              <div id="box3-Right-li">
-                <ul>
-                  <li>平台工作者劳务费</li>
-                  <li>注：参与项目的所有工作者的赏月劳务费总和。</li>
-                </ul>
-                <ul>
-                  <li>平台工作者劳务费</li>
-                  <li>注：参与项目的所有工作者的赏月劳务费总和。</li>
-                </ul>
-                <ul>
-                  <li>平台工作者劳务费</li>
-                  <li>注：参与项目的所有工作者的赏月劳务费总和。</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div id="train">
-        <p id="train-title1">灵活的人才培养方案</p>
-        <p id="train-content1">
-          免费的实习生培训计划、严格的实习生管理制度、真实的项目实战锻炼
-        </p>
-        <div id="train-pic">
-          <img src="..\components\img\train1.png" alt="" />
-          <img src="..\components\img\train2.png" alt="" />
-          <img src="..\components\img\train3.png" alt="" />
-        </div>
-      </div>
-
-      <div style="background-color: #FFFFFF;">
-        <div id="client">
-          <p class="saletitle">服务过的品牌客户</p>
-          <p class="salecontent">SERVIER BRAND CUSTOMERS</p>
-          <div id="client-Pic">
-            <div>
-              <img src="..\views\images\u34.jpg" alt="" />
-              <img src="..\views\images\u33.gif" alt="" />
-              <img src="..\views\images\u35.jpg" alt="" />
-              <img src="..\views\images\u36.png" alt="" />
-            </div>
-            <div>
-              <img src="..\views\images\u37.jpg" alt="" />
-              <img src="..\views\images\u38.jpg" alt="" />
-              <img src="..\views\images\u39.jpg" alt="" />
-              <img src="..\views\images\u40.jpg" alt="" />
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <home-footer></home-footer>
     </div>
+
+    <div style="background-color: #FFFFFF;padding-top:80px;">
+      <!-- height:648px; -->
+      <div id="fee">
+        <p class="saletitle">崭新的收费模式</p>
+        <p class="salecontent">确保收费简洁化、透明化</p>
+        <div
+          id="box3"
+          style="display:flex;justify-content:space-between;margin-right:120px; flex-wrap:wrap;"
+        >
+          <div id="box3-Left">
+            <img src="..\components\img\fee-left.png" alt />
+          </div>
+          <div id="box3-Right">
+            <div class="box3-Right-li">
+              <img src="..\assets\平台1.png" />
+              <img
+                src="..\assets\+ 2.png"
+                alt
+                style="width:17px;margin-top:11px;margin-bottom:12px;position:relative;left:52px;"
+              />
+              <img src="..\assets\平台2.png" />
+              <img
+                src="..\assets\= 2.png"
+                alt
+                style="width:17px;margin-top:15px;margin-bottom:16px;position:relative;left:52px;"
+              />
+              <img src="..\assets\平台3.png" />
+            </div>
+            <div class="box3-Right-li">
+              <ul>
+                <li>平台工作者劳务费</li>
+                <li>注：参与项目的所有工作者的赏月劳务费总和。</li>
+              </ul>
+              <ul>
+                <li>平台工作者劳务费</li>
+                <li>注：参与项目的所有工作者的赏月劳务费总和。</li>
+              </ul>
+              <ul>
+                <li>平台工作者劳务费</li>
+                <li>注：参与项目的所有工作者的赏月劳务费总和。</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="train">
+      <p id="train-title1">灵活的人才培养方案</p>
+      <p id="train-content1">免费的实习生培训计划、严格的实习生管理制度、真实的项目实战锻炼</p>
+      <div id="train-pic">
+        <div class="train-pic-con">
+          <img src="..\assets\量身打造.png" alt />
+          <div class="duanhengxian"></div>
+          <p>量身打造</p>
+          <p>面向互联网所需众多岗位，上班时间根据实习生自身情况决定，通过考核后在校也能办公。</p>
+        </div>
+        <div class="train-pic-con">
+          <img src="..\assets\严格.png" alt />
+          <div class="duanhengxian"></div>
+          <p>严格管理</p>
+          <p>周六公司固定例会时间，多方位知识面为实习生开拓视野，每天工作时间实时线上记录打卡。</p>
+        </div>
+        <div class="train-pic-con">
+          <img src="..\assets\严格管理.png" alt />
+          <div class="duanhengxian"></div>
+          <p>严格管理</p>
+          <p>知识培训外加真实项目实践，并有一对一导师指导，让实习生快速成长，独当一面。</p>
+        </div>
+      </div>
+    </div>
+    <div style="background-color: #FFFFFF;">
+      <div id="client">
+        <p class="saletitle">服务过的品牌客户</p>
+        <p class="salecontent">SERVIER BRAND CUSTOMERS</p>
+        <div id="client-Pic">
+          <div
+            style="display:flex;justify-content:space-between;margin-right:120px; flex-wrap:wrap;"
+          >
+            <!-- style="display:flex;justify-content:space-between;" -->
+            <img src="..\assets\携程.png" alt />
+            <img src="..\assets\李宁.png" alt />
+            <img src="..\assets\金.png" alt />
+            <img src="..\assets\广发.png" alt />
+          </div>
+          <div
+            style="display:flex;justify-content:space-between;margin-right:120px; flex-wrap:wrap;"
+          >
+            <!-- style="display:flex;justify-content:space-between;" -->
+            <img src="..\assets\朗新.png" alt />
+            <img src="..\assets\云.png" alt />
+            <img src="..\assets\金关.png" alt />
+            <img src="..\assets\携程 copy 7.png" alt />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <home-footer></home-footer>
   </div>
 </template>
 
 <style scoped>
+@media only screen and (max-width: 479px) {
+  .slideshow {
+    max-height: 260px !important;
+  }
+}
+
 div#sale {
   margin-left: 119px;
+  margin-right: 120px;
 }
 .saletitle {
   font-family: PingFangSC-Regular;
@@ -213,12 +245,78 @@ div#sale {
   color: #999999;
   letter-spacing: 0.2px;
   margin-top: 6px;
+  margin-bottom: 60px;
+}
+#blurr {
+  /* width: 83.3%; */
+  margin-left: 120px;
+  margin-right: 120px;
+  /* height: 220px; */
+  margin-top: 60px;
+  background: #ffffff;
+  box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.08);
+  display: flex;
+  justify-content: space-around;
+  position: relative;
+  top: 100px;
+}
+/* #blurr div:nth-child(1){
+  margin-left: 62px;
+} */
+#blurr div:nth-child(4) {
+  margin-right: 62px;
+  margin-bottom: 66px;
+}
+.blurrflex {
+  display: flex;
+  justify-content: center;
+  margin-top: 60px;
+}
+#blurr p {
+  text-align: center;
+  font-family: PingFangSC-Light;
+  color: #4a4a4a;
+}
+#blurr p:nth-child(1) {
+  font-size: 44px;
+  letter-spacing: 2.44px;
+  line-height: 48px;
+  /* margin-left: -56px; */
+}
+#blurr p:nth-child(2) {
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: 26px;
+  margin-top: 3px;
+}
+#blurr .blurrtext {
+  font-family: PingFangSC-Light;
+  font-size: 16px;
+  color: #999999;
+  letter-spacing: 0;
+  text-align: center;
+  line-height: 26px;
+  margin-top: 10px;
+  width: 224px;
+}
+#bigexploit {
+  width: auto;
+  /* height: 700px; */
+  background-image: linear-gradient(
+    0deg,
+    #e7f4fe 0%,
+    #f2f5f8 64%,
+    #f6f6f6 100%
+  );
 }
 #exploit {
-  margin-left: 120px;
+  /* margin-left: 120px; */
+  margin: auto 120px;
+  padding-top: 100px;
 }
 #exploit-Box {
   display: flex;
+  /* margin-right: 120px; */
 }
 div#fee {
   margin-left: 119px;
@@ -230,7 +328,7 @@ div#fee p {
 div#train {
   padding-top: 80px;
   clear: both;
-  width: 1440px;
+  width: 100%;
   height: 470px;
   opacity: 0.9;
   background-image: linear-gradient(0deg, #0057cb 0%, #007bff 100%);
@@ -246,7 +344,7 @@ div#client {
 div#client img {
   width: 284px;
   height: 128px;
-  margin-right: 21px;
+  /* margin-right: 21px; */
 }
 div#client p {
   margin-top: 0px;
@@ -254,7 +352,7 @@ div#client p {
 #box1 {
   background: #ffffff;
   border: 1px solid #f2f2f2;
-  margin-right: 26px;
+  /* margin-right: 26px; */
   width: 280px;
   height: 296px;
 }
@@ -277,6 +375,12 @@ div#box1-Up {
   text-align: center;
   line-height: 28px;
 }
+/* div#box1-up image{
+  margin-top: 20px !important;
+}
+div#box1-up p{
+  margin-top: 38px !important;
+} */
 div#box1-Dn {
   font-family: PingFangSC-Light;
   font-size: 16px;
@@ -287,13 +391,32 @@ div#box1-Dn {
   /* padding: 22px 28px; */
 }
 div#box1-Dn ul {
-  margin: 0;
-  padding-top: 10px;
-  padding-right: 28px;
+  margin: 20px 28px 22px 28px;
+  /* padding-top: 20px;
+      padding-bottom: 22px;
+      padding-right: 28px;
+      margin-left: 28px; */
+  padding-left: 0px;
 }
-
+div#box1-Dn ul li {
+  list-style: none;
+  text-indent: 0px;
+  display: flex;
+}
+.yuandian {
+  display: inline-block;
+  border: 1px solid #999999;
+  border-radius: 100%;
+  width: 5px;
+  height: 5px;
+  background-color: #999999;
+  vertical-align: super;
+  position: relative;
+  top: 12px;
+  margin-right: 4px;
+}
 #box2 {
-  margin-right: 60px;
+  /* margin-right: 60px; */
   margin-bottom: 62px;
   width: 360px;
   height: 330px;
@@ -317,8 +440,15 @@ div#box2-Up img {
   width: 360px;
   background: #ffffff;
 }
+div#box2-Dn p {
+  font-family: PingFangSC-Regular;
+  font-size: 24px;
+  color: #ffffff;
+  line-height: 90px;
+  letter-spacing: 0.27px;
+}
 div#box3-Left {
-  width: 585px;
+  width: 40%;
   height: 303px;
   float: left;
   /* background-image: linear-gradient(-180deg, #43BFFF 0%, #2093FF 100%); */
@@ -328,19 +458,18 @@ div#box3-Right {
   display: flex;
   /* background-image: linear-gradient(-180deg, #43BFFF 0%, #2093FF 100%); */
 }
-#box3-Right-li {
+.box3-Right-li {
   display: flex;
   flex-direction: column;
 }
-#box3-Right-li li {
+.box3-Right-li li {
   margin-bottom: 12px;
 }
-/* #box3-Right-li :last-child{
-      margin-bottom: 69px;
-    } */
-div#box3-Right ul {
-  padding-left: 9px;
-  margin-bottom: 98px;
+.box3-Right-li ul {
+  margin-top: 28px;
+  margin-bottom: 62px;
+  padding-left: 30px;
+  width: max-content;
 }
 div#box3-Right ul :first-child {
   list-style: none;
@@ -359,15 +488,14 @@ div#box3-Right ul :nth-child(2) {
   text-align: justify;
   line-height: 22px;
 }
-
-div#train p {
-  margin-left: 119px;
-}
+/* div#train p {
+} */
 #train-title1 {
   font-family: PingFangSC-Regular;
   font-size: 28px;
   color: #ffffff;
   letter-spacing: 0;
+  margin-left: 119px;
 }
 #train-content1 {
   opacity: 0.6;
@@ -375,33 +503,66 @@ div#train p {
   font-size: 18px;
   color: #ffffff;
   letter-spacing: 0.2px;
+  margin-left: 119px;
+  margin-top: 6px;
 }
 #train-pic {
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
+  justify-content: center;
   margin-left: 120px;
 }
-#train-pic img {
-  margin-right: 90px;
-  margin-bottom: 64px;
-  width: 340px;
-  height: 260px;
+#train-pic .train-pic-con img {
+  width: 44px;
+  height: 44px;
+  text-align: center;
+  margin: 61px auto 0px;
 }
-
+#train-pic .train-pic-con {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-right: 90px;
+}
+#train-pic .train-pic-con p:nth-child(3) {
+  font-family: PingFangSC-Regular;
+  font-size: 24px;
+  color: #ffffff;
+  letter-spacing: 0;
+  text-align: center;
+  line-height: 28px;
+  margin-bottom: 20px;
+}
+#train-pic .train-pic-con p:nth-child(4) {
+  opacity: 0.6;
+  font-family: PingFangSC-Light;
+  font-size: 16px;
+  color: #ffffff;
+  letter-spacing: 0;
+  text-align: justify;
+  line-height: 22px;
+  /* width: 385px; */
+}
+.duanhengxian {
+  opacity: 0.9;
+  width: 40px;
+  height: 2px;
+  background: #ffffff;
+  margin: 30px auto;
+}
 #client-Pic {
   margin-top: 40px;
 }
 #client-Pic img {
-  margin-right: 21px;
+  /* margin-right: 21px; */
   margin-bottom: 24px;
 }
 
 .home {
   text-align: left;
-  width: 1440px;
+  width: 100%;
   margin: 0 auto;
-  background: #f6f6f6;
+  background: #ffffff;
+  /* background: #f6f6f6; */
   /* background-color: gold; */
 }
 #box {
@@ -409,21 +570,21 @@ div#train p {
   height: 296px;
 }
 .slideshow {
-  width: 1440px;
-  height: 400px;
+  width: 100%;
+  /* height: 400px; */
 }
 .slideshow ul li {
   list-style: none;
 }
-.active {
+/* .active {
   background: red !important;
-}
-.image-enter-active {
-  transform: translateX(0);
+} */
+/* .image-enter-active {
+  transform: translateX(-100%);
   transition: all 1.5s ease;
 }
 .image-leave-active {
-  transform: translateX(-100%);
+  transform: translateX(100%);
   transition: all 1.5s ease;
 }
 .image-enter {
@@ -431,14 +592,19 @@ div#train p {
 }
 .image-leave {
   transform: translateX(0);
-}
+} */
 </style>
 
 <script>
+/* eslint-disable */
 // @ is an alias to /src
-import HelloWorld from "@/components/HelloWorld.vue";
 
+import img1 from "../assets/banner.png";
+import img2 from "../assets/banner2.png";
+import HelloWorld from "@/components/HelloWorld.vue";
 import HomeFooter from "../components/footer.vue";
+
+import animated from 'animate.css';
 
 export default {
   name: "home",
@@ -450,7 +616,45 @@ export default {
       timer: null, //定时器
       mark: 0, //比对图片索引的变量
       //轮播图数据
-      imgArray: [img1, img2]
+      imgArray: [img1, img2],
+      saleArray: [
+        {
+          src: require("../assets/1.png"),
+          title: "助力新零售",
+          content: [
+            { con: "结合优秀硬件团队" },
+            { con: "利用互联网优势" },
+            { con: "完成基于物联网技术的新零售体系建立或推广" }
+          ]
+        },
+        {
+          src: require("../assets/2.png"),
+          title: "政府信息化建设",
+          content: [
+            { con: "以精湛的互联网技术" },
+            { con: "推动政府信息化建设" },
+            { con: "提高行政效能" }
+          ]
+        },
+        {
+          src: require("../assets/3.png"),
+          title: "传统互联网转型",
+          content: [
+            { con: "深入了解传统行业" },
+            { con: "打破只做网络营销的传统思维" },
+            { con: "设计开发全新业务模式" },
+            { con: "依托传统产业原有资源" }
+          ]
+        },
+        {
+          src: require("../assets/4.png"),
+          title: "自有产品",
+          content: [
+            { con: "股票自动交易系统" },
+            { con: "汽车行业互联网舆情监控系统" }
+          ]
+        }
+      ]
     };
   },
   //点击切换图片
@@ -478,48 +682,4 @@ export default {
     this.play();
   }
 };
-
-import img1 from "../views/images/u2.png";
-import img2 from "../views/images/u3.png";
-//  export default {
-//                 name: 'firstPage',
-//                 data(){
-//                   return{
-//                           timer: null, //定时器
-//                           mark: 0, //比对图片索引的变量
-//                           //轮播图数据
-//                           imgArray:
-//                           [
-//                             img1,img2
-//                           ] ,
-//                         }
-//                     },
-//                 //点击切换图片
-//                 methods:
-//                 {
-//                       autoPlay ()
-//                     {
-//                         this.mark++;
-//                         if (this.mark === 2)
-//                         {
-//                           this.mark = 0
-//                         }
-//                     },
-//                     play () {
-//                     this.timer = setInterval(this.autoPlay, 1500)
-//                     },
-//                     change (i) {
-//                     this.mark = i
-//                     },
-//                     stop () {
-//                     clearInterval(this.timer)
-//                     },
-//                     move () {
-//                     this.timer = setInterval(this.autoPlay, 1500)
-//                     }
-//                 },
-//                     created () {
-//                       this.play()
-//                     }
-//     }
 </script>
