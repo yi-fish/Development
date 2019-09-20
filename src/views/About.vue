@@ -12,7 +12,6 @@
     <div class="aboutus">
       <div class="head">
         <p>关于我们</p>
-        <hr />
       </div>
       <div class="content">
         <div class="leftmenu" :class="navBarFixed == true ? 'navBarWrap' :''">
@@ -37,7 +36,7 @@
                 <div class="headline">
                   <p>西安芝麻开花网络科技有限公司</p>
                 </div>
-                <div>
+                <div class="headline-next">
                   <ul>
                     <li v-for="(item,index)  in list" :key="index">
                       <p class="listtext">{{item}}</p>
@@ -69,7 +68,8 @@
         </div>
       </div>
     </div>
-   <ooo  style="position: relative; top: 2600px;"></ooo></div>
+    <ooo style="position: relative; top: 4400px;"></ooo>
+  </div>
 </template>
 
 <script>
@@ -85,7 +85,7 @@ import img8 from "./images/u466.jpg";
 import img9 from "./images/u467.jpg";
 import img10 from "./images/u468.jpg";
 
-import HomeFooter from '../components/footer.vue'
+import HomeFooter from "../components/footer.vue";
 
 export default {
   name: "About",
@@ -93,7 +93,7 @@ export default {
   //     msg: String
   //   }
   components: {
-    "ooo":HomeFooter
+    ooo: HomeFooter
   },
   data() {
     return {
@@ -136,15 +136,15 @@ export default {
 };
 </script>
 <style scoped>
-* {
-  text-align: left;
-}
 .navBarWrap {
   position: fixed;
   top: -60px;
   z-index: 999;
 }
-
+.short{
+  width: 200px;
+  margin: auto;
+}
 .imgarea {
   position: relative;
   width: 100%;
@@ -160,23 +160,23 @@ export default {
   border: 1px solid rgb(242, 242, 242);
   margin-bottom: 30px;
 }
-.short {
-  width: 150px;
-  margin: auto;
-}
 .headline {
-  border-bottom: 1px solid rgb(0, 102, 153);
+  border-bottom: 3px solid rgb(0, 102, 153);
 }
 .listtext {
-  font-size: 16px;
+  font-size: 30px;
+  text-align: start;
   color: rgb(154, 154, 154);
 }
 .headline p {
+  font-size: 40px;
   color: rgb(0, 102, 153);
   font-weight: 600;
   margin-top: 0px;
-  margin-bottom: 15px;
   text-align: center;
+}
+.headline-next{
+  margin-top: 40px;
 }
 .aboutus {
   width: 100%;
@@ -184,17 +184,17 @@ export default {
 }
 .imgright {
   margin-top: 20px;
-  margin-left: 20px;
-  width: 50%;
+  margin-left: 10%;
+  width: 45%;
 }
 .block3 img {
   display: block;
-  width: 450px;
-  height: 300px;
+  width: 50%;
   text-align: center;
   margin: auto;
 }
 .block2 img {
+  width: 80%;
   margin: auto;
   display: block;
 }
@@ -212,8 +212,12 @@ export default {
   width: 100%;
   height: 100%;
 }
+.head {
+  border-bottom: 1px solid rgb(228, 228, 228);
+  padding-bottom: 7px;
+}
 .head p {
-  width:125px;
+  width: 125px;
   padding-left: 18px;
   display: flex;
   justify-content: flex-start;
@@ -222,8 +226,6 @@ export default {
 }
 .imgrow {
   margin-top: 30px;
-  margin-left: 49px;
-  margin-right: 49px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -231,14 +233,13 @@ export default {
 .row {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: flex-start;
 }
 .row img {
-  width: 322px;
-  height: 310px;
+  width: 40%;
 }
 .leftmenu {
-  width:300px;
+  width: 300px;
   /* width: 20%; */
   /* margin-left: 20px; */
   margin-top: 60px;
@@ -250,7 +251,7 @@ export default {
   padding-left: 50px;
   margin-top: 60px;
   margin-left: 60px;
-  width: 80%;
+  width: 70%;
   position: absolute;
   margin-left: 20%;
 }
@@ -262,14 +263,13 @@ export default {
   flex-direction: column;
   justify-content: space-between;
 }
-p{
+p {
   font-size: 21px;
   padding-left: 10px;
   padding-right: 10px;
 }
 .imgrow img {
-  width: 200px;
-  height: 250px;
+  width: 25%;
 }
 .imgtext {
   position: absolute;
@@ -287,19 +287,19 @@ button {
 
 .imgtext h1 {
   color: rgb(0, 102, 255);
-  font-size: 50px;
+  font-size: 90px;
   margin: auto;
-  font-weight: 600
+  font-weight: 600;
 }
 .righttext h2 {
   color: rgb(22, 102, 255);
   font-weight: 100;
   font-size: 40px;
-  margin-left: 400px;
+  margin-left: 240px;
   margin-top: -144px;
 }
-.head{
-  margin-top:30px;
+.head {
+  margin-top: 30px;
 }
 .righttext {
   padding-left: 400px;

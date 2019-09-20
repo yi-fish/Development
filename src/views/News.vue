@@ -10,7 +10,6 @@
     <div class="newscenter">
       <div class="newscenterhead">
         <p>新闻中心</p>
-        <hr />
       </div>
       <div class="newsblock">
         <div class="block">
@@ -45,7 +44,6 @@
             <p>MORE</p>
           </div>
         </div>
-        <hr />
       </div>
     </div>
     <home-footer></home-footer>
@@ -60,14 +58,14 @@ import img3 from "../components/img/u314.png";
 import img4 from "../components/img/u315.png";
 // import img5 from ""
 
-import HomeFooter from '../components/footer.vue'
+import HomeFooter from "../components/footer.vue";
 
 export default {
   name: "News",
   //   props: {
   //     msg: String
   //   }
-    components: {
+  components: {
     HomeFooter
   },
   data() {
@@ -108,8 +106,8 @@ export default {
 };
 </script>
 <style scoped>
-*{
-  text-align: left
+* {
+  text-align: left;
 }
 .imgarea {
   position: relative;
@@ -121,6 +119,10 @@ export default {
   width: 100%;
   height: 100%;
   display: flex;
+}
+.newscenterhead {
+  padding-bottom: 7px;
+  border-bottom: 1px solid rgb(215, 215, 215);
 }
 .newslistdays {
   color: rgb(204, 204, 204);
@@ -147,6 +149,13 @@ p {
   flex-direction: row;
   justify-content: space-between;
   padding-right: 20px;
+  border-bottom: 1px solid rgb(228, 228, 228);
+}
+.eachnews {
+  display: flex;
+  text-align: left;
+  flex-direction: column;
+  justify-content: center;
 }
 .eachnews p {
   margin-bottom: 0px;
@@ -171,10 +180,10 @@ p {
   position: relative;
   margin-top: 0%;
 }
-.newscenterhead{
-  margin-top:30px
+.newscenterhead {
+  margin-top: 30px;
 }
-.newscenterhead p{
+.newscenterhead p {
   width: 127px;
   padding-left: 18px;
   display: flex;
@@ -190,8 +199,8 @@ p {
   justify-content: space-around;
 }
 .block {
-  width: 285px;
-  height: 350px;
+  width: 30%;
+  height: 550px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -199,21 +208,21 @@ p {
   border-top: none;
 }
 .block img {
-  width: 285px;
-  height: 188px;
+  width: 100%;
+  height: 450px;
 }
 .imgtext h1 {
   color: black;
   margin: auto;
   font-size: 60px;
   margin-bottom: 25px;
-  font-weight: 600
+  font-weight: 600;
 }
 .imgtext h2 {
   color: rgb(102, 102, 102);
   margin: auto;
   margin-top: 10px;
-  font-weight: 600
+  font-weight: 600;
 }
 hr {
   color: rgb(154, 154, 154);
