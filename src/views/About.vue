@@ -14,6 +14,7 @@
         <p>关于我们</p>
       </div>
       <div class="content">
+        <div class="hidecontent" v-show="navBarFixed"></div>
         <div class="leftmenu" :class="navBarFixed == true ? 'navBarWrap' :''">
           <img :src="img2" alt />
           <div class="leftbutton">
@@ -62,7 +63,7 @@
         </div>
       </div>
     </div>
-    <ooo style="position: relative; top: 4400px;"></ooo>
+    <ooo ></ooo>
   </div>
 </template>
 
@@ -200,6 +201,9 @@ export default {
   display: flex;
   flex-direction: row;
 }
+.hidecontent{
+  width:20%;
+}
 .widthimg {
   display: flex;
   position: absolute;
@@ -233,7 +237,7 @@ export default {
   width: 40%;
 }
 .leftmenu {
-  width: 300px;
+  width: 20%;
   /* width: 20%; */
   /* margin-left: 20px; */
   margin-top: 60px;
@@ -246,8 +250,8 @@ export default {
   margin-top: 60px;
   margin-left: 60px;
   width: 70%;
-  position: absolute;
-  margin-left: 20%;
+  /* position: absolute; */
+  /* margin-left: 20%; */
 }
 .leftmenu img {
   height: 400px;
