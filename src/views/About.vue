@@ -17,15 +17,9 @@
         <div class="leftmenu" :class="navBarFixed == true ? 'navBarWrap' :''">
           <img :src="img2" alt />
           <div class="leftbutton">
-            <a href="#block1">
-              <button>公司概述</button>
-            </a>
-            <a href="#block2">
-              <button>发展历程</button>
-            </a>
-            <a href="#block3">
-              <button>公司荣誉</button>
-            </a>
+            <a href="#block1">公司概述</a>
+            <a href="#block2">发展历程</a>
+            <a href="#block3">公司荣誉</a>
           </div>
         </div>
         <div class="rightcontent">
@@ -256,12 +250,19 @@ export default {
   margin-left: 20%;
 }
 .leftmenu img {
-  height: 300px;
+  height: 400px;
 }
 .leftbutton {
+  height: 400px;
+  padding-top: 23px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  padding-bottom: 50px;
+}
+.leftbutton a{
+  font-size: 30px;
+  color: black;
 }
 p {
   font-size: 21px;
@@ -300,6 +301,9 @@ button {
 }
 .head {
   margin-top: 30px;
+}
+.button{
+  background: none;
 }
 .righttext {
   padding-left: 400px;
