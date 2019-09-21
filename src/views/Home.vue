@@ -1,47 +1,51 @@
 <template>
   <div class="home">
-    <div id="banner">
+    <carousel></carousel>
+    <!-- <div id="banner">
       <div id="u1" data-label="公司简介轮播图">
         <div class="slide" v-on:mouseover="stop()" v-on:mouseout="move()">
           <div class="slideshow">
-            <transition-group enter-active-class="animated bounceInLeft" leave-active-class="animated bounceOutRight"
+            <transition-group
               tag="ul"
               name="image"
               style="width: 100%; padding:0px;max-height: 400px;overflow:hidden"
             >
-              <li v-for="(item, index) in imgArray" v-show="index === mark" :key="item">
-                <img :src="item" v-show="index === mark" style="width: 100%; padding:0px" />
-                <!-- height: 400px; -->
+              <li
+                v-for="(item, index) in imgArray"
+                v-show="index === mark"
+                :key="item"
+              >
+                <img
+                  :src="item"
+                  v-show="index === mark"
+                  style="width: 100%; padding:0px"
+                />
               </li>
             </transition-group>
           </div>
-          <!-- <div class="bullet">
-            <span
-              v-for="(item, index) in imgArray"
-              :class="{ active: index === mark }"
-              @click="change(index)"
-              :key="item"
-            ></span>
-          </div> -->
         </div>
       </div>
-    </div>
+    </div> -->
 
     <div id="sale">
       <p class="saletitle">致力于互联网创新技术服务</p>
       <p class="salecontent">技术更跨界、创意更自由、服务更贴心</p>
       <div style="display:flex;justify-content:space-between; flex-wrap:wrap;">
-        <div v-for="(item,index) in saleArray" :key="index">
+        <div v-for="(item, index) in saleArray" :key="index">
           <div id="box1">
             <div id="box1-Up">
               <img :src="item.src" alt style="margin-top: 38px !important;" />
-              <p style="margin-top: 20px !important;margin-bottom:20px;">{{item.title}}</p>
+              <p style="margin-top: 20px !important;margin-bottom:20px;">
+                {{ item.title }}
+              </p>
             </div>
             <div id="box1-Dn">
               <ul>
-                <li v-for="(itemson,index) in item.content" :key="index">
+                <li v-for="(itemson, index) in item.content" :key="index">
                   <div class="yuandian"></div>
-                  <span style="display:block;text-align:left">{{itemson.con}}</span>
+                  <span style="display:block;text-align:left">{{
+                    itemson.con
+                  }}</span>
                 </li>
               </ul>
             </div>
@@ -88,7 +92,10 @@
       <div id="exploit">
         <p class="saletitle">全新的开发模式</p>
         <p class="salecontent">高效、快速、减少花费</p>
-        <div id="exploit-Box" style="display:flex;justify-content:space-between; flex-wrap:wrap;">
+        <div
+          id="exploit-Box"
+          style="display:flex;justify-content:space-between; flex-wrap:wrap;"
+        >
           <!-- margin-right:120px; -->
           <div id="box2">
             <div id="box2-Up">
@@ -167,25 +174,33 @@
 
     <div id="train">
       <p id="train-title1">灵活的人才培养方案</p>
-      <p id="train-content1">免费的实习生培训计划、严格的实习生管理制度、真实的项目实战锻炼</p>
+      <p id="train-content1">
+        免费的实习生培训计划、严格的实习生管理制度、真实的项目实战锻炼
+      </p>
       <div id="train-pic">
         <div class="train-pic-con">
           <img src="..\assets\量身打造.png" alt />
           <div class="duanhengxian"></div>
           <p>量身打造</p>
-          <p>面向互联网所需众多岗位，上班时间根据实习生自身情况决定，通过考核后在校也能办公。</p>
+          <p>
+            面向互联网所需众多岗位，上班时间根据实习生自身情况决定，通过考核后在校也能办公。
+          </p>
         </div>
         <div class="train-pic-con">
           <img src="..\assets\严格.png" alt />
           <div class="duanhengxian"></div>
           <p>严格管理</p>
-          <p>周六公司固定例会时间，多方位知识面为实习生开拓视野，每天工作时间实时线上记录打卡。</p>
+          <p>
+            周六公司固定例会时间，多方位知识面为实习生开拓视野，每天工作时间实时线上记录打卡。
+          </p>
         </div>
         <div class="train-pic-con">
           <img src="..\assets\严格管理.png" alt />
           <div class="duanhengxian"></div>
           <p>严格管理</p>
-          <p>知识培训外加真实项目实践，并有一对一导师指导，让实习生快速成长，独当一面。</p>
+          <p>
+            知识培训外加真实项目实践，并有一对一导师指导，让实习生快速成长，独当一面。
+          </p>
         </div>
       </div>
     </div>
@@ -576,23 +591,23 @@ div#box3-Right ul :nth-child(2) {
 .slideshow ul li {
   list-style: none;
 }
-/* .active {
-  background: red !important;
-} */
-/* .image-enter-active {
-  transform: translateX(-100%);
-  transition: all 1.5s ease;
+.image-enter-to {
+  transition: all 1s ease;
+  transform: translateX(0);
 }
+
 .image-leave-active {
-  transform: translateX(100%);
-  transition: all 1.5s ease;
+  transition: all 1s ease;
+  transform: translateX(-100%);
 }
+
 .image-enter {
   transform: translateX(100%);
 }
+
 .image-leave {
   transform: translateX(0);
-} */
+}
 </style>
 
 <script>
@@ -601,22 +616,25 @@ div#box3-Right ul :nth-child(2) {
 
 import img1 from "../assets/banner.png";
 import img2 from "../assets/banner2.png";
+import img3 from "../assets/banner3.png";
 import HelloWorld from "@/components/HelloWorld.vue";
 import HomeFooter from "../components/footer.vue";
+import Carousel from "@/components/carousel.vue";
 
-import animated from 'animate.css';
+import animated from "animate.css";
 
 export default {
   name: "home",
   components: {
-    HomeFooter
+    HomeFooter,
+    Carousel
   },
   data() {
     return {
       timer: null, //定时器
       mark: 0, //比对图片索引的变量
       //轮播图数据
-      imgArray: [img1, img2],
+      imgArray: [img1, img2,img3],
       saleArray: [
         {
           src: require("../assets/1.png"),
@@ -661,15 +679,12 @@ export default {
   methods: {
     autoPlay() {
       this.mark++;
-      if (this.mark === 2) {
+      if (this.mark === this.imgArray.length) {
         this.mark = 0;
       }
     },
     play() {
       this.timer = setInterval(this.autoPlay, 1500);
-    },
-    change(i) {
-      this.mark = i;
     },
     stop() {
       clearInterval(this.timer);
