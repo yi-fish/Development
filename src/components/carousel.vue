@@ -54,7 +54,7 @@ export default {
     initialInterval: {
       type: Number,
       default: 3
-    } // 如果是一个组件 接受外部传入的切换周期
+    } // 如果是一个组件 ////接受外部传入的切换周期
   },
   data () {
      
