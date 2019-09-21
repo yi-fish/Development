@@ -25,7 +25,7 @@
           </div>
         </div>
       </div>
-    </div> -->
+    </div>-->
 
     <div id="sale">
       <p class="saletitle">致力于互联网创新技术服务</p>
@@ -35,17 +35,17 @@
           <div id="box1">
             <div id="box1-Up">
               <img :src="item.src" alt style="margin-top: 38px !important;" />
-              <p style="margin-top: 20px !important;margin-bottom:20px;">
-                {{ item.title }}
-              </p>
+              <p style="margin-top: 20px !important;margin-bottom:20px;">{{ item.title }}</p>
             </div>
             <div id="box1-Dn">
               <ul>
                 <li v-for="(itemson, index) in item.content" :key="index">
                   <div class="yuandian"></div>
-                  <span style="display:block;text-align:left">{{
+                  <span style="display:block;text-align:left">
+                    {{
                     itemson.con
-                  }}</span>
+                    }}
+                  </span>
                 </li>
               </ul>
             </div>
@@ -92,10 +92,7 @@
       <div id="exploit">
         <p class="saletitle">全新的开发模式</p>
         <p class="salecontent">高效、快速、减少花费</p>
-        <div
-          id="exploit-Box"
-          style="display:flex;justify-content:space-between; flex-wrap:wrap;"
-        >
+        <div id="exploit-Box" style="display:flex;justify-content:space-between; flex-wrap:wrap;">
           <!-- margin-right:120px; -->
           <div id="box2">
             <div id="box2-Up">
@@ -174,33 +171,25 @@
 
     <div id="train">
       <p id="train-title1">灵活的人才培养方案</p>
-      <p id="train-content1">
-        免费的实习生培训计划、严格的实习生管理制度、真实的项目实战锻炼
-      </p>
+      <p id="train-content1">免费的实习生培训计划、严格的实习生管理制度、真实的项目实战锻炼</p>
       <div id="train-pic">
         <div class="train-pic-con">
           <img src="..\assets\量身打造.png" alt />
           <div class="duanhengxian"></div>
           <p>量身打造</p>
-          <p>
-            面向互联网所需众多岗位，上班时间根据实习生自身情况决定，通过考核后在校也能办公。
-          </p>
+          <p>面向互联网所需众多岗位，上班时间根据实习生自身情况决定，通过考核后在校也能办公。</p>
         </div>
         <div class="train-pic-con">
           <img src="..\assets\严格.png" alt />
           <div class="duanhengxian"></div>
           <p>严格管理</p>
-          <p>
-            周六公司固定例会时间，多方位知识面为实习生开拓视野，每天工作时间实时线上记录打卡。
-          </p>
+          <p>周六公司固定例会时间，多方位知识面为实习生开拓视野，每天工作时间实时线上记录打卡。</p>
         </div>
         <div class="train-pic-con">
           <img src="..\assets\严格管理.png" alt />
           <div class="duanhengxian"></div>
           <p>严格管理</p>
-          <p>
-            知识培训外加真实项目实践，并有一对一导师指导，让实习生快速成长，独当一面。
-          </p>
+          <p>知识培训外加真实项目实践，并有一对一导师指导，让实习生快速成长，独当一面。</p>
         </div>
       </div>
     </div>
@@ -275,9 +264,6 @@ div#sale {
   position: relative;
   top: 100px;
 }
-/* #blurr div:nth-child(1){
-  margin-left: 62px;
-} */
 #blurr div:nth-child(4) {
   margin-right: 62px;
   margin-bottom: 66px;
@@ -325,7 +311,6 @@ div#sale {
   );
 }
 #exploit {
-  /* margin-left: 120px; */
   margin: auto 120px;
   padding-top: 100px;
 }
@@ -359,7 +344,6 @@ div#client {
 div#client img {
   width: 284px;
   height: 128px;
-  /* margin-right: 21px; */
 }
 div#client p {
   margin-top: 0px;
@@ -367,7 +351,6 @@ div#client p {
 #box1 {
   background: #ffffff;
   border: 1px solid #f2f2f2;
-  /* margin-right: 26px; */
   width: 280px;
   height: 296px;
 }
@@ -390,12 +373,6 @@ div#box1-Up {
   text-align: center;
   line-height: 28px;
 }
-/* div#box1-up image{
-  margin-top: 20px !important;
-}
-div#box1-up p{
-  margin-top: 38px !important;
-} */
 div#box1-Dn {
   font-family: PingFangSC-Light;
   font-size: 16px;
@@ -407,10 +384,6 @@ div#box1-Dn {
 }
 div#box1-Dn ul {
   margin: 20px 28px 22px 28px;
-  /* padding-top: 20px;
-      padding-bottom: 22px;
-      padding-right: 28px;
-      margin-left: 28px; */
   padding-left: 0px;
 }
 div#box1-Dn ul li {
@@ -431,7 +404,6 @@ div#box1-Dn ul li {
   margin-right: 4px;
 }
 #box2 {
-  /* margin-right: 60px; */
   margin-bottom: 62px;
   width: 360px;
   height: 330px;
@@ -466,12 +438,10 @@ div#box3-Left {
   width: 40%;
   height: 303px;
   float: left;
-  /* background-image: linear-gradient(-180deg, #43BFFF 0%, #2093FF 100%); */
   margin: 87px 107px 110px 0px;
 }
 div#box3-Right {
   display: flex;
-  /* background-image: linear-gradient(-180deg, #43BFFF 0%, #2093FF 100%); */
 }
 .box3-Right-li {
   display: flex;
@@ -568,7 +538,6 @@ div#box3-Right ul :nth-child(2) {
   margin-top: 40px;
 }
 #client-Pic img {
-  /* margin-right: 21px; */
   margin-bottom: 24px;
 }
 
@@ -577,8 +546,7 @@ div#box3-Right ul :nth-child(2) {
   width: 100%;
   margin: 0 auto;
   background: #ffffff;
-  /* background: #f6f6f6; */
-  /* background-color: gold; */
+  overflow: hidden;
 }
 #box {
   width: 280px;
@@ -586,7 +554,6 @@ div#box3-Right ul :nth-child(2) {
 }
 .slideshow {
   width: 100%;
-  /* height: 400px; */
 }
 .slideshow ul li {
   list-style: none;
@@ -634,7 +601,7 @@ export default {
       timer: null, //定时器
       mark: 0, //比对图片索引的变量
       //轮播图数据
-      imgArray: [img1, img2,img3],
+      imgArray: [img1, img2, img3],
       saleArray: [
         {
           src: require("../assets/1.png"),

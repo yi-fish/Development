@@ -176,12 +176,8 @@ export default {
   .container li{
       width: 100%;
   }
-//   #dataCenter{
-    // text-align: center;
     .window{
       position:relative;
-    //   width:600px;
-    //   width: 1440px;
       height:400px;
       margin:0 auto;
       overflow:hidden;
