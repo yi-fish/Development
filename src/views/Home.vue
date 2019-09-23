@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <carousel></carousel>
+    <!-- <carousel></carousel> -->
     <!-- <div id="banner">
       <div id="u1" data-label="公司简介轮播图">
         <div class="slide" v-on:mouseover="stop()" v-on:mouseout="move()">
@@ -26,6 +26,7 @@
         </div>
       </div>
     </div>-->
+  <swiperr  :message="message"></swiperr>
 
     <div id="sale">
       <p class="saletitle">致力于互联网创新技术服务</p>
@@ -552,6 +553,9 @@ div#box3-Right ul :nth-child(2) {
   width: 280px;
   height: 296px;
 }
+#banner{
+  background-color: goldenrod
+}
 .slideshow {
   width: 100%;
 }
@@ -587,6 +591,7 @@ import img3 from "../assets/banner3.png";
 import HelloWorld from "@/components/HelloWorld.vue";
 import HomeFooter from "../components/footer.vue";
 import Carousel from "@/components/carousel.vue";
+import Swiperr from "@/components/swiperr.vue"
 
 import animated from "animate.css";
 
@@ -594,13 +599,15 @@ export default {
   name: "home",
   components: {
     HomeFooter,
-    Carousel
+    Carousel,
+    Swiperr
   },
   data() {
     return {
       timer: null, //定时器
       mark: 0, //比对图片索引的变量
       //轮播图数据
+      message:[img1, img2, img3],
       imgArray: [img1, img2, img3],
       saleArray: [
         {
