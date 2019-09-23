@@ -63,7 +63,7 @@
         </div>
       </div>
     </div>
-    <ooo ></ooo>
+    <ooo id="footer"></ooo>
   </div>
 </template>
 
@@ -121,8 +121,16 @@ export default {
         document.documentElement.scrollTop ||
         document.body.scrollTop;
       //  当滚动超过 50 时，实现吸顶效果
-      if (scrollTop > 549) {
+      if (
+        scrollTop > 549 &&
+        document.body.scrollHeight -
+          window.pageYOffset -
+          document.getElementById("footer").offsetHeight >
+          400
+      ) {
+        //(window.innerHeight-document.getElementById("footer").offsetHeight) > 400)
         this.navBarFixed = true;
+        console.log(document.getElementById("footer").offsetHeight);
       } else {
         this.navBarFixed = false;
       }
@@ -136,7 +144,7 @@ export default {
   top: -60px;
   z-index: 999;
 }
-.short{
+.short {
   width: 200px;
   margin: auto;
 }
@@ -170,7 +178,7 @@ export default {
   margin-top: 0px;
   text-align: center;
 }
-.headline-next{
+.headline-next {
   margin-top: 40px;
 }
 .aboutus {
@@ -201,8 +209,8 @@ export default {
   display: flex;
   flex-direction: row;
 }
-.hidecontent{
-  width:20%;
+.hidecontent {
+  width: 20%;
 }
 .widthimg {
   display: flex;
@@ -229,6 +237,8 @@ export default {
   justify-content: space-between;
 }
 .row {
+  align-items: flex-start;
+  padding-left: 1%;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -264,7 +274,7 @@ export default {
   justify-content: space-between;
   padding-bottom: 50px;
 }
-.leftbutton a{
+.leftbutton a {
   font-size: 30px;
   color: black;
 }
@@ -306,7 +316,7 @@ button {
 .head {
   margin-top: 30px;
 }
-.button{
+.button {
   background: none;
 }
 .righttext {
