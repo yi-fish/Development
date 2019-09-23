@@ -139,6 +139,28 @@ export default {
 };
 </script>
 <style scoped>
+@media screen and (max-width: 1970px) {
+    .headline p {
+        font-size: 30px!important;
+    }
+    .listtext{
+      font-size: 22px!important;
+    }
+    .leftbutton a {
+      font-size: 25px!important;
+    }
+}
+@media screen and (max-width: 1500px) {
+    .headline p {
+        font-size: 22px!important;
+    }
+    .listtext{
+      font-size: 17px!important;
+    }
+    .leftbutton a {
+      font-size: 20px!important;
+    }
+}
 .navBarWrap {
   position: fixed;
   top: -60px;
@@ -245,6 +267,7 @@ export default {
 }
 .row img {
   width: 40%;
+  margin-top: 30px;
 }
 .leftmenu {
   width: 20%;
