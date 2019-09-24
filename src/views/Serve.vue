@@ -52,17 +52,15 @@
             <h3>开发流程</h3>
          </div>
          <div class="process col-md-12">
-             <div class="boxs col-md-2" v-for="(process,index) in process" :key="index" :style="{color:process.color}"> 
-                <div class="top" >
-                    <div class="glyphicon glyphicon-chevron-right"></div>
-                    <div class="box">
-                        <div class="circle">
-                            <div class="size">{{process.title}}</div>
-                            <div class="index">{{index}}</div>
-                        </div>
-                    </div>   
-                </div>
-                <div class="title">{{process.subhead}}</div>
+             <div class="boxs" v-for="(process,index) in process" :key="index" :style="{color:process.color}">
+                <div class="glyphicon" :class="process.class"></div>
+                <div class="box">
+                    <div class="circle">
+                        <div class="size">{{process.title}}</div>
+                        <div class="index">{{index+1}}</div>
+                    </div>
+                    <div class="title">{{process.subhead}}</div>
+                </div>   
              </div>
          </div>
     </div>
@@ -113,11 +111,13 @@ export default {
           "works3":["黑盒测试","需求分析","数据分析","服务器维护","网站维护","系统维护"],
           "process":[
               {
+                  "class":"",
                   "title":"项目评估",
                   "subhead":"评估需求、开发周期、开发成本等",
                   "color":"orange"
               },
               {
+                  "class":"glyphicon-chevron-right",
                   "title":"立项",
                   "subhead":"签署合同、充值预付款",
                   "color":"green"
@@ -125,17 +125,20 @@ export default {
               {
                   "title":"安排工作者",
                   "subhead":"安排项目经理及其他工作者",
-                  "color":"blue"
+                  "color":"blue",
+                  "class":"glyphicon-chevron-right",
               },
               {
                   "title":"项目开发",
                   "subhead":"工作者按需求开发，按时发布工作进度",
-                  "color":"purple"
+                  "color":"purple",
+                  "class":"glyphicon-chevron-right",
               },
               {
                   "title":"按月结算",
                   "subhead":"每月初结算上月工作者报酬及平台服务费",
-                  "color":"green"
+                  "color":"green",
+                  "class":"glyphicon-chevron-right",
               },
           ],
           "methods":[
@@ -288,110 +291,214 @@ export default {
     cursor: pointer;
 }
 /*********************second开发流程*************************/
-@media screen and (max-width:1100px){
-    .serve .second{
-    padding-left: 0；
-    }
-    .serve .second .process .boxs .box .circle .size{
-    font-size: 18px;
-    }
-    .serve .second .process .boxs .box .circle .index{
-    position: absolute;
-    display: flex;
-    align-items: center;
-    bottom: -2%;
-    left:50%;
-    margin-left: -5%;
-    background: rgb(245, 245,245,1);
-    width:10%;
-    font-size: 14px;
-    text-align: center;
-    }
-    .serve .second .process .boxs .title{
-    padding-left: 20%;
-    margin-top: 20px;
-    font-size: 20px;
-    display: flex;
-    justify-items: center;
-    align-items: centers;
-    font-size: 16px!important;
-    }
-    .serve .second .process .boxs .box .circle{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 20vw!important;
-    height: 20vw!important;
-    /* margin-left: -2%; */
-    border-radius: 100%;
-    border: 1px dashed;
-    position: relative;
-}
-}
 .serve .second{
     padding-left: 5%;
 }
 .serve .second .process{
     display: flex;
-    flex: 1;
     flex-direction: row;
+    flex:1;
+    padding-left: 2%;
+    padding-right: 4%;
+    background: #dddddd;
 }
 .serve .second .process .boxs{
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    flex-wrap: wrap;
-    padding: 1%;
-    background:rgb(245,245,245);
-}
-.serve .second .process .boxs .top{
+    flex-direction: row;
     width: 100%;
-    height: 200px;
-    display: flex;
-    flex-direction:row;
-    justify-content: space-between;
-    align-items: center;
+    padding: 19px; 
+    position: relative;
 }
-.serve .second .process .boxs:first-child .glyphicon{
-    display: none;
-}
-.serve .second .process .boxs:first-child .top{
-    display: flex;
-    justify-content: flex-end;
-    margin-left: -5%
+.serve .second .process .boxs .glyphicon{
+    position: absolute;
+    top:5.5vw;
+    left:-3vw;
 }
 .serve .second .process .boxs .box .circle{
-    display: flex;
-    justify-content: center;
-    align-items: center;
     width: 10vw;
     height: 10vw;
-    margin-left: -2%;
+    border:1px dashed;
     border-radius: 100%;
-    border: 1px dashed;
-    position: relative;
-    font-size: 24px;
-}
-.serve .second .process .boxs .box .circle .index{
-    position: absolute;
     display: flex;
     align-items: center;
-    bottom: -8%;
-    left:50%;
-    margin-left: -5%;
-    background: rgb(245, 245,245,1);
-    width:10%;
-    font-size: 20px;
-    text-align: center;
+    justify-content: center;
+    font-size: 30px;
+    position: relative;
 }
-.serve .second .process .boxs .title{
-    padding-left: 20%;
-    margin-top: 20px;
+
+/* 圆圈里的字体大小     */
+@media screen and (max-width:1600px){
+    .serve .second .process .boxs .box .circle{
+        font-size: 24px!important;
+    }
+}
+@media screen and (max-width:1230px){
+    .serve .second .process .boxs .box .circle{
+        font-size: 20px!important;
+    }
+}
+@media screen and (max-width:1075px){
+    .serve .second .process .boxs .box .circle{
+        font-size: 16px!important;
+    }
+}
+.serve .second .process .boxs .box .circle .index{
+    width: 25px;
+    height: 25px;
+    background:#dddddd;
+    position: absolute;
+    bottom: 0px;
+    margin-bottom: -5%;
     font-size: 20px;
+}
+@media screen and (max-width:1440px){
+  .serve .second .process .boxs .box .circle .index{
+    margin-bottom: -10%!important;
+  }  
+}
+.serve .second .process .boxs .box .title{
+    width: 10vw;
+    font-size: 20px;
+    margin-top: 10px;
+}
+/* 圆圈下面的字体的大小 */
+@media screen and (max-width:1440px){
+    .serve .second .process .boxs .box .title{
+    font-size: 18px!important;
+    }
+}
+@media screen and (max-width:1110px){
+    .serve .second .process .boxs .box .title{
+    font-size: 14px!important;
+    }
+}
+@media screen and (max-width:900px){
+.serve .second .process .boxs .box .circle{
+    width: 18vw;
+    height: 18vw;
+    border:1px dashed;
+    border-radius: 100%;
     display: flex;
-    justify-items: center;
-    align-items: centers
+    align-items: center;
+    justify-content: center;
+    font-size: 30px!important;
+    position: relative;
 }
+.serve .second .process .boxs .glyphicon{
+    position: absolute;
+    top:9.5vw;
+    left:-1vw;
+}
+.serve .second .process .boxs .box .title{
+    width: 18vw!important;
+    font-size: 20px!important;
+    margin-top: 20px!important;
+}
+}
+@media screen and (max-width:700px){
+    .serve .second .process .boxs .box .circle{
+    width: 18vw;
+    height: 18vw;
+    border:1px dashed;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px!important;
+    position: relative;
+}
+}
+@media screen and (max-width:500px){
+    .serve .second .process .boxs .box .circle{
+    width: 30vw;
+    height: 30vw;
+    border:1px dashed;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px!important;
+    position: relative;
+    }
+.serve .second .process .boxs .box .circle .index{
+    width: 40px;
+    height: 40px;
+    background:#dddddd;
+    position: absolute;
+    margin-bottom: -16%!important;
+    font-size: 30px;
+    line-height: 40px;
+}
+.serve .second .process .boxs .glyphicon{
+    position: absolute;
+    top:18vw;
+    left:-5vw;
+    font-size: 20px;
+}
+.serve .second .process .boxs .box .title{
+    width: 30vw!important;
+    font-size: 20px!important;
+    margin-top: 20px!important;
+}
+}
+/* @media screen and (max-width:500px){
+    .serve .second .process{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex:1;
+    padding-left: 2%;
+    padding-right: 4%;
+    background: #dddddd;
+}
+.serve .second .process .boxs{
+    display: flex;
+    flex-direction: row;
+    width: 30%;
+    padding: 19px; 
+    position: relative;
+}
+    .serve .second .process .boxs .box .circle{
+    width: 50vw;
+    height: 50vw;
+    border:1px dashed;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px!important;
+    position: relative;.serve .second .process .boxs .box .circle{
+    width: 50vw;
+    height: 50vw;
+    border:1px dashed;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px!important;
+    position: relative;
+}
+.serve .second .process .boxs .box .circle .index{
+    width: 40px;
+    height: 40px;
+    background:#dddddd;
+    position: absolute;
+    margin-bottom: -6%!important;
+    font-size: 40px;
+    line-height: 40px;
+}
+.serve .second .process .boxs .glyphicon{
+    position: absolute;
+    top:25vw;
+    left:-5vw;
+    font-size: 20px;
+}
+.serve .second .process .boxs .box .title{
+    width: 50vw!important;
+    font-size: 30px!important;
+    margin-top: 20px!important;
+}
+} */
 /*********************second开发流程*************************/
 /*********************third产品解决方案*************************/
 @media screen and (max-width:1026px){
@@ -399,13 +506,15 @@ export default {
     padding: 5%;
     border: 1px solid black;
     /* min-height:320px; */
+    max-height: 600px;
+    overflow: auto;
     /* height: 400px!important; */
     height: auto!important;
     margin-bottom: 30px;
     }
     .third img{
     width: 100%;
-    /* max-height: 300px; */
+    max-height: 300px;
     height: auto!important;
     }
     .third p{
@@ -447,6 +556,18 @@ export default {
 .third span{
     font-weight: 600;
     font-size: 22px;
+}
+@media screen and (max-width:700px){
+.third p{
+    font-size: 38px!important;
+    line-height: 80px!important;
+}
+.third span{
+    font-size: 40px!important;    
+}
+h3{
+    font-size: 42px!important;
+}
 }
 /*********************third产品解决方案*************************/
 </style>

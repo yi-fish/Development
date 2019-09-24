@@ -271,7 +271,7 @@ export default {
         width: 500px!important;
     }
     h4{
-        font-size: 36px!important;
+        font-size: 40px!important;
         margin-top: 30px!important;
         margin-bottom: 30px!important;
     }
@@ -310,7 +310,7 @@ export default {
 
     }
     .padding p{
-        font-size: 32px!important;
+        font-size: 36px!important;
         line-height: 80px!important;
     }
     .job ul li{
