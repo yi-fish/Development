@@ -1,5 +1,5 @@
  <template>
-   <div id="app" style="    min-width: 966px;">
+   <div id="app" style="min-width: 966px;">
        <div class="topNav">
          <div id="nav" style="padding: 0px;background: #FFFFFF;" role="navigation">
            <img src="./components/img/logo.png" alt="">

@@ -37,7 +37,7 @@
             <div class="work1">
                 <div class="img col-md-1">
                     <img :src="workImg3">
-                </div>               
+                </div>
                 <div class="title col-md-1"><p>{{title3}}</p> </div>
                 <div class="job col-md-10">
                     <ul>
@@ -46,7 +46,7 @@
                 </div>
             </div>
         </div>
-    </div>       
+    </div>
     <div class="second">
         <div class="col-md-12 tit">
             <h3>开发流程</h3>
@@ -60,7 +60,7 @@
                         <div class="index">{{index+1}}</div>
                     </div>
                     <div class="title">{{process.subhead}}</div>
-                </div>   
+                </div>
              </div>
          </div>
     </div>

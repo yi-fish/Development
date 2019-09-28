@@ -43,7 +43,7 @@
             <div class="picture">
                 <div v-for="(wages,index) in wages" :key="index">
                     <div class="img"><img src="./images/入门待遇.png" alt="待遇图片"><p>{{wages.title}}</p></div>
-                    <div class="money"><p>{{wages.money}}</p></div>    
+                    <div class="money"><p>{{wages.money}}</p></div>
                 </div>
             </div>
             <h3>考核标准</h3>
@@ -88,7 +88,7 @@
             <ul>
                 <li v-for="(goToArr,index) in goToArrs" :key="index"><img :src="goToArr" alt="优秀学员去向"></li>
             </ul>
-        </div>      
+        </div>
     </div><home-footer></home-footer> </div>
     </div>
 </template>

@@ -25,6 +25,7 @@
 </template>
 
 <script>
+/* eslint-disable */
 import img1 from "./img/weixin.png";
 export default {
     name: 'HomeFooter',
