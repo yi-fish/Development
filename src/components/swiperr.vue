@@ -57,10 +57,12 @@ export default {
 .swiper-button-next:after, .swiper-button-prev:after {
   display: none;
 }
+
 .swiper-button-next, .swiper-button-prev{
   height: auto;
   margin-top: 0px;
 }
+
 .swiper-wrapper img {
   width: 100%;
   height: 100%;
