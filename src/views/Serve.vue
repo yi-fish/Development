@@ -114,30 +114,30 @@ export default {
                   "class":"",
                   "title":"项目评估",
                   "subhead":"评估需求、开发周期、开发成本等",
-                  "color":"orange"
+                  "color":"#f49956"
               },
               {
                   "class":"glyphicon-chevron-right",
                   "title":"立项",
                   "subhead":"签署合同、充值预付款",
-                  "color":"green"
+                  "color":"#64b046"
               },
               {
                   "title":"安排工作者",
                   "subhead":"安排项目经理及其他工作者",
-                  "color":"blue",
+                  "color":"#2486a3",
                   "class":"glyphicon-chevron-right",
               },
               {
                   "title":"项目开发",
                   "subhead":"工作者按需求开发，按时发布工作进度",
-                  "color":"purple",
+                  "color":"#5e41ae",
                   "class":"glyphicon-chevron-right",
               },
               {
                   "title":"按月结算",
                   "subhead":"每月初结算上月工作者报酬及平台服务费",
-                  "color":"green",
+                  "color":"#b1459d",
                   "class":"glyphicon-chevron-right",
               },
           ],
@@ -262,7 +262,7 @@ export default {
 /* 主营业务的手机端 */
 @media screen and (max-width:1026px){
    .serve .first .work .work1 .title{
-       font-size: 24px;
+       font-size: 26px;
        float: left;
     } 
     .serve .first .work .work1 .img img{
@@ -280,11 +280,9 @@ export default {
         flex:10
     }
     .serve .first .work .job ul li{
-    /* float: left; */
     display: flex;
     flex: 1;
     font-size: 20px;
-
 }
 }
 .serve .first .work .job ul li:hover{
@@ -417,7 +415,7 @@ export default {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 25px!important;
+    font-size: 20px!important;
     position: relative;
     }
 .serve .second .process .boxs .box .circle .index{

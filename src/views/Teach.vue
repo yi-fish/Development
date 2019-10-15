@@ -1,7 +1,7 @@
 <template>
 <div class="education">
     <div class="imgs">
-        <img src="./images/人才培养.png" alt="芝麻开花">
+        <img src="./images/人才培养.jpg" alt="芝麻开花">
         <p>人才</p>
         <h4>企业成长的不竭动力</h4>
     </div>
