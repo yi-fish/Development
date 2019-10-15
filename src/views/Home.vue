@@ -1,33 +1,6 @@
 <template>
   <div class="home">
-    <!-- <carousel></carousel> -->
-    <!-- <div id="banner">
-      <div id="u1" data-label="公司简介轮播图">
-        <div class="slide" v-on:mouseover="stop()" v-on:mouseout="move()">
-          <div class="slideshow">
-            <transition-group
-              tag="ul"
-              name="image"
-              style="width: 100%; padding:0px;max-height: 400px;overflow:hidden"
-            >
-              <li
-                v-for="(item, index) in imgArray"
-                v-show="index === mark"
-                :key="item"
-              >
-                <img
-                  :src="item"
-                  v-show="index === mark"
-                  style="width: 100%; padding:0px"
-                />
-              </li>
-            </transition-group>
-          </div>
-        </div>
-      </div>
-    </div>-->
-  <swiperr  :message="message"></swiperr>
-
+    <swiperr  :message="message"></swiperr>
     <div id="sale">
       <p class="saletitle">致力于互联网创新技术服务</p>
       <p class="salecontent">技术更跨界、创意更自由、服务更贴心</p>
@@ -57,7 +30,7 @@
 
     <div
       id="blurr"
-      style="display:flex;justify-content:space-between;margin-right:120px; flex-wrap:wrap;"
+      style="display:flex;justify-content:space-between; flex-wrap:wrap;"
     >
       <div style="margin-left: 62px;">
         <div class="blurrflex">
@@ -233,8 +206,10 @@
 }
 
 div#sale {
-  margin-left: 119px;
-  margin-right: 120px;
+  /* margin-left: 119px;
+  margin-right: 120px; */
+  width: 1200px;
+  margin: 0 auto;
 }
 .saletitle {
   font-family: PingFangSC-Regular;
@@ -253,10 +228,10 @@ div#sale {
   margin-bottom: 60px;
 }
 #blurr {
-  /* width: 83.3%; */
-  margin-left: 120px;
-  margin-right: 120px;
-  /* height: 220px; */
+  /* margin-left: 120px;
+  margin-right: 120px; */
+  width: 1200px;
+  margin: 0 auto;
   margin-top: 60px;
   background: #ffffff;
   box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.08);
@@ -312,7 +287,8 @@ div#sale {
   );
 }
 #exploit {
-  margin: auto 120px;
+  width: 1200px;
+  margin: 0 auto;
   padding-top: 100px;
 }
 #exploit-Box {
