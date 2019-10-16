@@ -20,8 +20,7 @@
 @media only screen and (max-width: 479px) {
   #nav {
     width: 83.3% !important;
-    margin-left: 20px !important;
-    margin-right: 5px !important;
+    margin 0 auto !important;
     height: 40px !important;
   }
 
@@ -46,12 +45,20 @@
     }
   }
 }
+
 @media only screen and (max-width: 1440px) {
- #nav {
+  #nav {
     width: 83.3% !important;
-    margin: 0 auto;
+    padding:  auto 8.3% !important;
   }
 }
+@media only screen and (min-width: 1440px) {
+  #nav {
+    width: 1200px !important;
+    margin: 0 auto !important;
+  }
+}
+
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -65,8 +72,10 @@
   background: #FFFFFF;
   display: flex;
   justify-content: space-between;
-  width: 1200px;
-  margin: 0 auto;
+  margin: 0 auto !important;
+  position: fixed;
+  top: 0px;
+  z-index: 999;
 }
 
 #nav-a {

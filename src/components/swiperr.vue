@@ -54,6 +54,16 @@ export default {
 <style lang="stylus" scoped>
 @import '../assets/swiper.min.css';
 
+@media only screen and (max-width: 479px) {
+  .swiper-button-next img {
+    width: 16px !important;
+    height: 16px !important;
+  }
+  .swiper-button-prev img {
+    width: 16px !important;
+    height: 16px !important;
+  }
+}
 .swiper-button-next:after, .swiper-button-prev:after {
   display: none;
 }
