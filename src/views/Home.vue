@@ -1,7 +1,7 @@
 <template>
   <div class="home">
-    <swiperr  :message="message"></swiperr>
-    <div id="sale">
+    <swiperr :message="message"></swiperr>
+    <div id="sale" class="liubai">
       <p class="saletitle">致力于互联网创新技术服务</p>
       <p class="salecontent">技术更跨界、创意更自由、服务更贴心</p>
       <div style="display:flex;justify-content:space-between; flex-wrap:wrap;">
@@ -28,10 +28,7 @@
       </div>
     </div>
 
-    <div
-      id="blurr"
-      style="display:flex;justify-content:space-between; flex-wrap:wrap;"
-    >
+    <div id="blurr" class="liubai" style="display:flex;justify-content:space-between; flex-wrap:wrap;">
       <div style="margin-left: 62px;">
         <div class="blurrflex">
           <p>3</p>
@@ -63,11 +60,10 @@
     </div>
 
     <div id="bigexploit">
-      <div id="exploit">
+      <div id="exploit" class="liubai">
         <p class="saletitle">全新的开发模式</p>
         <p class="salecontent">高效、快速、减少花费</p>
         <div id="exploit-Box" style="display:flex;justify-content:space-between; flex-wrap:wrap;">
-          <!-- margin-right:120px; -->
           <div id="box2">
             <div id="box2-Up">
               <img src="..\components\img\exploitpic1.png" alt />
@@ -97,14 +93,10 @@
     </div>
 
     <div style="background-color: #FFFFFF;padding-top:80px;">
-      <!-- height:648px; -->
-      <div id="fee">
+      <div id="fee" class="liubai">
         <p class="saletitle">崭新的收费模式</p>
         <p class="salecontent">确保收费简洁化、透明化</p>
-        <div
-          id="box3"
-          style="display:flex;justify-content:space-between;margin-right:120px; flex-wrap:wrap;"
-        >
+        <div id="box3">
           <div id="box3-Left">
             <img src="..\components\img\fee-left.png" alt />
           </div>
@@ -143,48 +135,48 @@
       </div>
     </div>
 
-    <div id="train">
-      <p id="train-title1">灵活的人才培养方案</p>
-      <p id="train-content1">免费的实习生培训计划、严格的实习生管理制度、真实的项目实战锻炼</p>
-      <div id="train-pic">
-        <div class="train-pic-con">
-          <img src="..\assets\量身打造.png" alt />
-          <div class="duanhengxian"></div>
-          <p>量身打造</p>
-          <p>面向互联网所需众多岗位，上班时间根据实习生自身情况决定，通过考核后在校也能办公。</p>
-        </div>
-        <div class="train-pic-con">
-          <img src="..\assets\严格.png" alt />
-          <div class="duanhengxian"></div>
-          <p>严格管理</p>
-          <p>周六公司固定例会时间，多方位知识面为实习生开拓视野，每天工作时间实时线上记录打卡。</p>
-        </div>
-        <div class="train-pic-con">
-          <img src="..\assets\严格管理.png" alt />
-          <div class="duanhengxian"></div>
-          <p>严格管理</p>
-          <p>知识培训外加真实项目实践，并有一对一导师指导，让实习生快速成长，独当一面。</p>
+    <div style="background-image: linear-gradient(0deg, #0057cb 0%, #007bff 100%);">
+      <div id="train" class="liubai">
+        <p id="train-title1">灵活的人才培养方案</p>
+        <p id="train-content1">免费的实习生培训计划、严格的实习生管理制度、真实的项目实战锻炼</p>
+        <div id="train-pic" style="display:flex;justify-content:space-between; flex-wrap:wrap;">
+          <div class="train-pic-con">
+            <img src="..\assets\量身打造.png" alt />
+            <div class="duanhengxian"></div>
+            <p>量身打造</p>
+            <p>面向互联网所需众多岗位，上班时间根据实习生自身情况决定，通过考核后在校也能办公。</p>
+          </div>
+          <div class="train-pic-con">
+            <img src="..\assets\严格.png" alt />
+            <div class="duanhengxian"></div>
+            <p>严格管理</p>
+            <p>周六公司固定例会时间，多方位知识面为实习生开拓视野，每天工作时间实时线上记录打卡。</p>
+          </div>
+          <div class="train-pic-con">
+            <img src="..\assets\严格管理.png" alt />
+            <div class="duanhengxian"></div>
+            <p>严格管理</p>
+            <p>知识培训外加真实项目实践，并有一对一导师指导，让实习生快速成长，独当一面。</p>
+          </div>
         </div>
       </div>
     </div>
     <div style="background-color: #FFFFFF;">
-      <div id="client">
+      <div id="client" class="liubai">
         <p class="saletitle">服务过的品牌客户</p>
         <p class="salecontent">SERVIER BRAND CUSTOMERS</p>
         <div id="client-Pic">
           <div
-            style="display:flex;justify-content:space-between;margin-right:120px; flex-wrap:wrap;"
+            style="display:flex;justify-content:space-between; flex-wrap:wrap;"
           >
-            <!-- style="display:flex;justify-content:space-between;" -->
             <img src="..\assets\携程.png" alt />
             <img src="..\assets\李宁.png" alt />
             <img src="..\assets\金.png" alt />
             <img src="..\assets\广发.png" alt />
           </div>
           <div
-            style="display:flex;justify-content:space-between;margin-right:120px; flex-wrap:wrap;"
+            style="display:flex;justify-content:space-between; flex-wrap:wrap;"
           >
-            <!-- style="display:flex;justify-content:space-between;" -->
             <img src="..\assets\朗新.png" alt />
             <img src="..\assets\云.png" alt />
             <img src="..\assets\金关.png" alt />
@@ -200,14 +192,22 @@
 
 <style scoped>
 @media only screen and (max-width: 479px) {
-  .slideshow {
-    max-height: 260px !important;
+  .liubai {
+    width: 83.3% !important;
+    margin: auto 8.3% !important;
   }
 }
-
+@media only screen and (max-width: 1440px) {
+  .liubai {
+    width: 83.3% !important;
+    margin: auto 8.3% !important;
+  }
+}
+.liubai {
+  width: 1200px;
+  margin: 0 auto;
+}
 div#sale {
-  /* margin-left: 119px;
-  margin-right: 120px; */
   width: 1200px;
   margin: 0 auto;
 }
@@ -228,8 +228,6 @@ div#sale {
   margin-bottom: 60px;
 }
 #blurr {
-  /* margin-left: 120px;
-  margin-right: 120px; */
   width: 1200px;
   margin: 0 auto;
   margin-top: 60px;
@@ -258,13 +256,14 @@ div#sale {
   font-size: 44px;
   letter-spacing: 2.44px;
   line-height: 48px;
-  /* margin-left: -56px; */
+  margin-left: 10px;
 }
 #blurr p:nth-child(2) {
   font-size: 16px;
   letter-spacing: 0;
   line-height: 26px;
   margin-top: 3px;
+  width: 20px;
 }
 #blurr .blurrtext {
   font-family: PingFangSC-Light;
@@ -278,7 +277,6 @@ div#sale {
 }
 #bigexploit {
   width: auto;
-  /* height: 700px; */
   background-image: linear-gradient(
     0deg,
     #e7f4fe 0%,
@@ -287,16 +285,10 @@ div#sale {
   );
 }
 #exploit {
-  width: 1200px;
-  margin: 0 auto;
   padding-top: 100px;
 }
 #exploit-Box {
   display: flex;
-  /* margin-right: 120px; */
-}
-div#fee {
-  margin-left: 119px;
 }
 div#fee p {
   margin-top: 0px;
@@ -305,8 +297,7 @@ div#fee p {
 div#train {
   padding-top: 80px;
   clear: both;
-  width: 100%;
-  height: 470px;
+  /* height: 470px; */
   opacity: 0.9;
   background-image: linear-gradient(0deg, #0057cb 0%, #007bff 100%);
 }
@@ -314,7 +305,6 @@ div#train p {
   margin-top: 0px;
 }
 div#client {
-  margin-left: 120px;
   padding-top: 80px;
   margin-bottom: 61px;
 }
@@ -411,6 +401,11 @@ div#box2-Dn p {
   line-height: 90px;
   letter-spacing: 0.27px;
 }
+div#box3 {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
 div#box3-Left {
   width: 40%;
   height: 303px;
@@ -450,14 +445,11 @@ div#box3-Right ul :nth-child(2) {
   text-align: justify;
   line-height: 22px;
 }
-/* div#train p {
-} */
 #train-title1 {
   font-family: PingFangSC-Regular;
   font-size: 28px;
   color: #ffffff;
   letter-spacing: 0;
-  margin-left: 119px;
 }
 #train-content1 {
   opacity: 0.6;
@@ -465,13 +457,11 @@ div#box3-Right ul :nth-child(2) {
   font-size: 18px;
   color: #ffffff;
   letter-spacing: 0.2px;
-  margin-left: 119px;
   margin-top: 6px;
 }
 #train-pic {
   display: flex;
-  justify-content: center;
-  margin-left: 120px;
+  justify-content: space-between;
 }
 #train-pic .train-pic-con img {
   width: 44px;
@@ -483,7 +473,6 @@ div#box3-Right ul :nth-child(2) {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-right: 90px;
 }
 #train-pic .train-pic-con p:nth-child(3) {
   font-family: PingFangSC-Regular;
@@ -502,7 +491,8 @@ div#box3-Right ul :nth-child(2) {
   letter-spacing: 0;
   text-align: justify;
   line-height: 22px;
-  /* width: 385px; */
+  width: 340px;
+  margin: 0 0 64px;
 }
 .duanhengxian {
   opacity: 0.9;
@@ -529,8 +519,8 @@ div#box3-Right ul :nth-child(2) {
   width: 280px;
   height: 296px;
 }
-#banner{
-  background-color: goldenrod
+#banner {
+  background-color: goldenrod;
 }
 .slideshow {
   width: 100%;
@@ -567,7 +557,7 @@ import img3 from "../assets/banner3.png";
 import HelloWorld from "@/components/HelloWorld.vue";
 import HomeFooter from "../components/footer.vue";
 import Carousel from "@/components/carousel.vue";
-import Swiperr from "@/components/swiperr.vue"
+import Swiperr from "@/components/swiperr.vue";
 
 import animated from "animate.css";
 
@@ -583,7 +573,7 @@ export default {
       timer: null, //定时器
       mark: 0, //比对图片索引的变量
       //轮播图数据
-      message:[img1, img2, img3],
+      message: [img1, img2, img3],
       imgArray: [img1, img2, img3],
       saleArray: [
         {
