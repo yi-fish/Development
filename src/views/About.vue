@@ -104,7 +104,7 @@ export default {
       img10: img10,
       navBarFixed: false,
       list: [
-        "西安芝麻开花网络科技有限公司成立于2016年，多年来专注于互联网技术开发和数据服务。",
+        `西安芝麻开花网络科技有限公司成立于2016年，多年来专注于互联网技术开发和数据服务。`,
         "我们的服务分为四大部分：为创业企业提供互联网技术支持；为传统企业互联网转型提供专业的全程解决方案；为政府事业单位提供信息化策略支持，为硬件技术企业提供互联网技术结合方案。",
         "公司采用全职+兼职+实习的管理模式，办公环境良好，位于西安曲江新区顶级写字楼。"
       ]
@@ -141,7 +141,7 @@ export default {
 <style scoped>
 @media screen and (max-width: 1970px) {
     .headline p {
-        font-size: 30px!important;
+        font-size: 28px!important;
     }
     .listtext{
       font-size: 22px!important;
@@ -189,22 +189,25 @@ export default {
   border-bottom: 3px solid rgb(0, 102, 153);
 }
 .listtext {
-  font-size: 30px;
+  text-indent: 2em;
+  font-size: 23px;
+  text-align: 2em;
   text-align: start;
   color: rgb(154, 154, 154);
 }
 .headline p {
-  font-size: 40px;
+  font-size: 28px;
   color: rgb(0, 102, 153);
   font-weight: 600;
   margin-top: 0px;
   text-align: center;
 }
 .headline-next {
-  margin-top: 40px;
+  margin-top: 23px;
 }
 .aboutus {
-  width: 100%;
+  width: 1440px;
+  margin: auto;
   position: relative;
 }
 .imgright {

@@ -134,7 +134,8 @@ export default {
 }
 .listcontent {
   margin-top: 30px;
-  margin-left: 50px;
+  margin: auto;
+  width: 1440px;
 }
 p {
   font-size: 19px;
@@ -177,6 +178,8 @@ p {
   justify-content: center;
 }
 .newscenter {
+  margin: auto;
+  width: 1440px;
   position: relative;
   margin-top: 0%;
 }
