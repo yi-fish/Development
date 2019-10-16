@@ -2,13 +2,15 @@
   <div id="app">
     <div class="topNav">
       <div id="nav" role="navigation">
-        <img src="./components/img/logo.png" alt />
-        <div id="nav-a">
-          <router-link to="/">首页</router-link>
-          <router-link to="/serve">服务</router-link>
-          <router-link to="/teach">人才培养</router-link>
-          <router-link to="/news">新闻</router-link>
-          <router-link to="/about">关于我们</router-link>
+        <div id="home_tab" class="liubai">
+          <img src="./components/img/logo.png" alt />
+          <div id="nav-a">
+            <router-link to="/">首页</router-link>
+            <router-link to="/serve">服务</router-link>
+            <router-link to="/teach">人才培养</router-link>
+            <router-link to="/news">新闻</router-link>
+            <router-link to="/about">关于我们</router-link>
+          </div>
         </div>
       </div>
       <router-view />
@@ -19,19 +21,19 @@
 <style lang="stylus">
 @media only screen and (max-width: 479px) {
   #nav {
-    width: 83.3% !important;
-    margin 0 auto !important;
     height: 40px !important;
   }
 
   #nav img {
-    margin-top: 1px !important;
-    margin-bottom: 2px !important;
+    width: 80px !important;
+    height: 18px !important;
+    margin: 10px 31px !important;
   }
 
   #nav-a {
     height: 40px !important;
     line-height: 40px !important;
+    margin-right: 31px !important;
   }
 
   #nav-a a {
@@ -46,19 +48,32 @@
   }
 }
 
-@media only screen and (max-width: 1440px) {
+@media only screen and (min-width: 479px) {
   #nav {
-    width: 83.3% !important;
-    padding:  auto 8.3% !important;
-  }
-}
-@media only screen and (min-width: 1440px) {
-  #nav {
-    width: 1200px !important;
-    margin: 0 auto !important;
+    width: 100% !important;
   }
 }
 
+@media only screen and (max-width: 1440px) {
+  #nav {
+    width: 100% !important;
+  }
+
+  .liubai {
+    width: 83.3% !important;
+    margin: auto 8.3% !important;
+  }
+}
+@media only screen and (max-width: 661px) {
+  #nav-a{
+    display: none !important;
+  }
+}
+
+.liubai {
+  width: 1200px;
+  margin: 0 auto;
+}
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -70,12 +85,14 @@
 #nav {
   padding: 0px;
   background: #FFFFFF;
-  display: flex;
-  justify-content: space-between;
-  margin: 0 auto !important;
   position: fixed;
   top: 0px;
   z-index: 999;
+}
+
+#home_tab {
+  display: flex;
+  justify-content: space-between;
 }
 
 #nav-a {
