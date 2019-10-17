@@ -165,6 +165,7 @@ export default {
   position: fixed;
   top: -60px;
   z-index: 999;
+  width: 13.62% !important;
 }
 .short {
   width: 200px;
@@ -233,6 +234,7 @@ export default {
 .content {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
 }
 .hidecontent {
   width: 20%;
@@ -282,9 +284,7 @@ export default {
   justify-content: space-evenly;
 }
 .rightcontent {
-  padding-left: 50px;
   margin-top: 60px;
-  margin-left: 60px;
   width: 70%;
   /* position: absolute; */
   /* margin-left: 20%; */
