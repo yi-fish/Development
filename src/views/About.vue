@@ -278,7 +278,7 @@ export default {
   width: 20%;
   /* width: 20%; */
   /* margin-left: 20px; */
-  margin-top: 60px;
+  margin-top: 150px;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
