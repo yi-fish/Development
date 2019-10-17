@@ -11,6 +11,30 @@
             <router-link to="/news">新闻</router-link>
             <router-link to="/about">关于我们</router-link>
           </div>
+          <img
+            src=".\assets\menu.png"
+            alt="切换目录"
+            @click="aaa = !aaa"
+            class="phonemenu"
+            style="width:32px !important;height:18px !important;"
+          />
+          <div type="button" :class="{ showmenu: aaa, switching: true }" @click="aaa = !aaa">
+            <ul>
+              <li>
+                <router-link to="/"
+                  >首页<span class="sr-only">切换导航</span></router-link
+                >
+              </li>
+              <li>
+                <router-link to="/serve"
+                  >服务<span class="icon-bar"></span
+                ></router-link>
+              </li>
+              <li><router-link to="/teach">人才培养</router-link></li>
+              <li><router-link to="/news">新闻</router-link></li>
+              <li><router-link to="/about">关于我们</router-link></li>
+            </ul>
+          </div>
         </div>
       </div>
       <router-view />
@@ -64,16 +88,46 @@
     margin: auto 8.3% !important;
   }
 }
+
 @media only screen and (max-width: 661px) {
-  #nav-a{
+  #nav-a {
     display: none !important;
   }
+
+  .phonemenu {
+    display: block !important;
+  }
+}
+
+.phonemenu {
+  display: none;
+  position: absolute;
+  right: 0px;
+  z-index: 999
+}
+
+.showmenu {
+  display: none;
+}
+
+.switching {
+  position: absolute;
+  right: 19px;
+  top: 0px;
+  background-image: linear-gradient(-90deg, #30d5ff 0%, #749cf7 100%);
+  border-radius: 2%;
+  padding-top: 40px;
+}
+
+.switching li {
+  padding-bottom: 0px !important;
 }
 
 .liubai {
   width: 1200px;
   margin: 0 auto;
 }
+
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -127,3 +181,16 @@
   margin-bottom: 29px;
 }
 </style>
+
+<script>
+/* eslint-disable */
+
+export default {
+  name: "app",
+  data() {
+    return {
+      aaa: true
+    };
+  }
+};
+</script>

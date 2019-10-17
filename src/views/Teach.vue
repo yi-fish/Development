@@ -94,9 +94,8 @@
         </div>
 
     </div>
-    <home-footer id="foot"></home-footer> 
-    
-</div>   
+    <home-footer id="foot"></home-footer>
+</div>
 </template>
 
 <script>

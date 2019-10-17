@@ -139,6 +139,14 @@ export default {
 };
 </script>
 <style scoped>
+@media only screen and (max-width: 479px) {
+  .about{
+    margin-top: 40px !important;
+  }
+}
+.about{
+    margin-top: 80px !important;
+  }
 @media screen and (max-width: 1970px) {
     .headline p {
         font-size: 28px!important;

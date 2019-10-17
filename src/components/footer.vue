@@ -19,13 +19,12 @@
                             <p class="text-muted">地址：{{address}}</p>
                         </div>
                     </div>
-                    
                 </div>
             </div>
             <div class="bottom">
                 <h4>Copyright @ 芝麻开花科技有限公司  保留所有权利  京ICP备13040720号-8</h4>
             </div>
-        </div>   
+        </div>
     </div>
 </template>
 

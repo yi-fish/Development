@@ -30,15 +30,15 @@
       </div>
     </div>
     <div class="listcontent">
-      <div v-for="(item,index) in listnews" :key="index">
+      <div v-for="(item, index) in listnews" :key="index">
         <div class="newslist">
           <div class="newslistdays">
             <p class="days">06-23</p>
             <p>2019</p>
           </div>
           <div class="eachnews">
-            <p>{{item.head}}</p>
-            <p class="newscontent">{{item.content}}</p>
+            <p>{{ item.head }}</p>
+            <p class="newscontent">{{ item.content }}</p>
           </div>
           <div>
             <p>MORE</p>
@@ -106,6 +106,14 @@ export default {
 };
 </script>
 <style scoped>
+@media only screen and (max-width: 479px) {
+  .news {
+    margin-top: 40px !important;
+  }
+}
+.news {
+  margin-top: 80px !important;
+}
 * {
   text-align: left;
 }
