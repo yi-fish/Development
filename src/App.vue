@@ -52,6 +52,7 @@
     width: 80px !important;
     height: 18px !important;
     margin: 10px 31px !important;
+    margin-left: 0px !important;
   }
 
   #nav-a {
