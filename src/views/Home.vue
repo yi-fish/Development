@@ -5,7 +5,7 @@
       <p class="saletitle">致力于互联网创新技术服务</p>
       <p class="salecontent">技术更跨界、创意更自由、服务更贴心</p>
       <div style="display:flex;justify-content:space-between; flex-wrap:wrap;">
-        <div v-for="(item, index) in saleArray" :key="index">
+        <div v-for="(item, index) in saleArray" :key="index" class="pianyi-center">
           <div id="box1">
             <div id="box1-Up">
               <img :src="item.src" alt style="margin-top: 38px !important;" />
@@ -28,29 +28,33 @@
       </div>
     </div>
 
-    <div id="blurr" class="liubai" style="display:flex;justify-content:space-between; flex-wrap:wrap;">
-      <div style="margin-left: 62px;">
+    <div
+      id="blurr"
+      class="liubai"
+      style="display:flex;justify-content:space-between; flex-wrap:wrap;"
+    >
+      <div id="pianyi" class="pianyi-center">
         <div class="blurrflex">
           <p>3</p>
           <p>年</p>
         </div>
         <div class="blurrtext">多年互联网创新服务经验</div>
       </div>
-      <div>
+      <div class="pianyi-center">
         <div class="blurrflex">
           <p style="letter-spacing: 0.4px;">20</p>
           <p>+</p>
         </div>
         <div class="blurrtext">提供多样化服务类型</div>
       </div>
-      <div>
+      <div class="pianyi-center">
         <div class="blurrflex">
           <p style="letter-spacing: 0.4px;">40</p>
           <p>+</p>
         </div>
         <div class="blurrtext">持续服务更多用户</div>
       </div>
-      <div>
+      <div class="pianyi-center">
         <div class="blurrflex">
           <p style="letter-spacing: 1px;">12000</p>
           <p></p>
@@ -102,19 +106,11 @@
           </div>
           <div id="box3-Right">
             <div class="box3-Right-li">
-              <img src="..\assets\平台1.png" />
-              <img
-                src="..\assets\+ 2.png"
-                alt
-                style="width:17px;margin-top:11px;margin-bottom:12px;position:relative;left:52px;"
-              />
-              <img src="..\assets\平台2.png" />
-              <img
-                src="..\assets\= 2.png"
-                alt
-                style="width:17px;margin-top:15px;margin-bottom:16px;position:relative;left:52px;"
-              />
-              <img src="..\assets\平台3.png" />
+              <img src="..\assets\平台1.png" class="piclog" />
+              <img src="..\assets\+ 2.png" alt class="picjia" />
+              <img src="..\assets\平台2.png" class="piclog" />
+              <img src="..\assets\= 2.png" alt class="picdengyu" />
+              <img src="..\assets\平台3.png" class="piclog" />
             </div>
             <div class="box3-Right-li">
               <ul>
@@ -123,7 +119,7 @@
               </ul>
               <ul>
                 <li>平台工作者劳务费</li>
-                <li>注：参与项目的所有工作者的赏月劳务费总和。</li>
+                <li>注：平台工作者上月劳务费综合的60%。</li>
               </ul>
               <ul>
                 <li>平台工作者劳务费</li>
@@ -166,17 +162,13 @@
         <p class="saletitle">服务过的品牌客户</p>
         <p class="salecontent">SERVIER BRAND CUSTOMERS</p>
         <div id="client-Pic">
-          <div
-            style="display:flex;justify-content:space-between; flex-wrap:wrap;"
-          >
+          <div style="display:flex;justify-content:space-between; flex-wrap:wrap;">
             <img src="..\assets\携程.png" alt />
             <img src="..\assets\李宁.png" alt />
             <img src="..\assets\金.png" alt />
             <img src="..\assets\广发.png" alt />
           </div>
-          <div
-            style="display:flex;justify-content:space-between; flex-wrap:wrap;"
-          >
+          <div style="display:flex;justify-content:space-between; flex-wrap:wrap;">
             <img src="..\assets\朗新.png" alt />
             <img src="..\assets\云.png" alt />
             <img src="..\assets\金关.png" alt />
@@ -192,9 +184,75 @@
 
 <style scoped>
 @media only screen and (max-width: 479px) {
+  .home{
+    margin-top: 40px !important;
+  }
   .liubai {
     width: 83.3% !important;
     margin: auto 8.3% !important;
+  }
+  #box1 {
+    margin-bottom: 30px;
+    width: 86px !important;
+    height: 150px !important;
+  }
+  #box1 p {
+    font-size: 10px !important;
+  }
+  #box1 ul {
+    display: none;
+  }
+  #blurr div:nth-child(4) {
+    margin-bottom: 60px !important;
+  }
+  .pianyi-center {
+    margin: 0 auto !important;
+  }
+  #client-Pic img {
+    margin: 20px auto !important;
+  }
+  #box2 {
+    width: 280px !important;
+    height: auto !important;
+    margin: 30px auto !important;
+  }
+  #box2-Up {
+    height: auto !important;
+  }
+  #box2 img {
+    width: 280px !important;
+    height: 150px !important;
+  }
+  #box3-Left {
+    height: auto !important;
+  }
+  #box3-Left img {
+    width: 280px !important;
+  }
+  .piclog {
+    width: 80px !important;
+    height: 80px !important;
+  }
+  .picjia {
+    width: 7px !important;
+    left: 38px !important;
+  }
+  .picdengyu {
+    width: 7px !important;
+    left: 38px !important;
+  }
+  .box3-Right-li ul {
+    margin-top: 8px !important;
+    margin-bottom: 30px !important;
+  }
+  .box3-Right-li ul li {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 218px;
+  }
+  #blurr .blurrtext {
+    width: auto !important;
   }
 }
 @media only screen and (max-width: 1440px) {
@@ -203,6 +261,7 @@
     margin: auto 8.3% !important;
   }
 }
+
 .liubai {
   width: 1200px;
   margin: 0 auto;
@@ -241,6 +300,9 @@ div#sale {
 #blurr div:nth-child(4) {
   margin-right: 62px;
   margin-bottom: 66px;
+}
+#pianyi {
+  margin-left: 62px;
 }
 .blurrflex {
   display: flex;
@@ -419,6 +481,24 @@ div#box3-Right {
   display: flex;
   flex-direction: column;
 }
+.piclog {
+  width: 120px;
+  height: 120px;
+}
+.picjia {
+  width: 17px;
+  margin-top: 11px;
+  margin-bottom: 12px;
+  position: relative;
+  left: 52px;
+}
+.picdengyu {
+  width: 17px;
+  margin-top: 15px;
+  margin-bottom: 16px;
+  position: relative;
+  left: 52px;
+}
 .box3-Right-li li {
   margin-bottom: 12px;
 }
@@ -514,6 +594,7 @@ div#box3-Right ul :nth-child(2) {
   margin: 0 auto;
   background: #ffffff;
   overflow: hidden;
+  margin-top: 80px;
 }
 #box {
   width: 280px;
