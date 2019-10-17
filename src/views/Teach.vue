@@ -5,92 +5,98 @@
         <p>人才</p>
         <h4>企业成长的不竭动力</h4>
     </div>
-    <div class="title col-md-12">
-        <p>人才培养</p>
-    </div>
-    <div id="right" class="col-md-12">
-        <!-- 当吸顶时，出现，占位，将content挤到原来的位置 -->
-        <div class="middle" v-if="!flag"></div>
-        <div class='middle' :class="navBarFixed == true ? 'navBarWrap' :''">
-            <img src=".//images/line.png" alt="|">
-            <ul>
-                <li><a href="#padding" style="text-decoration:none">培训详情简介</a> </li>
-                <li><a href="#padding2" style="text-decoration:none">考核&薪资</a></li>
-                <li><a href="#padding3" style="text-decoration:none">优秀学员寄语</a></li>
-                <li><a href="#padding4" style="text-decoration:none">实习生优秀项目展示</a> </li>
-                <li><a href="#padding5" style="text-decoration:none">实习生毕业去向</a></li>
-            </ul>
+    <div id="content">
+        <div class="title">
+            <p>人才培养</p>
         </div>
-    <div class="content">
-        <div class="padding" id="padding">
-            <h3>芝麻开花实习生培训介绍</h3>
-            <div v-for="(introduce,index) in introduce" :key="index">
-                <h4>{{index+1}}、{{introduce.title}}</h4>
-                <p>{{introduce.par}}</p>
-            </div>
-            <h3>实习生招收岗位&招收对象</h3>
-            <div class="job">
-                <div v-for="(job,index) in jobs" :key="index">
-                    <h4>{{index+1}} 、{{job.title}}</h4>
-                    <ul>
-                        <li v-for="(par,index) in job.par" :key="index"><span class="glyphicon glyphicon-play-circle"></span> {{par}}</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="padding2" id="padding2">
-            <h3>薪资待遇</h3>
-            <div class="picture">
-                <div v-for="(wages,index) in wages" :key="index">
-                    <div class="img"><img src="./images/入门待遇.png" alt="待遇图片"><p>{{wages.title}}</p></div>
-                    <div class="money"><p>{{wages.money}}</p></div>
-                </div>
-            </div>
-            <h3>考核标准</h3>
-            <div>
-                <div class='evaluate' v-for="(standard,index) in standard" :key="index">
-                    <p>{{standard.title}}</p>
-                    <ul>
-                        <li v-for="(par,index) in standard.par" :key="index">
-                            <span v-if="standard.par.length>1">({{index+1}})</span>{{par.tit}}
-                            <ul>
-                                <li v-for="(model,index) in par.model" :key="index">{{model}}</li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="padding3" id="padding3">
-            <h3>优秀学员寄语</h3>
-            <div class="box">
+        <div id="right">
+            <!-- 当吸顶时，出现，占位，将content挤到原来的位置 -->
+            <div class="middleHidden" v-show="!flag"></div>
+            <div class='middle' :class="navBarFixed == true ? 'navBarWrap' :''">
+                <img src=".//images/line.png" alt="|">
                 <ul>
-                    <li v-for="(obj,index) in wishes" :key="index">
-                        <h5>{{obj.name}}</h5><span class="line"></span>
-                        <div>
-                            <p>{{obj.intro}}</p>
-                            <p><span class="bord">学生寄语：</span>{{obj.wish}}</p>
-                        </div>
-                    </li>
+                    <li><a href="#padding" style="text-decoration:none">培训详情简介</a> </li>
+                    <li><a href="#padding2" style="text-decoration:none">考核&薪资</a></li>
+                    <li><a href="#padding3" style="text-decoration:none">优秀学员寄语</a></li>
+                    <li><a href="#padding4" style="text-decoration:none">实习生优秀项目展示</a> </li>
+                    <li><a href="#padding5" style="text-decoration:none">实习生毕业去向</a></li>
                 </ul>
             </div>
-        </div>
-        <div class="padding4" id="padding4">
-            <h3>实习生优秀项目展示</h3>
-            <div class="show">
-                <div>
-                    <img :src="img" alt="作品展示" v-for="(img,index) in showImg" :key="index">
+            <div class="content">
+                <div class="padding" id="padding">
+                    <h3>芝麻开花实习生培训介绍</h3>
+                    <div v-for="(introduce,index) in introduce" :key="index">
+                        <h4>{{index+1}}、{{introduce.title}}</h4>
+                        <p>{{introduce.par}}</p>
+                    </div>
+                    <h3>实习生招收岗位&招收对象</h3>
+                    <div class="job">
+                        <div v-for="(job,index) in jobs" :key="index">
+                            <h4>{{index+1}} 、{{job.title}}</h4>
+                            <ul>
+                                <li v-for="(par,index) in job.par" :key="index"><span class="glyphicon glyphicon-play-circle"></span> {{par}}</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="padding2" id="padding2">
+                    <h3>薪资待遇</h3>
+                    <div class="picture">
+                        <div v-for="(wages,index) in wages" :key="index">
+                            <div class="img"><img src="./images/入门待遇.png" alt="待遇图片"><p>{{wages.title}}</p></div>
+                            <div class="money"><p>{{wages.money}}</p></div>
+                        </div>
+                    </div>
+                    <h3>考核标准</h3>
+                    <div>
+                        <div class='evaluate' v-for="(standard,index) in standard" :key="index">
+                            <p>{{standard.title}}</p>
+                            <ul>
+                                <li v-for="(par,index) in standard.par" :key="index">
+                                    <span v-if="standard.par.length>1">({{index+1}})</span>{{par.tit}}
+                                    <ul>
+                                        <li v-for="(model,index) in par.model" :key="index">{{model}}</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="padding3" id="padding3">
+                    <h3>优秀学员寄语</h3>
+                    <div class="box">
+                        <ul>
+                            <li v-for="(obj,index) in wishes" :key="index">
+                                <h5>{{obj.name}}</h5><span class="line"></span>
+                                <div>
+                                    <p>{{obj.intro}}</p>
+                                    <p><span class="bord">学生寄语：</span>{{obj.wish}}</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="padding4" id="padding4">
+                    <h3>实习生优秀项目展示</h3>
+                    <div class="show">
+                        <div>
+                            <img :src="img" alt="作品展示" v-for="(img,index) in showImg" :key="index">
+                        </div>
+                    </div>
+                </div>
+                <div class="padding5" id="padding5">
+                    <h3>优秀学员毕业去向</h3>
+                    <ul>
+                        <li v-for="(goToArr,index) in goToArrs" :key="index"><img :src="goToArr" alt="优秀学员去向"></li>
+                    </ul>
                 </div>
             </div>
         </div>
-        <div class="padding5" id="padding5">
-            <h3>优秀学员毕业去向</h3>
-            <ul>
-                <li v-for="(goToArr,index) in goToArrs" :key="index"><img :src="goToArr" alt="优秀学员去向"></li>
-            </ul>
-        </div>
-    </div><home-footer></home-footer> </div>
+
     </div>
+    <home-footer id="foot"></home-footer> 
+    
+</div>   
 </template>
 
 <script>
@@ -195,19 +201,23 @@ export default {
         "showImg":[image1,image2,image3],
       "goToArrs":[img1,img2,img3,img4],
       navBarFixed :"false",
-      flag:true
+      navBar:false,
+      flag:true,
     }  
   },
    mounted () {
         // 事件监听滚动条
       window.addEventListener('scroll', this.watchScroll)
+      
   },
   methods: {
     watchScroll () {
+        let foot=document.getElementById("foot")
+        let scrollHidden=document.body.scrollHeight-window.pageYOffset -foot.offsetHeight
           var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
           //  当滚动超过400时，实现吸顶效果
-          if (scrollTop > 580) {
-            this.navBarFixed = true
+          if (scrollTop > 580 && scrollHidden>400) {
+            this.navBarFixed = true;
           } else {
             this.navBarFixed = false
           }
@@ -234,11 +244,19 @@ export default {
 #right .middle{
     flex: 1;
 }
+
+#content{
+    width: 1440px;
+    margin: 0 auto;
+}
 .content{
-    flex:3
+    flex:3;
+}
+.middleHidden{
+    flex: 1;
 }
 /********************imgs***************************/
-@media screen and (max-width:1240px){
+/* @media screen and (max-width:1240px){
     .education .imgs img{
     width: 100%;
     max-height: 400px;
@@ -333,6 +351,17 @@ export default {
         padding-top: 10px!important;
         line-height: 80px!important
     }
+} */
+@media screen and (max-width:1026px){
+    #content{
+        width: 800px!important;
+    }
+   #right .middle{
+        display: none!important;
+    } 
+   #right .middleHidden{
+        display: none!important;
+    } 
 }
 .education .imgs{
     width: 100%;
@@ -366,7 +395,7 @@ export default {
     width: 100%;
     font-family: 'Arial Normal', 'Arial';
     margin-top: 30px;
-    padding-left: 50px;
+    padding-left: 4%;
     font-size: 22px;
     border-bottom: 1px solid #333;
 }
@@ -410,7 +439,7 @@ export default {
 #right .content .padding{
     border:1px solid #e2dfdf;
     margin-top:50px;
-    padding: 0px 0px 20px 20px;
+    padding: 0px 0px 2% 2%;
 }
 #right .content .padding h3{
     width: 340px;
@@ -429,7 +458,7 @@ export default {
     font-size: 26px;
     color: #000000;
     text-indent: 2em;
-    padding: 15px 0px 15px 15px;
+    padding: 1.5%;
 }
 #right .content .padding p{
     font-size: 22px;
@@ -540,7 +569,6 @@ export default {
   margin: 30px 0px 20px 35px;
 }
 #right .content .padding3 .box{
-    border:1px solid black;
     padding: 3%;
     padding-right: 0;
 }
@@ -649,6 +677,6 @@ export default {
 .navBarWrap {
     position:fixed;
     top:-40px;
-    z-index:-1;
+    z-index: 999;
 }
 </style>
