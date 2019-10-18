@@ -3,7 +3,7 @@
     <div class="topNav">
       <div id="nav" role="navigation">
         <div id="home_tab" class="liubai">
-          <img src="./components/img/logo.png" alt />
+          <img src="./assets/logo.png" alt />
           <div id="nav-a">
             <router-link to="/">首页</router-link>
             <router-link to="/serve">服务</router-link>

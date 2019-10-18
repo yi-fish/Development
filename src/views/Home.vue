@@ -4,21 +4,25 @@
     <div id="sale" class="liubai">
       <p class="saletitle">致力于互联网创新技术服务</p>
       <p class="salecontent">技术更跨界、创意更自由、服务更贴心</p>
-      <div style="display:flex;justify-content:space-between; flex-wrap:wrap;">
-        <div v-for="(item, index) in saleArray" :key="index" class="pianyi-center">
+      <div class="sale_content_son">
+        <div
+          v-for="(item, index) in saleArray"
+          :key="index"
+          class="pianyi-center"
+        >
           <div id="box1">
             <div id="box1-Up">
               <img :src="item.src" alt style="margin-top: 38px !important;" />
-              <p style="margin-top: 20px !important;margin-bottom:20px;">{{ item.title }}</p>
+              <p style="margin-top: 20px !important;margin-bottom:20px;">
+                {{ item.title }}
+              </p>
             </div>
             <div id="box1-Dn">
               <ul>
                 <li v-for="(itemson, index) in item.content" :key="index">
                   <div class="yuandian"></div>
                   <span style="display:block;text-align:left">
-                    {{
-                    itemson.con
-                    }}
+                    {{ itemson.con }}
                   </span>
                 </li>
               </ul>
@@ -67,7 +71,10 @@
       <div id="exploit" class="liubai">
         <p class="saletitle">全新的开发模式</p>
         <p class="salecontent">高效、快速、减少花费</p>
-        <div id="exploit-Box" style="display:flex;justify-content:space-between; flex-wrap:wrap;">
+        <div
+          id="exploit-Box"
+          style="display:flex;justify-content:space-between; flex-wrap:wrap;"
+        >
           <div id="box2">
             <div id="box2-Up">
               <img src="..\components\img\exploitpic1.png" alt />
@@ -131,28 +138,42 @@
       </div>
     </div>
 
-    <div style="background-image: linear-gradient(0deg, #0057cb 0%, #007bff 100%);">
+    <div
+      style="background-image: linear-gradient(0deg, #0057cb 0%, #007bff 100%);"
+    >
       <div id="train" class="liubai">
         <p id="train-title1">灵活的人才培养方案</p>
-        <p id="train-content1">免费的实习生培训计划、严格的实习生管理制度、真实的项目实战锻炼</p>
-        <div id="train-pic" style="display:flex;justify-content:space-between; flex-wrap:wrap;">
+        <p id="train-content1">
+          免费的实习生培训计划、严格的实习生管理制度、真实的项目实战锻炼
+        </p>
+        <div id="train-pic">
           <div class="train-pic-con">
             <img src="..\assets\量身打造.png" alt />
             <div class="duanhengxian"></div>
             <p>量身打造</p>
-            <p>面向互联网所需众多岗位，上班时间根据实习生自身情况决定，通过考核后在校也能办公。</p>
+            <p>
+              面向互联网所需众多岗位，上班时间根据实习生自身情况决定，通过考核后在校也能办公。
+            </p>
           </div>
           <div class="train-pic-con">
-            <img src="..\assets\严格.png" alt />
+            <img
+              src="..\assets\严格.png"
+              alt
+              style="width: 42px; height: 46px;"
+            />
             <div class="duanhengxian"></div>
             <p>严格管理</p>
-            <p>周六公司固定例会时间，多方位知识面为实习生开拓视野，每天工作时间实时线上记录打卡。</p>
+            <p>
+              周六公司固定例会时间，多方位知识面为实习生开拓视野，每天工作时间实时线上记录打卡。
+            </p>
           </div>
           <div class="train-pic-con">
             <img src="..\assets\严格管理.png" alt />
             <div class="duanhengxian"></div>
             <p>严格管理</p>
-            <p>知识培训外加真实项目实践，并有一对一导师指导，让实习生快速成长，独当一面。</p>
+            <p>
+              知识培训外加真实项目实践，并有一对一导师指导，让实习生快速成长，独当一面。
+            </p>
           </div>
         </div>
       </div>
@@ -162,13 +183,17 @@
         <p class="saletitle">服务过的品牌客户</p>
         <p class="salecontent">SERVIER BRAND CUSTOMERS</p>
         <div id="client-Pic">
-          <div style="display:flex;justify-content:space-between; flex-wrap:wrap;">
+          <div
+            style="display:flex;justify-content:space-between; flex-wrap:wrap;"
+          >
             <img src="..\assets\携程.png" alt />
             <img src="..\assets\李宁.png" alt />
             <img src="..\assets\金.png" alt />
             <img src="..\assets\广发.png" alt />
           </div>
-          <div style="display:flex;justify-content:space-between; flex-wrap:wrap;">
+          <div
+            style="display:flex;justify-content:space-between; flex-wrap:wrap;"
+          >
             <img src="..\assets\朗新.png" alt />
             <img src="..\assets\云.png" alt />
             <img src="..\assets\金关.png" alt />
@@ -184,7 +209,7 @@
 
 <style scoped>
 @media only screen and (max-width: 479px) {
-  .home{
+  .home {
     margin-top: 40px !important;
   }
   .liubai {
@@ -286,16 +311,21 @@ div#sale {
   margin-top: 6px;
   margin-bottom: 60px;
 }
+.sale_content_son {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 60px;
+}
 #blurr {
   width: 1200px;
   margin: 0 auto;
-  margin-top: 60px;
   background: #ffffff;
   box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.08);
   display: flex;
   justify-content: space-around;
   position: relative;
-  top: 100px;
+  z-index: 2;
 }
 #blurr div:nth-child(4) {
   margin-right: 62px;
@@ -345,6 +375,9 @@ div#sale {
     #f2f5f8 64%,
     #f6f6f6 100%
   );
+  z-index: 1;
+  position: relative;
+  margin-top: -100px;
 }
 #exploit {
   padding-top: 100px;
@@ -380,7 +413,7 @@ div#client p {
 #box1 {
   background: #ffffff;
   border: 1px solid #f2f2f2;
-  width: 280px;
+  width: 282px;
   height: 296px;
 }
 #box1 p {
@@ -445,6 +478,7 @@ div#box1-Dn ul li {
   font-size: 24px !important;
   color: #ffffff !important;
   letter-spacing: 0.27px !important;
+  margin-top: 1px;
 }
 div#box2-Up {
   height: 240px;
@@ -542,6 +576,7 @@ div#box3-Right ul :nth-child(2) {
 #train-pic {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 #train-pic .train-pic-con img {
   width: 44px;
