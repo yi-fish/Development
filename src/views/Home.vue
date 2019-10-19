@@ -105,8 +105,8 @@
 
     <div style="background-color: #FFFFFF;padding-top:80px;">
       <div id="fee" class="liubai">
-        <p class="saletitle">崭新的收费模式</p>
-        <p class="salecontent">确保收费简洁化、透明化</p>
+        <p class="saletitle" style="margin-bottom:6px">崭新的收费模式</p>
+        <p class="salecontent" style="margin-bottom:20px">确保收费简洁化、透明化</p>
         <div id="box3">
           <div id="box3-Left">
             <img src="..\components\img\fee-left.png" alt />
@@ -120,7 +120,7 @@
               <img src="..\assets\平台3.png" class="piclog" />
             </div>
             <div class="box3-Right-li">
-              <ul>
+              <ul style="margin-top: 29px;">
                 <li>平台工作者劳务费</li>
                 <li>注：参与项目的所有工作者的赏月劳务费总和。</li>
               </ul>
@@ -159,7 +159,7 @@
             <img
               src="..\assets\严格.png"
               alt
-              style="width: 42px; height: 46px;"
+              style="width: 42px; height: 46px;margin-top:61px"
             />
             <div class="duanhengxian"></div>
             <p>严格管理</p>
@@ -181,7 +181,7 @@
     <div style="background-color: #FFFFFF;">
       <div id="client" class="liubai">
         <p class="saletitle">服务过的品牌客户</p>
-        <p class="salecontent">SERVIER BRAND CUSTOMERS</p>
+        <p class="salecontent" style="margin-bottom:40px;margin-top:6px">SERVIER BRAND CUSTOMERS</p>
         <div id="client-Pic">
           <div
             style="display:flex;justify-content:space-between; flex-wrap:wrap;"
@@ -338,6 +338,7 @@ div#sale {
   display: flex;
   justify-content: center;
   margin-top: 60px;
+  margin-left: 20px;
 }
 #blurr p {
   text-align: center;
@@ -348,7 +349,6 @@ div#sale {
   font-size: 44px;
   letter-spacing: 2.44px;
   line-height: 48px;
-  margin-left: 10px;
 }
 #blurr p:nth-child(2) {
   font-size: 16px;
@@ -506,7 +506,7 @@ div#box3-Left {
   width: 40%;
   height: 303px;
   float: left;
-  margin: 87px 107px 110px 0px;
+  margin: 67px 107px 110px 0px;
 }
 div#box3-Right {
   display: flex;
@@ -533,12 +533,11 @@ div#box3-Right {
   position: relative;
   left: 52px;
 }
-.box3-Right-li li {
+/* .box3-Right-li li {
   margin-bottom: 12px;
-}
+} */
 .box3-Right-li ul {
-  margin-top: 28px;
-  margin-bottom: 62px;
+  margin-bottom: 98px;
   padding-left: 30px;
   width: max-content;
 }
@@ -558,12 +557,14 @@ div#box3-Right ul :nth-child(2) {
   letter-spacing: 0;
   text-align: justify;
   line-height: 22px;
+  margin-top: 12px;
 }
 #train-title1 {
   font-family: PingFangSC-Regular;
   font-size: 28px;
   color: #ffffff;
   letter-spacing: 0;
+  margin-bottom: 6px;
 }
 #train-content1 {
   opacity: 0.6;
@@ -572,6 +573,7 @@ div#box3-Right ul :nth-child(2) {
   color: #ffffff;
   letter-spacing: 0.2px;
   margin-top: 6px;
+  margin-bottom: 0px;
 }
 #train-pic {
   display: flex;
@@ -582,7 +584,7 @@ div#box3-Right ul :nth-child(2) {
   width: 44px;
   height: 44px;
   text-align: center;
-  margin: 61px auto 0px;
+  margin: 60px auto 0px;
 }
 #train-pic .train-pic-con {
   display: flex;
@@ -619,7 +621,7 @@ div#box3-Right ul :nth-child(2) {
 #client-Pic {
   margin-top: 40px;
 }
-#client-Pic img {
+#client-Pic div:nth-child(1) img {
   margin-bottom: 24px;
 }
 
