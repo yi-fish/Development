@@ -21,18 +21,26 @@
           <div type="button" :class="{ showmenu: aaa, switching: true }" @click="aaa = !aaa">
             <ul>
               <li>
-                <router-link to="/"
-                  >首页<span class="sr-only">切换导航</span></router-link
-                >
+                <router-link to="/">
+                  首页
+                  <span class="sr-only">切换导航</span>
+                </router-link>
               </li>
               <li>
-                <router-link to="/serve"
-                  >服务<span class="icon-bar"></span
-                ></router-link>
+                <router-link to="/serve">
+                  服务
+                  <span class="icon-bar"></span>
+                </router-link>
               </li>
-              <li><router-link to="/teach">人才培养</router-link></li>
-              <li><router-link to="/news">新闻</router-link></li>
-              <li><router-link to="/about">关于我们</router-link></li>
+              <li>
+                <router-link to="/teach">人才培养</router-link>
+              </li>
+              <li>
+                <router-link to="/news">新闻</router-link>
+              </li>
+              <li>
+                <router-link to="/about">关于我们</router-link>
+              </li>
             </ul>
           </div>
         </div>
@@ -100,11 +108,17 @@
   }
 }
 
+@media only screen and (min-width: 661px) {
+  .switching, .showmenu {
+    display: none;
+  }
+}
+
 .phonemenu {
   display: none;
   position: absolute;
   right: 0px;
-  z-index: 999
+  z-index: 999;
 }
 
 .showmenu {
@@ -115,7 +129,7 @@
   position: absolute;
   right: 19px;
   top: 0px;
-  background-image: linear-gradient(-90deg, #30d5ff 0%, #749cf7 100%);
+  background-image: linear-gradient(-90deg, #f5fffd 0%, #1b1b1d00 100%);
   border-radius: 2%;
   padding-top: 40px;
 }
