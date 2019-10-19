@@ -106,14 +106,14 @@ export default {
 };
 </script>
 <style scoped>
-@media only screen and (max-width: 479px) {
+/* @media only screen and (max-width: 479px) {
   .news {
     margin-top: 40px !important;
   }
 }
 .news {
   margin-top: 80px !important;
-}
+} */
 * {
   text-align: left;
 }

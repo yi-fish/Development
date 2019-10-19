@@ -45,6 +45,7 @@
           </div>
         </div>
       </div>
+      <div class="fenge"></div>
       <router-view />
     </div>
   </div>
@@ -52,6 +53,11 @@
 
 <style lang="stylus">
 @media only screen and (max-width: 479px) {
+  .fenge {
+    height: 40px !important;
+    backgroundColor: blue;
+  }
+
   #nav {
     height: 40px !important;
   }
@@ -113,6 +119,11 @@
     display: none;
   }
 }
+
+.fenge {
+    height: 80px;
+    backgroundColor: blue;
+  }
 
 .phonemenu {
   display: none;

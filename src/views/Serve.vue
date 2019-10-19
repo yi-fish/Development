@@ -181,14 +181,14 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-@media only screen and (max-width: 479px) {
+/* @media only screen and (max-width: 479px) {
   .serve {
     margin-top: 40px !important;
   }
 }
 .serve {
   margin-top: 80px !important;
-}
+} */
 /************************************整体样式********************************************/
 *{
     margin: 0px;
