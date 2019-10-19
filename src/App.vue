@@ -135,7 +135,7 @@
 }
 
 .switching li {
-  padding-bottom: 0px !important;
+  padding-bottom: 6px !important;
 }
 
 .liubai {
