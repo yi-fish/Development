@@ -8,8 +8,8 @@
         <div v-for="(item, index) in saleArray" :key="index" class="pianyi-center">
           <div id="box1">
             <div id="box1-Up">
-              <img :src="item.src" alt style="margin-top: 38px !important;" />
-              <p style="margin-top: 20px !important;margin-bottom:20px;">{{ item.title }}</p>
+              <img :src="item.src" alt style="margin-top: 38px" />
+              <p style="margin-top: 20px; margin-bottom:20px;">{{ item.title }}</p>
             </div>
             <div id="box1-Dn">
               <ul>
@@ -165,15 +165,28 @@
     margin: auto 8.3% !important;
   }
   #box1 {
-    margin-bottom: 30px;
+    /* margin-bottom: 30px; */
     width: 77px !important;
     height: 150px !important;
   }
   #box1 p {
     font-size: 10px !important;
+    margin-top: 7px !important;
+    margin-bottom: 0px !important;
+    line-height: 14px !important;
   }
   #box1 ul {
-    display: none;
+    /* display: none; */
+    margin: 0px !important;
+    overflow: scroll;
+    height: 50px !important;
+    font-size: 12px;
+  }
+  #box1-Up {
+    height: 100px !important;
+  }
+  #box1-Up img {
+    margin-top: 20px !important;
   }
   #blurr div:nth-child(4) {
     margin-bottom: 16px !important;
