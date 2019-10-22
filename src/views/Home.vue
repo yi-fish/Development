@@ -178,7 +178,7 @@
   #box1 ul {
     /* display: none; */
     margin: 0px !important;
-    overflow: scroll;
+    overflow: auto;
     height: 50px !important;
     font-size: 12px;
   }
@@ -225,6 +225,8 @@
   #box2-Dn p {
     line-height: 20px !important;
     font-size: 14px !important;
+    margin-bottom: 10px !important;
+    margin-top: 10px !important;
   }
   .saletitle {
     font-size: 19px !important;
@@ -267,12 +269,13 @@
     margin-bottom: 20px !important;
   }
   .box3-Right-li ul li {
-    overflow: hidden;
-    text-overflow: ellipsis;
+    /* overflow: hidden; */
+    /* text-overflow: ellipsis; */
     white-space: nowrap;
     width: 100px;
     font-size: 13px !important;
     margin-top: 0px !important;
+    overflow: auto;
   }
   #blurr .blurrtext {
     width: 138px !important;
