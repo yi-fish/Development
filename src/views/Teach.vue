@@ -22,6 +22,16 @@
                     <li><a href="#padding5" style="text-decoration:none">实习生毕业去向</a></li>
                 </ul>
             </div>
+            <div class='middle navabsolute' v-if="navabs" :style="{'top':padding5Height+'px'}">
+                <img src=".//images/line.png" alt="|">
+                <ul>
+                    <li><a href="#padding" style="text-decoration:none">培训详情简介</a> </li>
+                    <li><a href="#padding2" style="text-decoration:none">考核&薪资</a></li>
+                    <li><a href="#padding3" style="text-decoration:none">优秀学员寄语</a></li>
+                    <li><a href="#padding4" style="text-decoration:none">实习生优秀项目展示</a> </li>
+                    <li><a href="#padding5" style="text-decoration:none">实习生毕业去向</a></li>
+                </ul>
+            </div>
             <div class="content">
                 <div class="padding" id="padding">
                     <h3>芝麻开花实习生培训介绍</h3>
@@ -202,6 +212,8 @@ export default {
       navBarFixed :"false",
       navBar:false,
       flag:true,
+      navabs:false,
+      padding5Height:5000
     }  
   },
    mounted () {
@@ -211,14 +223,19 @@ export default {
   },
   methods: {
     watchScroll () {
-        let foot=document.getElementById("foot")
-        let scrollHidden=document.body.scrollHeight-window.pageYOffset -foot.offsetHeight
           var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
+          let padding5Height=document.getElementById('padding5').offsetTop
+          this.padding5Height=padding5Height
           //  当滚动超过400时，实现吸顶效果
-          if (scrollTop > 580 && scrollHidden>400) {
+          if (scrollTop > 580&& scrollTop<=padding5Height) {
             this.navBarFixed = true;
-          } else {
+            this.navabs=false;
+          } else if(scrollTop>padding5Height) {
             this.navBarFixed = false
+            this.navabs=true
+          }else{
+            this.navBarFixed = false
+            this.navabs=false;              
           }
           this.flag=!this.navBarFixed
     }  
@@ -233,6 +250,12 @@ export default {
     padding: 0px;
     list-style: none;
     text-align: left;
+}
+.education{
+    position: relative;
+}
+.navabsolute{
+    position: absolute;
 }
 /************************************整体样式********************************************/
 #right{
