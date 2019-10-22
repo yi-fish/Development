@@ -40,7 +40,7 @@
             <p>{{item.head}}</p>
             <p class="newscontent">{{item.content}}</p>
           </div>
-          <div>
+          <div class="more">
             <p>MORE</p>
           </div>
         </div>
@@ -106,6 +106,88 @@ export default {
 };
 </script>
 <style scoped>
+@media screen and (max-width: 1970px) {
+    .newscenter,
+    .listcontent{
+      width: 1440px;
+    }
+    .headline p {
+        font-size: 28px!important;
+    }
+    .listtext{
+      font-size: 22px!important;
+    }
+    .leftbutton a {
+      font-size: 25px!important;
+    }
+}
+@media screen and (max-width: 1500px) {
+    .newscenter,
+    .listcontent{
+      width: 700px!important;
+    }
+    .block{
+      height: 300px!important;
+    }
+    .block img{
+      height: 250px!important;
+    }
+    .block p{
+      font-size: 15px!important;
+    }
+    .headline p {
+        font-size: 22px!important;
+    }
+    .listtext{
+      font-size: 17px!important;
+    }
+    .leftbutton a {
+      font-size: 20px!important;
+    }
+}
+@media screen and (max-width: 420px) {
+  .imgarea{
+    height: 200px!important;
+  }
+    .imgtext h1{
+      font-size: 30px!important;
+    }
+    .days{
+      font-size: 10px!important;
+    }
+    .newslist{
+      margin-top: 3px;
+      margin-bottom: 5px!important;
+    }
+    .eachnews p,
+    .more p{
+      font-size: 10px!important;
+    }
+    .imgtext h2{
+      font-size: 25px!important;
+    }
+    .newscenter,
+    .listcontent{
+      width: 300px!important;
+    }
+    .newsblock{
+      display: flex;
+      flex-direction: column!important;
+    }
+    .block{
+      width:100%!important;
+      margin-bottom: 10px!important;
+    }
+    .headline p {
+        font-size: 17px!important;
+    }
+    .listtext{
+      font-size: 12px!important;
+    }
+    .leftbutton a {
+      font-size: 15px!important;
+    }
+}
 * {
   text-align: left;
 }

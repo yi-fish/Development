@@ -140,35 +140,175 @@ export default {
 </script>
 <style scoped>
 @media screen and (max-width: 1970px) {
-    .headline p {
-        font-size: 28px!important;
-    }
-    .listtext{
-      font-size: 22px!important;
-    }
-    .leftbutton a {
-      font-size: 25px!important;
-    }
+  .headline p {
+    font-size: 28px !important;
+  }
+  .listtext {
+    font-size: 22px !important;
+  }
+  .leftbutton a {
+    font-size: 25px !important;
+  }
 }
 @media screen and (max-width: 1500px) {
-    .headline p {
-        font-size: 22px!important;
-    }
-    .listtext{
-      font-size: 17px!important;
-    }
-    .leftbutton a {
-      font-size: 20px!important;
-    }
+  h1 {
+    font-size: 55px !important;
+  }
+  h2 {
+    font-size: 30px !important;
+  }
+  .aboutus {
+    width: 60% !important;
+  }
+  .row {
+    display: block !important;
+  }
+  .imgright {
+    margin-left: 0% !important;
+    width: 103% !important;
+  }
+  .row img {
+    padding-right: 10px !important;
+    float: left !important;
+  }
+  .headline {
+    margin-left: 45% !important;
+    margin-right: 20px;
+  }
+  .leftmenu{
+    width: 190px!important;
+  }
+  .navBarWrap {
+    width: 190px!important;
+  }
+  .navBarWrap{
+    margin-left: 0px!important;
+  }
+
+  .leftbutton a {
+    font-size: 18px !important;
+  }
+  .headline p {
+    font-size: 20px !important;
+  }
+  .listtext {
+    font-size: 17px !important;
+  }
+  .leftbutton a {
+    font-size: 20px !important;
+  }
+}
+@media screen and (max-width: 920px) {
+  h1 {
+    font-size: 35px !important;
+  }
+  h2 {
+    font-size: 20px !important;
+  }
+  .aboutus {
+    width: 60% !important;
+  }
+  .row {
+    display: block !important;
+  }
+  .imgright {
+    margin-left: 0% !important;
+    width: 103% !important;
+  }
+  .row img {
+    padding-right: 10px !important;
+    float: left !important;
+  }
+  .headline {
+    margin-left: 45% !important;
+    margin-right: 20px;
+  }
+  .leftmenu{
+    width: 90px!important;
+  }
+  .navBarWrap {
+    width: 90px!important;
+  }
+  .navBarWrap{
+    margin-left: 0px!important;
+  }
+  .headline p {
+    font-size: 15px!important;
+  }
+  .listtext {
+    font-size: 17px!important;
+  }
+  .leftmenu img{
+    margin-left: -20px!important;
+    height: 300px!important;
+  }
+  .leftbutton{
+    margin-left: -15px!important;
+    height: 300px!important;
+  }
+  .leftbutton a {
+    font-size: 10px!important;
+  }
+}
+@media screen and (max-width: 415px) {
+  h1 {
+    font-size: 20px !important;
+  }
+  h2 {
+    font-size: 10px !important;
+  }
+  .aboutus {
+    width: 60% !important;
+  }
+  .row {
+    display: block !important;
+  }
+  .imgright {
+    margin-left: 0% !important;
+    width: 103% !important;
+  }
+  .row img {
+    padding-right: 10px !important;
+    float: left !important;
+  }
+  .headline {
+    margin-left: 45% !important;
+    margin-right: 20px;
+  }
+  .leftmenu{
+    width: 90px!important;
+  }
+  .navBarWrap {
+    width: 90px!important;
+  }
+  .navBarWrap{
+    margin-left: 0px!important;
+  }
+  .headline p {
+    font-size: 15px!important;
+  }
+  .listtext {
+    font-size: 17px!important;
+  }
+  .leftmenu img{
+    margin-left: -20px!important;
+    height: 300px!important;
+  }
+  .leftbutton{
+    margin-left: -15px!important;
+    height: 300px!important;
+  }
+  .leftbutton a {
+    font-size: 10px!important;
+  }
 }
 .navBarWrap {
   position: fixed;
   top: -60px;
   z-index: 999;
-  width: 13.62% !important;
 }
 .short {
-  width: 200px;
+  width: 50%;
   margin: auto;
 }
 .imgarea {
@@ -205,6 +345,9 @@ export default {
 }
 .headline-next {
   margin-top: 23px;
+}
+.short {
+  margin: auto !important;
 }
 .aboutus {
   width: 1440px;
@@ -275,10 +418,10 @@ export default {
   margin-top: 30px;
 }
 .leftmenu {
-  width: 20%;
+  width: 200px;
   /* width: 20%; */
   /* margin-left: 20px; */
-  margin-top: 150px;
+  margin-top: 100px;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
@@ -336,8 +479,10 @@ button {
   color: rgb(22, 102, 255);
   font-weight: 100;
   font-size: 40px;
-  margin-left: 240px;
   margin-top: -144px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
 }
 .head {
   margin-top: 30px;
