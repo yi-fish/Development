@@ -78,6 +78,7 @@ export default {
     font-family: PingFangSC-Regular;
     font-size: 28px;
     height: 40px;
+    line-height: 40px;
     color: #4A4A4A;
     letter-spacing: 0;
     margin-bottom: 6px;
@@ -154,5 +155,78 @@ export default {
 .footer .bottom h4{
     font-size: 16px;
     color: #999999;
+}
+@media screen and (max-width:900px){
+    .footer .top div h4{
+        font-size: 24px;
+    }
+    .footer .top div span{
+    font-size: 15px;
+    }
+    .footer .top .tit1 div p{
+    font-size: 15px;
+    }
+    .footer .top .tit1 .weixin p{
+    font-size: 16px;
+    }
+    .footer .bottom h4{
+        font-size: 15px;
+        text-align: center;
+    }
+}
+@media screen and (max-width:500px){
+    .footer{
+        height: 490px;
+    }
+    .footer .top div h4{
+        font-size: 20px;
+    }
+    .footer .top div span{
+        font-size: 12px;
+    }
+.line{
+    display: flex;
+    flex-direction: column;
+}
+.line .weixin{
+    padding: 0;
+    margin: 0 auto;
+}
+.footer .top .tit{
+    height: 108px;
+    padding-top: 20px;
+}
+.footer .top .tit1{
+    height: 303px;
+    padding-left: 8.3%;
+}
+.footer .top .tit1 .weixin img{
+    width: 90px;
+    height: 90px;
+    margin-bottom: 2px;
+}
+.footer .top .tit1 .weixin p{
+    font-size: 14px;
+    color: #999999;
+    letter-spacing: 4px;
+    height: 22px;
+    line-height: 22px;
+    text-align: center;
+    width: 90px;
+}
+.footer .contact{
+    padding: 10px 0px ;
+}
+.footer .bottom{
+    height: 78px;
+    padding: 0px 20px
+}
+.footer .bottom h4{
+    font-size: 13px;
+    color: #999999;
+}
+.footer .top .tit1 div p{
+    font-size: 13px;
+}
 }
 </style>
