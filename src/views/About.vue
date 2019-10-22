@@ -135,7 +135,7 @@ export default {
         this.navBarFixed = false;
       }
     }
-  }
+  },
 };
 </script>
 <style scoped>
@@ -160,6 +160,7 @@ export default {
   }
   .row img {
     padding-right: 10px !important;
+    padding-bottom: 2rem!important;
     float: left !important;
   }
   .headline {
@@ -176,7 +177,7 @@ export default {
     margin-left: 0px!important;
   }
 }
-@media screen and (max-width: 920px) {
+@media screen and (max-width: 1440px) {
   .aboutus {
     width: 60% !important;
   }
@@ -190,6 +191,9 @@ export default {
   .row img {
     padding-right: 10px !important;
     float: left !important;
+  }
+  .righttext h2{
+    margin-top: -7rem!important;
   }
   .headline {
     margin-left: 45% !important;
@@ -213,24 +217,43 @@ export default {
     height: 300px!important;
   }
 }
-@media screen and (max-width: 415px) {
+@media screen and (max-width: 479px) {
+  .hidecontent{
+    display: none!important;
+  }
+  .content{
+    justify-content: space-around!important;
+  }
   .aboutus {
-    width: 60% !important;
+    width: 90% !important;
   }
   .row {
     display: block !important;
+    align-content: center!important;
+  }
+  .row img{
+    padding-right: 0px!important;
+    margin: auto !important;
+    width: 100%!important;
+    margin-top: 0px!important;
+    clear: both!important;
+  }
+  .imgarea{
+    height: 20rem!important;
   }
   .imgright {
     margin-left: 0% !important;
     width: 103% !important;
   }
+  .rightcontent{
+    margin-top: 1rem!important;
+  }
   .row img {
-    padding-right: 10px !important;
+    padding-right: 0px !important;
     float: left !important;
   }
   .headline {
-    margin-left: 45% !important;
-    margin-right: 20px;
+    margin: auto!important;
   }
   .leftmenu{
     display: none!important;
@@ -268,24 +291,24 @@ export default {
 .block1,
 .block2,
 .block3 {
-  padding-left: 30px;
-  padding-top: 30px;
-  padding-right: 30px;
+  padding-left: 2rem;
+  padding-top: 1rem;
+  padding-right: 2rem;
   padding-bottom: 30px;
   border: 1px solid rgb(242, 242, 242);
-  margin-bottom: 30px;
+  margin-bottom: 1rem;
 }
 .headline {
   border-bottom: 3px solid rgb(0, 102, 153);
 }
 .listtext {
   text-indent: 2em;
-  font-size: 2.5rem;
+  font-size: 3rem;
   text-align: start;
   color: rgb(154, 154, 154);
 }
 .headline p {
-  font-size: 2.9rem;
+  font-size: 3rem;
   color: rgb(0, 102, 153);
   font-weight: 600;
   margin-top: 0px;
@@ -376,9 +399,7 @@ export default {
 }
 .rightcontent {
   margin-top: 60px;
-  width: 70%;
-  /* position: absolute; */
-  /* margin-left: 20%; */
+  width: 80%;
 }
 .leftmenu img {
   height: 400px;
@@ -392,7 +413,7 @@ export default {
   padding-bottom: 50px;
 }
 .leftbutton a {
-  font-size: 2.5rem;
+  font-size: 3rem;
   color: black;
 }
 p {
@@ -427,10 +448,11 @@ button {
   color: rgb(22, 102, 255);
   font-weight: 100;
   font-size: 4rem;
-  margin-top: -144px;
+  margin-top: -9rem;
   display: flex;
   flex-direction: row;
-  justify-content: flex-end;
+  justify-content: space-evenly;
+  padding-left: 50%;
 }
 .head {
   margin-top: 30px;
@@ -439,7 +461,6 @@ button {
   background: none;
 }
 .righttext {
-  padding-left: 400px;
   margin-top: -32px;
 }
 hr {

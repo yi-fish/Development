@@ -107,6 +107,7 @@ export default {
 </script>
 <style scoped>
 @media screen and (max-width: 1970px) {
+    
     .newscenter,
     .listcontent{
       width: 1440px;
@@ -145,9 +146,12 @@ export default {
       font-size: 20px!important;
     }
 }
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 470px) {
   .imgarea{
     height: 200px!important;
+  }
+  .leftmenu{
+    display: none!important;
   }
     .imgtext h1{
       font-size: 30px!important;
