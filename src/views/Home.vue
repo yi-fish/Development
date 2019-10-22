@@ -4,22 +4,18 @@
     <div id="sale" class="liubai">
       <p class="saletitle">致力于互联网创新技术服务</p>
       <p class="salecontent">技术更跨界、创意更自由、服务更贴心</p>
-      <div style="display:flex;justify-content:space-between; flex-wrap:wrap;">
+      <div class="sale_content_son">
         <div v-for="(item, index) in saleArray" :key="index" class="pianyi-center">
           <div id="box1">
             <div id="box1-Up">
-              <img :src="item.src" alt style="margin-top: 38px !important;" />
-              <p style="margin-top: 20px !important;margin-bottom:20px;">{{ item.title }}</p>
+              <img :src="item.src" alt style="margin-top: 38px" />
+              <p style="margin-top: 20px; margin-bottom:20px;">{{ item.title }}</p>
             </div>
             <div id="box1-Dn">
               <ul>
                 <li v-for="(itemson, index) in item.content" :key="index">
                   <div class="yuandian"></div>
-                  <span style="display:block;text-align:left">
-                    {{
-                    itemson.con
-                    }}
-                  </span>
+                  <span style="display:block;text-align:left">{{ itemson.con }}</span>
                 </li>
               </ul>
             </div>
@@ -98,8 +94,8 @@
 
     <div style="background-color: #FFFFFF;padding-top:80px;">
       <div id="fee" class="liubai">
-        <p class="saletitle">崭新的收费模式</p>
-        <p class="salecontent">确保收费简洁化、透明化</p>
+        <p class="saletitle" style="margin-bottom:6px">崭新的收费模式</p>
+        <p class="salecontent" style="margin-bottom:20px">确保收费简洁化、透明化</p>
         <div id="box3">
           <div id="box3-Left">
             <img src="..\components\img\fee-left.png" alt />
@@ -107,24 +103,18 @@
           <div id="box3-Right">
             <div class="box3-Right-li">
               <img src="..\assets\平台1.png" class="piclog" />
-              <img src="..\assets\+ 2.png" alt class="picjia" />
+              <img src="..\assets\+ 2.png" alt="+" class="picjia" />
               <img src="..\assets\平台2.png" class="piclog" />
-              <img src="..\assets\= 2.png" alt class="picdengyu" />
+              <img src="..\assets\= 2.png" alt="=" class="picdengyu" />
               <img src="..\assets\平台3.png" class="piclog" />
             </div>
             <div class="box3-Right-li">
-              <ul>
-                <li>平台工作者劳务费</li>
-                <li>注：参与项目的所有工作者的赏月劳务费总和。</li>
-              </ul>
-              <ul>
-                <li>平台工作者劳务费</li>
-                <li>注：平台工作者上月劳务费综合的60%。</li>
-              </ul>
-              <ul>
-                <li>平台工作者劳务费</li>
-                <li>注：参与项目的所有工作者的赏月劳务费总和。</li>
-              </ul>
+              <div v-for="(item, index) in box3Arry" :key="index">
+                <ul>
+                  <li>{{item.con}}</li>
+                  <li>{{item.zhu}}</li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
@@ -135,24 +125,14 @@
       <div id="train" class="liubai">
         <p id="train-title1">灵活的人才培养方案</p>
         <p id="train-content1">免费的实习生培训计划、严格的实习生管理制度、真实的项目实战锻炼</p>
-        <div id="train-pic" style="display:flex;justify-content:space-between; flex-wrap:wrap;">
-          <div class="train-pic-con">
-            <img src="..\assets\量身打造.png" alt />
-            <div class="duanhengxian"></div>
-            <p>量身打造</p>
-            <p>面向互联网所需众多岗位，上班时间根据实习生自身情况决定，通过考核后在校也能办公。</p>
-          </div>
-          <div class="train-pic-con">
-            <img src="..\assets\严格.png" alt />
-            <div class="duanhengxian"></div>
-            <p>严格管理</p>
-            <p>周六公司固定例会时间，多方位知识面为实习生开拓视野，每天工作时间实时线上记录打卡。</p>
-          </div>
-          <div class="train-pic-con">
-            <img src="..\assets\严格管理.png" alt />
-            <div class="duanhengxian"></div>
-            <p>严格管理</p>
-            <p>知识培训外加真实项目实践，并有一对一导师指导，让实习生快速成长，独当一面。</p>
+        <div class="train-pic-copy">
+          <div id="train-pic" v-for="(item, index) in trainPicArry" :key="index">
+            <div class="train-pic-con">
+              <img :src="item.src" alt />
+              <div class="duanhengxian"></div>
+              <p>{{ item.con1 }}</p>
+              <p>{{ item.con2 }}</p>
+            </div>
           </div>
         </div>
       </div>
@@ -160,19 +140,15 @@
     <div style="background-color: #FFFFFF;">
       <div id="client" class="liubai">
         <p class="saletitle">服务过的品牌客户</p>
-        <p class="salecontent">SERVIER BRAND CUSTOMERS</p>
+        <p
+          class="salecontent"
+          style="margin-bottom:40px;margin-top:6px;height: 22px;"
+        >SERVIER BRAND CUSTOMERS</p>
         <div id="client-Pic">
           <div style="display:flex;justify-content:space-between; flex-wrap:wrap;">
-            <img src="..\assets\携程.png" alt />
-            <img src="..\assets\李宁.png" alt />
-            <img src="..\assets\金.png" alt />
-            <img src="..\assets\广发.png" alt />
-          </div>
-          <div style="display:flex;justify-content:space-between; flex-wrap:wrap;">
-            <img src="..\assets\朗新.png" alt />
-            <img src="..\assets\云.png" alt />
-            <img src="..\assets\金关.png" alt />
-            <img src="..\assets\携程 copy 7.png" alt />
+            <div v-for="(item, index) in clientArry" :key="index">
+              <img :src="item.src" alt />
+            </div>
           </div>
         </div>
       </div>
@@ -184,75 +160,122 @@
 
 <style scoped>
 @media only screen and (max-width: 479px) {
-  .home{
-    margin-top: 40px !important;
-  }
   .liubai {
     width: 83.3% !important;
     margin: auto 8.3% !important;
   }
   #box1 {
-    margin-bottom: 30px;
-    width: 86px !important;
+    /* margin-bottom: 30px; */
+    width: 77px !important;
     height: 150px !important;
   }
   #box1 p {
     font-size: 10px !important;
+    margin-top: 7px !important;
+    margin-bottom: 0px !important;
+    line-height: 14px !important;
   }
   #box1 ul {
-    display: none;
+    /* display: none; */
+    margin: 0px !important;
+    overflow: scroll;
+    height: 50px !important;
+    font-size: 12px;
+  }
+  #box1-Up {
+    height: 100px !important;
+  }
+  #box1-Up img {
+    margin-top: 20px !important;
   }
   #blurr div:nth-child(4) {
-    margin-bottom: 60px !important;
+    margin-bottom: 16px !important;
+  }
+  .blurrflex {
+    margin-top: 16px !important;
   }
   .pianyi-center {
     margin: 0 auto !important;
   }
   #client-Pic img {
     margin: 20px auto !important;
+    width: 150px !important;
+    height: 69px !important;
+  }
+  #train-pic .train-pic-con p[data-v-fae5bece]:nth-child(3) {
+    font-size: 19px !important;
+  }
+  #train-pic .train-pic-con p[data-v-fae5bece]:nth-child(4) {
+    width: 150px !important;
+    font-size: 14px !important;
+    height: 50px;
+  }
+  #train-pic .train-pic-con img[data-v-fae5bece] {
+    width: 22px !important;
+    height: 22px !important;
   }
   #box2 {
-    width: 280px !important;
+    width: 100px !important;
     height: auto !important;
     margin: 30px auto !important;
   }
   #box2-Up {
     height: auto !important;
   }
+  #box2-Dn p {
+    line-height: 20px !important;
+    font-size: 14px !important;
+  }
+  .saletitle {
+    font-size: 19px !important;
+  }
+  .salecontent {
+    margin-bottom: 10px !important;
+  }
+  #train-title1 {
+    font-size: 19px !important;
+  }
+  #blurr p:nth-child(1) {
+    font-size: 23px !important;
+  }
   #box2 img {
-    width: 280px !important;
-    height: 150px !important;
+    width: 100px !important;
+    height: 81px !important;
   }
   #box3-Left {
     height: auto !important;
+    margin-right: 10px !important;
+    margin-bottom: 66px !important;
   }
   #box3-Left img {
-    width: 280px !important;
+    width: 137px !important;
   }
   .piclog {
-    width: 80px !important;
-    height: 80px !important;
+    width: 40px !important;
+    height: 40px !important;
   }
   .picjia {
     width: 7px !important;
-    left: 38px !important;
+    left: 19px !important;
   }
   .picdengyu {
     width: 7px !important;
-    left: 38px !important;
+    left: 19px !important;
   }
   .box3-Right-li ul {
-    margin-top: 8px !important;
-    margin-bottom: 30px !important;
+    margin-top: 0px !important;
+    margin-bottom: 20px !important;
   }
   .box3-Right-li ul li {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-    width: 218px;
+    width: 100px;
+    font-size: 13px !important;
+    margin-top: 0px !important;
   }
   #blurr .blurrtext {
-    width: auto !important;
+    width: 138px !important;
   }
 }
 @media only screen and (max-width: 1440px) {
@@ -286,16 +309,21 @@ div#sale {
   margin-top: 6px;
   margin-bottom: 60px;
 }
+.sale_content_son {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 60px;
+}
 #blurr {
   width: 1200px;
   margin: 0 auto;
-  margin-top: 60px;
   background: #ffffff;
   box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.08);
   display: flex;
   justify-content: space-around;
   position: relative;
-  top: 100px;
+  z-index: 2;
 }
 #blurr div:nth-child(4) {
   margin-right: 62px;
@@ -308,6 +336,7 @@ div#sale {
   display: flex;
   justify-content: center;
   margin-top: 60px;
+  margin-left: 20px;
 }
 #blurr p {
   text-align: center;
@@ -318,7 +347,6 @@ div#sale {
   font-size: 44px;
   letter-spacing: 2.44px;
   line-height: 48px;
-  margin-left: 10px;
 }
 #blurr p:nth-child(2) {
   font-size: 16px;
@@ -345,6 +373,9 @@ div#sale {
     #f2f5f8 64%,
     #f6f6f6 100%
   );
+  z-index: 1;
+  position: relative;
+  margin-top: -100px;
 }
 #exploit {
   padding-top: 100px;
@@ -368,7 +399,7 @@ div#train p {
 }
 div#client {
   padding-top: 80px;
-  margin-bottom: 61px;
+  padding-bottom: 61px;
 }
 div#client img {
   width: 284px;
@@ -380,7 +411,7 @@ div#client p {
 #box1 {
   background: #ffffff;
   border: 1px solid #f2f2f2;
-  width: 280px;
+  width: 282px;
   height: 296px;
 }
 #box1 p {
@@ -442,9 +473,10 @@ div#box1-Dn ul li {
   margin-left: 0px !important;
   text-align: center;
   font-family: PingFangSC-Regular;
-  font-size: 24px !important;
+  font-size: 24px;
   color: #ffffff !important;
   letter-spacing: 0.27px !important;
+  margin-top: 1px;
 }
 div#box2-Up {
   height: 240px;
@@ -472,7 +504,7 @@ div#box3-Left {
   width: 40%;
   height: 303px;
   float: left;
-  margin: 87px 107px 110px 0px;
+  margin: 67px 107px 110px 0px;
 }
 div#box3-Right {
   display: flex;
@@ -499,14 +531,16 @@ div#box3-Right {
   position: relative;
   left: 52px;
 }
-.box3-Right-li li {
-  margin-bottom: 12px;
-}
 .box3-Right-li ul {
-  margin-top: 28px;
-  margin-bottom: 62px;
+  margin-bottom: 98px;
   padding-left: 30px;
   width: max-content;
+}
+.box3-Right-li div:nth-child(1) ul {
+  margin-top: 29px;
+}
+.box3-Right-li div:nth-child(3) ul {
+  margin-bottom: 0px;
 }
 div#box3-Right ul :first-child {
   list-style: none;
@@ -524,12 +558,14 @@ div#box3-Right ul :nth-child(2) {
   letter-spacing: 0;
   text-align: justify;
   line-height: 22px;
+  margin-top: 12px;
 }
 #train-title1 {
   font-family: PingFangSC-Regular;
   font-size: 28px;
   color: #ffffff;
   letter-spacing: 0;
+  margin-bottom: 6px;
 }
 #train-content1 {
   opacity: 0.6;
@@ -538,16 +574,23 @@ div#box3-Right ul :nth-child(2) {
   color: #ffffff;
   letter-spacing: 0.2px;
   margin-top: 6px;
+  margin-bottom: 0px;
 }
 #train-pic {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
+}
+.train-pic-copy {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 #train-pic .train-pic-con img {
   width: 44px;
   height: 44px;
   text-align: center;
-  margin: 61px auto 0px;
+  margin: 60px auto 0px;
 }
 #train-pic .train-pic-con {
   display: flex;
@@ -584,7 +627,7 @@ div#box3-Right ul :nth-child(2) {
 #client-Pic {
   margin-top: 40px;
 }
-#client-Pic img {
+#client-Pic div:nth-child(4) img {
   margin-bottom: 24px;
 }
 
@@ -594,7 +637,6 @@ div#box3-Right ul :nth-child(2) {
   margin: 0 auto;
   background: #ffffff;
   overflow: hidden;
-  margin-top: 80px;
 }
 #box {
   width: 280px;
@@ -693,6 +735,71 @@ export default {
             { con: "汽车行业互联网舆情监控系统" }
           ]
         }
+      ],
+      trainPicArry: [
+        {
+          src: require("../assets/量身打造.png"),
+          con1: "量身打造",
+          con2:
+            "面向互联网所需众多岗位，上班时间根据实习生自身情况决定，通过考核后在校也能办公。"
+        },
+        {
+          src: require("../assets/严格.png"),
+          con1: "严格管理",
+          con2:
+            "周六公司固定例会时间，多方位知识面为实习生开拓视野，每天工作时间实时线上记录打卡。"
+        },
+        {
+          src: require("../assets/严格管理.png"),
+          con1: "严格管理",
+          con2:
+            "知识培训外加真实项目实践，并有一对一导师指导，让实习生快速成长，独当一面。"
+        }
+      ],
+      box3Arry: [
+        {
+          con: "平台工作者劳务费",
+          zhu: "注：参与项目的所有工作者的赏月劳务费总和。"
+        },
+        {
+          con: "平台工作者劳务费",
+          zhu: "注：参与项目的所有工作者的赏月劳务费总和。"
+        },
+        {
+          con: "平台工作者劳务费",
+          zhu: "注：参与项目的所有工作者的赏月劳务费总和。"
+        }
+      ],
+      clientArry: [
+        {
+          src: require("../assets/携程.png")
+        },
+        { src: require("../assets/李宁.png") },
+        { src: require("../assets/金.png") },
+        { src: require("../assets/广发.png") },
+        {
+          src: require("../assets/朗新.png")
+        },
+        { src: require("../assets/云.png") },
+        { src: require("../assets/金关.png") },
+        { src: require("../assets/携程.png") }
+
+        // content: [
+        //   {
+        //     src: require("../assets/携程.png"),
+        //     src: require("../assets/李宁.png"),
+        //     src: require("../assets/金.png"),
+        //     src: require("../assets/广发.png")
+        //   }
+        // ],
+        // content: [
+        //   {
+        //     src: require("../assets/朗新.png"),
+        //     src: require("../assets/云.png"),
+        //     src: require("../assets/金关.png"),
+        //     src: require("../assets/携程.png")
+        //   }
+        // ]
       ]
     };
   },

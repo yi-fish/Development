@@ -3,7 +3,7 @@
     <div class="topNav">
       <div id="nav" role="navigation">
         <div id="home_tab" class="liubai">
-          <img src="./components/img/logo.png" alt />
+          <img src="./assets/logo.png" alt />
           <div id="nav-a">
             <router-link to="/">首页</router-link>
             <router-link to="/serve">服务</router-link>
@@ -11,8 +11,41 @@
             <router-link to="/news">新闻</router-link>
             <router-link to="/about">关于我们</router-link>
           </div>
+          <img
+            src=".\assets\menu.png"
+            alt="切换目录"
+            @click="aaa = !aaa"
+            class="phonemenu"
+            style="width:32px !important;height:18px !important;"
+          />
+          <div type="button" :class="{ showmenu: aaa, switching: true }" @click="aaa = !aaa">
+            <ul>
+              <li>
+                <router-link to="/">
+                  首页
+                  <span class="sr-only">切换导航</span>
+                </router-link>
+              </li>
+              <li>
+                <router-link to="/serve">
+                  服务
+                  <span class="icon-bar"></span>
+                </router-link>
+              </li>
+              <li>
+                <router-link to="/teach">人才培养</router-link>
+              </li>
+              <li>
+                <router-link to="/news">新闻</router-link>
+              </li>
+              <li>
+                <router-link to="/about">关于我们</router-link>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
+      <div class="fenge"></div>
       <router-view />
     </div>
   </div>
@@ -20,6 +53,11 @@
 
 <style lang="stylus">
 @media only screen and (max-width: 479px) {
+  .fenge {
+    height: 40px !important;
+    backgroundColor: blue;
+  }
+
   #nav {
     height: 40px !important;
   }
@@ -28,6 +66,7 @@
     width: 80px !important;
     height: 18px !important;
     margin: 10px 31px !important;
+    margin-left: 0px !important;
   }
 
   #nav-a {
@@ -64,16 +103,57 @@
     margin: auto 8.3% !important;
   }
 }
+
 @media only screen and (max-width: 661px) {
-  #nav-a{
+  #nav-a {
     display: none !important;
   }
+
+  .phonemenu {
+    display: block !important;
+  }
+}
+
+@media only screen and (min-width: 661px) {
+  .switching, .showmenu {
+    display: none;
+  }
+}
+
+.fenge {
+    height: 80px;
+    backgroundColor: blue;
+  }
+
+.phonemenu {
+  display: none;
+  position: absolute;
+  right: 0px;
+  z-index: 999;
+}
+
+.showmenu {
+  display: none;
+}
+
+.switching {
+  position: absolute;
+  right: 19px;
+  top: 0px;
+  background-image: linear-gradient(-90deg, #f5fffd 0%, #1b1b1d00 100%);
+  border-radius: 2%;
+  padding-top: 40px;
+}
+
+.switching li {
+  padding-bottom: 6px !important;
 }
 
 .liubai {
   width: 1200px;
   margin: 0 auto;
 }
+
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -127,3 +207,16 @@
   margin-bottom: 29px;
 }
 </style>
+
+<script>
+/* eslint-disable */
+
+export default {
+  name: "app",
+  data() {
+    return {
+      aaa: true
+    };
+  }
+};
+</script>

@@ -139,24 +139,15 @@ export default {
 };
 </script>
 <style scoped>
-@media screen and (max-width: 1970px) {
-  .headline p {
-    font-size: 28px !important;
-  }
-  .listtext {
-    font-size: 22px !important;
-  }
-  .leftbutton a {
-    font-size: 25px !important;
+/* @media only screen and (max-width: 479px) {
+  .about{
+    margin-top: 40px !important;
   }
 }
+.about{
+    margin-top: 80px !important;
+  } */
 @media screen and (max-width: 1500px) {
-  h1 {
-    font-size: 55px !important;
-  }
-  h2 {
-    font-size: 30px !important;
-  }
   .aboutus {
     width: 60% !important;
   }
@@ -183,28 +174,9 @@ export default {
   }
   .navBarWrap{
     margin-left: 0px!important;
-  }
-
-  .leftbutton a {
-    font-size: 18px !important;
-  }
-  .headline p {
-    font-size: 20px !important;
-  }
-  .listtext {
-    font-size: 17px !important;
-  }
-  .leftbutton a {
-    font-size: 20px !important;
   }
 }
 @media screen and (max-width: 920px) {
-  h1 {
-    font-size: 35px !important;
-  }
-  h2 {
-    font-size: 20px !important;
-  }
   .aboutus {
     width: 60% !important;
   }
@@ -232,12 +204,6 @@ export default {
   .navBarWrap{
     margin-left: 0px!important;
   }
-  .headline p {
-    font-size: 15px!important;
-  }
-  .listtext {
-    font-size: 17px!important;
-  }
   .leftmenu img{
     margin-left: -20px!important;
     height: 300px!important;
@@ -245,18 +211,9 @@ export default {
   .leftbutton{
     margin-left: -15px!important;
     height: 300px!important;
-  }
-  .leftbutton a {
-    font-size: 10px!important;
   }
 }
 @media screen and (max-width: 415px) {
-  h1 {
-    font-size: 20px !important;
-  }
-  h2 {
-    font-size: 10px !important;
-  }
   .aboutus {
     width: 60% !important;
   }
@@ -276,19 +233,13 @@ export default {
     margin-right: 20px;
   }
   .leftmenu{
-    width: 90px!important;
+    display: none!important;
   }
   .navBarWrap {
     width: 90px!important;
   }
   .navBarWrap{
     margin-left: 0px!important;
-  }
-  .headline p {
-    font-size: 15px!important;
-  }
-  .listtext {
-    font-size: 17px!important;
   }
   .leftmenu img{
     margin-left: -20px!important;
@@ -298,10 +249,8 @@ export default {
     margin-left: -15px!important;
     height: 300px!important;
   }
-  .leftbutton a {
-    font-size: 10px!important;
-  }
 }
+
 .navBarWrap {
   position: fixed;
   top: -60px;
@@ -331,13 +280,12 @@ export default {
 }
 .listtext {
   text-indent: 2em;
-  font-size: 23px;
-  text-align: 2em;
+  font-size: 2.5rem;
   text-align: start;
   color: rgb(154, 154, 154);
 }
 .headline p {
-  font-size: 28px;
+  font-size: 2.9rem;
   color: rgb(0, 102, 153);
   font-weight: 600;
   margin-top: 0px;
@@ -444,11 +392,11 @@ export default {
   padding-bottom: 50px;
 }
 .leftbutton a {
-  font-size: 30px;
+  font-size: 2.5rem;
   color: black;
 }
 p {
-  font-size: 21px;
+  font-size: 2rem;
   padding-left: 10px;
   padding-right: 10px;
 }
@@ -471,14 +419,14 @@ button {
 
 .imgtext h1 {
   color: rgb(0, 102, 255);
-  font-size: 90px;
+  font-size: 10rem;
   margin: auto;
   font-weight: 600;
 }
 .righttext h2 {
   color: rgb(22, 102, 255);
   font-weight: 100;
-  font-size: 40px;
+  font-size: 4rem;
   margin-top: -144px;
   display: flex;
   flex-direction: row;
