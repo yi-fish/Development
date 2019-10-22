@@ -55,10 +55,11 @@
                     <div class="glyphicon" :class="process.class"></div>
                     <div class="box">
                         <div class="circle">
-                        <div class="size">{{process.title}}</div>
-                        <div class="index">{{index+1}}</div>
+                            <div class="size">{{process.title}}</div>
+                            <div class="index">{{index+1}}</div>
+                        </div>
+                        <div class="title">{{process.subhead}}</div>
                     </div>
-                    <div class="title">{{process.subhead}}</div>
                 </div>
             </div>
         </div>
@@ -77,7 +78,7 @@
                 </ul>
             </div>
         </div>
-    </div>
+    
     </div>
     <home-footer></home-footer>
  </div>
@@ -181,14 +182,6 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-/* @media only screen and (max-width: 479px) {
-  .serve {
-    margin-top: 40px !important;
-  }
-}
-.serve {
-  margin-top: 80px !important;
-} */
 /************************************整体样式********************************************/
 *{
     margin: 0px;
@@ -239,7 +232,7 @@ export default {
     padding-left: 3%;
 }
 .serve .tit h3{
-    font-size: 28px
+    font-size: 28px;
 }
 .serve .first .work .work1{
     border-top: 1px solid rgb(212, 212, 212);
@@ -272,15 +265,35 @@ export default {
     flex: 10
 }
 /* 主营业务的手机端 */
+@media screen and (max-width: 1440px) {
+     #content{
+        width: 100%;
+    }
+}
+@media screen and (max-width: 1200px) {
+ .serve .second .process .boxs .glyphicon{
+    top:60px;
+    left:-19px!important;
+    }   
+}
+@media screen and (max-width: 1100px) {
+ .serve .second .process .boxs .glyphicon{
+    top:60px;
+    left:-10px!important;
+    }   
+}
 @media screen and (max-width:1026px){
     #content{
-        width: 800px!important;
+        width: 100%!important;
+    }
+    .serve .tit h3{
+    font-size: 26px;
     }
    .serve .first .work .work1 .title{
        font-size: 20px;
        float: left;
     } 
-    .serve .first .work .work1 .img img{
+    .serve .first .work .work1 .img{
         display: none;
     } 
     .serve .first .work .work1{
@@ -299,6 +312,58 @@ export default {
     flex: 1;
     font-size: 17px;
 }
+}
+@media screen and (max-width:800px){
+    .serve .tit h3{
+    font-size: 22px;
+}
+    .serve .first .work .work1 .title{
+       font-size: 17px;
+    } 
+    .serve .first .work .work1{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .serve .first .work .work1 .title{
+        flex:2;
+    }
+    .serve .first .work .work1 .job{
+        flex:10
+    }
+    .serve .first .work .job ul li{
+    display: flex;
+    flex: 1;
+    font-size: 13px;
+    }
+}
+@media screen and (max-width:600px){
+    .serve .first .work .work1{
+        height: 70px;
+        line-height: 70px;
+    }
+    .serve .tit h3{
+        font-size: 20px;
+    }
+    .serve .first .work .work1 .title{
+       font-size: 14px;
+    } 
+    .serve .first .work .work1{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .serve .first .work .work1 .title{
+        flex:1;
+    }
+    .serve .first .work .work1 .job{
+        flex:6;
+    }
+    .serve .first .work .job ul li{
+    display: flex;
+    flex: 1;
+    font-size: 12px;
+    }
 }
 .serve .first .work .job ul li:hover{
     cursor: pointer;
@@ -355,6 +420,19 @@ export default {
     margin-bottom: -8%;
     font-size: 18px;
   }
+  .serve .imgs p{
+    font-size: 36px;
+    left: 25%;
+    top: 35%;
+    font-weight: 600;   
+    }
+    .serve .imgs h4{
+    font-size: 40px;
+    color: white; 
+    left: 55%;
+    top: 55%;
+    font-weight: 600;
+    }
   .serve .second .process .boxs .box .circle{
     width: 100px;
     height: 100px;
@@ -375,6 +453,62 @@ export default {
         font-size: 14px;
     }
 }
+@media screen and (max-width:800px){
+  .serve .second .process .boxs .box .circle .index{
+    margin-bottom: -8%;
+    font-size: 16px;
+  }
+  .serve .imgs p{
+    font-size: 25px;   
+    }
+    .serve .imgs h4{
+    font-size: 30px;
+
+    }
+  .serve .second .process .boxs .box .circle{
+    width: 70px;
+    height: 70px;
+    font-size: 13px;
+    position: relative;
+    } 
+   .serve .second .process .boxs .glyphicon{
+    top:50px;
+    left:-8px;
+    font-size: 10px;
+    } 
+    .serve .second .process .boxs .box .title{
+        font-size: 12px;
+    }
+}
+@media screen and (max-width:600px){
+    .serve .second .process{
+        width: 100%;
+    }
+  .serve .second .process .boxs .box .circle .index{
+    margin-bottom: -11%;
+    font-size: 14px;
+  }
+  .serve .imgs p{
+    font-size: 22px;   
+    }
+    .serve .imgs h4{
+    font-size: 26px;
+
+    }
+  .serve .second .process .boxs .box .circle{
+    width: 58px;
+    height: 58px;
+    font-size: 10px;
+    } 
+   .serve .second .process .boxs .glyphicon{
+    top:45px;
+    left:-6px;
+    font-size: 10px;
+    } 
+    .serve .second .process .boxs .box .title{
+        font-size: 10px;
+    }
+}
 /*********************second开发流程*************************/
 /*********************third产品解决方案*************************/
 .third .methods ul{
@@ -389,11 +523,9 @@ export default {
     padding: 5%;
     border: 1px solid black;
     height: 320px;
-    overflow: auto;
 }
 .third img{
     width: 100%;
-    max-height: 300px;
     height: 200px;
 }
 .third p{
@@ -407,17 +539,200 @@ export default {
     font-weight: 600;
     font-size: 22px;
 }
-@media screen and (max-width:1026px){
-.third ul li{
-    margin: 20px auto;
-    width: 600px;
-}
+@media screen and (max-width:1440px){
 .third ul li div{
     padding: 5%;
     border: 1px solid black;
-    height: 290px;
-    overflow: auto;
-}   
+    height: 330px!important;
+} 
+}    
+@media screen and (max-width:1206px){
+.third ul li div{
+    padding: 5%;
+    border: 1px solid black;
+    height: 380px!important;
+}     
+}
+@media screen and (max-width:1026px){
+.third ul li div{
+    border: 1px solid black;
+    height: 350px!important;
+} 
+.third img{
+    width: 100%;
+    height: 150px;
+}  
+.third p{
+    font-size: 16px;
+    line-height: 30px;
+    padding-top: 10px;
+    margin-bottom: 30px;
+    text-align: left;
+}
+.third span{
+    font-weight: 600;
+    font-size: 20px;
+}
+}
+@media screen and (max-width:800px){
+    .third .methods ul{
+        display: flex;
+        flex-direction: column;
+    }
+    .third ul li{
+        width: 60%;
+        margin: 0 auto;
+        margin-bottom: 25px;
+    }
+    .third ul li:last-child{
+        margin-bottom: 0px;
+    }
+.third ul li div{
+    padding: 5%;
+    height: 240px!important;
+} 
+.third img{
+    width: 100%;
+    height: 150px;
+}  
+.third p{
+    font-size: 16px;
+    line-height: 30px;
+    padding-top: 10px;
+    margin-bottom: 30px;
+    text-align: left;
+}
+.third span{
+    font-weight: 600;
+    font-size: 20px;
+}
+}
+@media screen and (max-width:600px){
+.third ul li div{
+    padding: 5%;
+    height: 250px;
+} 
+.third img{
+    width: 100%;
+    height: 150px;
+}  
+.third p{
+    font-size: 15px;
+    line-height: 30px;
+    padding-top: 10px;
+    margin-bottom: 30px;
+    text-align: left;
+}
+.third span{
+    font-weight: 600;
+    font-size: 18px;
+}
+}
+@media screen and (max-width: 500px) {
+    #content{
+        width: 100%;
+    }
+    .serve .imgs p{
+        font-size: 18px;
+        left: 20%;
+        top: 25%;
+    }
+    .serve .imgs h4{
+        font-size: 20px;
+        left: 50%;
+        top: 55%;
+    }
+    .serve .first{
+        width: 100%;
+    }
+    .serve .first .work .work1{
+        padding-left: 10px;
+        line-height: 20px;
+    }
+    .serve .tit h3{
+        font-size: 20px;
+    }
+    .serve .first .work .work1 .title{
+       font-size: 13px;
+       display: flex;
+       align-items: center;
+       flex:1;
+    } 
+    .serve .first .work .work1{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .serve .first .work .work1 .job{
+        display: flex;
+        flex:4;
+        align-items: center;
+    }
+    .serve .first .work .job ul li{
+        display: flex;
+        width: 33%;
+        font-size: 12px;
+        padding-left: 10px;
+    }
+    .serve .first .work .work1:nth-child(2) ul li{
+        width: 50%;
+    }
+    .serve .second{
+        width: 100%;
+        overflow: hidden;
+        margin-top: -15px;
+    }
+.serve .second .process{
+    display: flex;
+    flex-direction: row;
+    flex:1;
+    flex-wrap: wrap;
+    padding: 3% 5%;
+    background: #dddddd;
+    margin-top: -20px;
+}
+.serve .second .process .boxs{
+    width: 50%;
+    padding: 19px; 
+}
+.serve .second .process .boxs .glyphicon{
+    position: absolute;
+    top:52px;
+    left:-6px!important;
+    display: none;
+}
+.serve .second .process .boxs .box .circle{
+    width: 80px;
+    height: 80px;
+    font-size: 14px;
+}
+.serve .second .process .boxs .box .circle .index{
+    width: 20px;
+    height: 20px;
+    background:#dddddd;
+    position: absolute;
+    bottom: -6px;
+    margin-bottom: -5%;
+    font-size: 16px;
+}
+.serve .second .process .boxs .box .title{
+    font-size: 14px;
+    margin-top: 20px;
+    margin-left: -20px;
+}
+
+.third{
+    width: 100%;
+    
+} 
+.third ul li{
+    margin: 0 auto;
+    width: 80%;
+    margin-bottom: 20px;
+}
+.third ul li div{
+    height: auto!important;
+}
 }
 /*********************third产品解决方案*************************/
 </style>

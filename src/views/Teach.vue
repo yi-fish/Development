@@ -255,115 +255,9 @@ export default {
     flex: 1;
 }
 /********************imgs***************************/
-/* @media screen and (max-width:1240px){
-    .education .imgs img{
-    width: 100%;
-    max-height: 400px;
-    }
-    .education .imgs p{
-    font-size: 50px!important;
-    color:rgb(97, 137, 224);
-    position: absolute;
-    left: 52%;
-    top: 35%;
-    font-weight: 600;   
-    }
-    .education .imgs h4{
-    font-size: 30px!important;
-    color:rgb(114, 76, 76); 
-    position: absolute;
-    left: 58%;
-    top: 60%;
-    font-weight: 600;
-    }
-    .middle{
-        display: none;
-    }
-    .title p{
-        font-size: 50px!important;
-        width: 210px!important;
-    }
-    h3{
-        font-size: 40px!important;
-        width: 500px!important;
-    }
-    h4{
-        font-size: 40px!important;
-        margin-top: 30px!important;
-        margin-bottom: 30px!important;
-    }
-    h5{
-        font-size: 32px!important;
-    }
-    .padding2 h3{
-        width: 200px!important;
-    }
-    .padding3 h3{
-        width: 280px!important;
-    }
-    .padding4 h3{
-        width: 350px!important;
-    }
-    .padding5 h3{
-        width: 350px!important;
-    }
-    .content{
-        padding: 2%!important;
-    }
-    .content .padding2{
-        padding: 4%!important;
-
-    }
-    .content .padding{
-        padding: 4%!important;
-        margin: 0!important;
-    }
-    .content .padding3{
-        padding: 4%!important;
-
-    }
-    .content .padding4{
-        padding: 4%!important;
-
-    }
-    .padding p{
-        font-size: 36px!important;
-        line-height: 80px!important;
-    }
-    .job ul li{
-        font-size: 28px!important;
-        height: 80px!important;
-        line-height: 80px!important;
-    }
-    .padding2 p{
-        font-size: 32px!important;
-    }
-    .padding2 ul li{
-        font-size: 32px!important;
-        padding-top: 30px!important;
-    }
-    .padding3 ul li span{
-        font-size: 36px!important;
-    }
-    .padding3 ul li p{
-        font-size: 32px!important;
-        padding-top: 10px!important;
-        line-height: 80px!important
-    }
-} */
-@media screen and (max-width:1026px){
-    #content{
-        width: 800px!important;
-    }
-   #right .middle{
-        display: none!important;
-    } 
-   #right .middleHidden{
-        display: none!important;
-    } 
-}
 .education .imgs{
     width: 100%;
+    height: auto;
     position: relative;
 }
 .education .imgs img{
@@ -371,7 +265,7 @@ export default {
     max-height: 400px;
 }
 .education .imgs p{
-    font-size: 70px;
+    font-size: 68px;
     color:rgb(97, 137, 224);
     position: absolute;
     left: 52%;
@@ -379,7 +273,7 @@ export default {
     font-weight: 600;   
 }
 .education .imgs h4{
-    font-size: 50px;
+    font-size: 48px;
     color:#ddd; 
     position: absolute;
     left: 58%;
@@ -397,6 +291,7 @@ export default {
     padding-left: 4%;
     font-size: 22px;
     border-bottom: 1px solid #333;
+    color: red;
 }
 .education .title p{
     width: 130px;
@@ -441,7 +336,7 @@ export default {
     padding: 0px 0px 2% 2%;
 }
 #right .content .padding h3{
-    width: 340px;
+    display: inline-block;
     line-height: 60px;
     border-bottom: 1px solid #006699;
     font-family: PingFangSC-Regular;
@@ -449,7 +344,7 @@ export default {
     text-align: center;
     font-size: 28px;
     color: #006699;
-    margin: 30px 0px 0px 15px;
+    margin: 30px 0px 10px 15px;
 }
 #right .content .padding h4{
     font-family: PingFangSC-Regular;
@@ -466,19 +361,21 @@ export default {
     padding-left: 20px;
     line-height: 50px;
 }
-#right .content .padding .job ul{
+#right .content .padding .job ul li{
+    font-size: 22px;
+    height: 50px;
+    line-height: 50px;
+    padding-left: 6%;
+}
+#right .content .padding .job ul li span{
+    margin-right: 20px;
+}
+/* 招收岗位底下的li每行有两个 */
+#right .content .padding .job>div:first-of-type ul{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
 }
-#right .content .padding .job ul li{
-    width: 100%;
-    font-size: 22px;
-    height: 50px;
-    line-height: 50px;
-    padding-left: 5%;
-}
-/* 招收岗位底下的li每行有两个 */
 #right .content .padding .job>div:first-of-type ul li {
     width: 50%;
 }
@@ -493,7 +390,7 @@ export default {
     padding: 0px 0px 20px 20px;
 }
 #right .content .padding2 h3{
-  width: 120px;
+display: inline-block;
   line-height: 60px;
   border-bottom: 1px solid #006699;
   font-family: PingFangSC-Regular;
@@ -504,10 +401,271 @@ export default {
   margin: 40px 0px 0px 15px;
 }
 #right .content .padding2 .picture{
-    /* padding: 0 0 30px 150px; */
     display: flex;
     flex: 1;
     flex-direction: column;
+}
+#right .content .padding2 .picture p{
+    font-size: 22px;
+    margin-left: 50px;
+}
+#right .content .padding2 .picture img{
+    width: 90px;
+}
+#right .content .padding2 .picture>div{
+    display: flex;
+    flex-direction: row;
+    padding-top: 50px;
+    justify-content: space-between;
+}
+#right .content .padding2 .picture .img{
+    padding-left: 10%;
+    display: flex;    
+    width: 50%;
+    flex-direction: row;
+    align-items: center;
+}
+#right .content .padding2 .picture .money{
+    display: flex;
+    width: 50%;
+    align-items: center;
+}
+#right .content .padding2 .evaluate{
+    margin-top: 15px;
+    padding-left: 5%;
+    font-family: PingFangSC-Regular;
+}
+#right .content .padding2 .evaluate p{
+    font-size: 18px;
+    line-height: 40px;
+}
+#right .content .padding2 .evaluate ul li{
+    line-height: 30px;
+    font-size: 15px;
+}
+#right .content .padding2 .evaluate ul li ul{
+    padding-left: 10px;
+}
+/*********第二个浅色框***************/
+/*********第三个浅色框***************/
+#right .content .padding3{
+  border:1px solid #e2dfdf;
+  margin-top:50px;
+}
+#right .content .padding3 h3{
+    display: inline-block;
+  line-height: 60px;
+  border-bottom: 1px solid #006699;
+  font-family: PingFangSC-Regular;
+  font-weight: 700;
+  text-align: center;
+  font-size: 28px;
+  color: #006699;
+  margin: 30px 0px 10px 35px;
+}
+#right .content .padding3 .box{
+    padding: 3%;
+    padding-right: 0;
+}
+#right .content .padding3 ul li{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+#right .content .padding3 ul li h5{
+    font-size: 28px;
+    line-height: 60px;
+    text-align: center;
+    width: 15%;
+    height: 60px;
+    background: #006699;
+    color: aliceblue;
+}
+#right .content .padding3 ul li .line{
+    width: 85%;
+    height: 30px;
+    border-bottom: 2px solid #006699;
+}
+#right .content .padding3 .box div{
+    padding:2%;
+}
+#right .content .padding3 .box div p{
+  line-height: 50px;
+  font-size: 22px;
+}
+#right .content .padding3 .box div .bord{
+    font-weight: bold;
+}
+/*********第三个浅色框***************/
+/*********第四个浅色框***************/
+#right .content .padding4{
+    border:1px solid #e2dfdf;
+    margin-top: 50px;
+}
+#right .content .padding4 h3{
+display: inline-block;
+  line-height: 60px;
+  border-bottom: 1px solid #006699;
+  font-family: PingFangSC-Regular;
+  font-weight: 700;
+  text-align: center;
+  font-size: 28px;
+  color: #006699;
+  margin: 30px 0px 20px 35px;
+}
+#right .content .padding4 .show>div{
+  width: 60%;
+  margin-left: 15%;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+/* 后面两个作品展示的宽度 */
+#right .content .padding4 .show img{
+    width: 48%;
+}
+/* 第一个作品展示的宽度 */
+#right .content .padding4 .show>div img:first-of-type{
+    width: 100%;
+}
+/*********第四个浅色框***************/
+/*********第五个浅色框***************/
+#right .content .padding5{
+    border:1px solid #e2dfdf;
+    margin-top:50px;
+    padding-bottom: 80px;
+}
+#right .content .padding5 h3{
+  display: inline-block;
+  line-height: 60px;
+  border-bottom: 1px solid #006699;
+  font-family: PingFangSC-Regular;
+  font-weight: 700;
+  text-align: center;
+  font-size: 28px;
+  color: #006699;
+  margin: 30px 0px 50px 35px;
+}
+#right .content .padding5 ul{
+    width: 80%;
+    border: 1px solid black;
+    margin: 0px auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+#right .content .padding5 ul li{
+    padding: 1%;
+    width: 50%;
+    border: 1px solid black;
+}
+#right .content .padding5 ul li img{
+    width: 100%;
+    max-height: 200px;
+}
+/*********第五个浅色框***************/
+
+/*********************content*************************/
+/************************************右边样式********************************************/
+.navBarWrap {
+    position:fixed;
+    top:40px;
+    z-index: 999;
+}
+@media screen and (max-width: 1440px) {
+     #content{
+        width: 100%;
+    }
+    #right .middle img{
+    float: left;
+    margin-left: 20px;
+    margin-top: 45px; 
+    height: 340px;   
+}
+#right .middle ul{
+    margin-left: 20px;
+    float: left;
+    margin-top:12px;
+}
+#right .middle ul li{
+    padding:40px 0px 0px 0px;
+    height: 75px;
+    font-weight: 400;
+    font-size: 20px;
+}
+}
+@media screen and (max-width:1050px){
+   
+   #right .middle{
+        display: none;
+    } 
+   #right .middleHidden{
+        display: none;
+    }
+    .education .imgs p{
+    font-size: 50px;
+    left: 52%;
+    top: 40%;   
+}
+.education .imgs h4{
+    font-size: 40px;
+    left: 58%;
+    top: 60%;
+} 
+}
+@media screen and (max-width:900px){
+
+    .education .imgs img{
+        height: 300px;
+    }
+    .education .imgs p{
+    font-size: 48px;
+    left: 52%;
+    top: 40%;   
+}
+.education .imgs h4{
+    font-size: 36px;
+    left: 58%;
+    top: 60%;
+} 
+.education .title {
+    margin-top: 20px;
+    padding-left: 4%;
+    font-size: 20px;
+}
+#right .content .padding{
+    border:1px solid #e2dfdf;
+    margin-top:30px;
+    padding: 0px 0px 2% 2%;
+}
+#right .content .padding h3{
+    line-height: 40px;
+    font-size: 26px;
+}
+#right .content .padding h4{
+    font-size: 24px;
+    padding: 1.5%;
+}
+#right .content .padding p{
+    font-size: 21px;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+#right .content .padding .job ul li{
+    font-size: 20px;
+    padding-left: 6%;
+}
+/*********第二个浅色框***************/
+#right .content .padding2{
+    margin-top:40px;
+    padding: 0px 0px 20px 20px;
+}
+#right .content .padding2 h3{
+  line-height: 50px;
+  font-size: 26px;
+  margin: 30px 0px 0px 15px;
 }
 #right .content .padding2 .picture p{
     font-size: 22px;
@@ -552,105 +710,50 @@ export default {
 /*********第二个浅色框***************/
 /*********第三个浅色框***************/
 #right .content .padding3{
-  border:1px solid #e2dfdf;
-  margin-top:50px;
-  padding-bottom: 30px;
+  margin-top:40px;
 }
 #right .content .padding3 h3{
-  width: 170px;
-  line-height: 60px;
-  border-bottom: 1px solid #006699;
-  font-family: PingFangSC-Regular;
-  font-weight: 700;
-  text-align: center;
-  font-size: 28px;
-  color: #006699;
-  margin: 30px 0px 20px 35px;
-}
-#right .content .padding3 .box{
-    padding: 3%;
-    padding-right: 0;
-}
-#right .content .padding3 ul li{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+  line-height: 50px;
+  font-size: 26px;
+  margin: 30px 0px 0px 30px;
 }
 #right .content .padding3 ul li h5{
-    font-size: 28px;
-    line-height: 60px;
+    font-size: 26px;
+    line-height: 50px;
     text-align: center;
     width: 15%;
-    height: 60px;
-    background: #006699;
-    color: aliceblue;
+    height: 50px;
 }
 #right .content .padding3 ul li .line{
     width: 85%;
     height: 30px;
     border-bottom: 2px solid #006699;
 }
-#right .content .padding3 .box div{
-    padding:2%;
-}
 #right .content .padding3 .box div p{
   line-height: 50px;
-  font-size: 22px;
-}
-#right .content .padding3 .box div .bord{
-    font-weight: bold;
+  font-size: 20px;
 }
 /*********第三个浅色框***************/
 /*********第四个浅色框***************/
 #right .content .padding4{
-    border:1px solid #e2dfdf;
-    margin-top: 50px;
+    margin-top: 40px;
 }
 #right .content .padding4 h3{
-  width: 260px;
-  line-height: 60px;
-  border-bottom: 1px solid #006699;
-  font-family: PingFangSC-Regular;
-  font-weight: 700;
-  text-align: center;
-  font-size: 28px;
+  line-height: 50px;
+  font-size: 26px;
   color: #006699;
-  margin: 30px 0px 20px 35px;
-}
-#right .content .padding4 .show>div{
-  width: 60%;
-  margin-left: 15%;
-  border: 1px solid black;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-/* 后面两个作品展示的宽度 */
-#right .content .padding4 .show img{
-    width: 48%;
-}
-/* 第一个作品展示的宽度 */
-#right .content .padding4 .show>div img:first-of-type{
-    width: 100%;
+  margin: 20px 0px 30px 35px;
 }
 /*********第四个浅色框***************/
 /*********第五个浅色框***************/
 #right .content .padding5{
-    border:1px solid #e2dfdf;
-    margin-top:50px;
-    padding-bottom: 80px;
+    margin-top:40px;
+    padding-bottom: 60px;
 }
 #right .content .padding5 h3{
-  width: 260px;
-  line-height: 60px;
-  border-bottom: 1px solid #006699;
-  font-family: PingFangSC-Regular;
-  font-weight: 700;
-  text-align: center;
-  font-size: 28px;
-  color: #006699;
-  margin: 30px 0px 50px 35px;
+  line-height: 50px;
+  font-size: 26px;
+  margin: 20px 0px 40px 35px;
 }
 #right .content .padding5 ul{
     width: 80%;
@@ -669,13 +772,315 @@ export default {
     width: 100%;
     max-height: 200px;
 }
+}
+@media screen and (max-width:800px){
+    #content{
+        width: 100%;
+        padding-left: 2%;
+    }
+    .education .imgs img{
+        height: 270px;
+    }
+    .education .imgs p{
+    font-size: 40px;
+    left: 48%;
+    top: 40%;   
+}
+.education .imgs h4{
+    font-size: 30px;
+    left: 55%;
+    top: 60%;
+} 
+}
+@media screen and (max-width:659px){
+    .education .imgs img{
+        height: 200px;
+    }
+    .education .imgs p{
+    font-size: 35px;
+    left: 46%;
+    top: 40%;   
+}
+.education .imgs h4{
+    font-size: 24px;
+    left: 50%;
+    top: 62%;
+} 
+#right .content .padding{
+    margin-top:30px;
+    padding: 0px 0px 2% 2%;
+}
+#right .content .padding h3{
+    line-height: 40px;
+    font-size: 24px;
+    margin-top: 15px;
+}
+#right .content .padding h4{
+    font-size: 22px;
+    padding: 1.5%;
+}
+#right .content .padding p{
+    font-size: 18px;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+#right .content .padding .job ul li{
+    font-size: 16px;
+    padding-left: 6%;
+}
+/*********第二个浅色框***************/
+#right .content .padding2{
+    margin-top:30px;
+    padding: 0px 0px 20px 20px;
+}
+#right .content .padding2 h3{
+  line-height: 40px;
+  font-size: 24px;
+  margin: 15px 0px 0px 15px;
+}
+#right .content .padding2 .picture p{
+    font-size: 20px;
+    margin-left: 20px;
+}
+#right .content .padding2 .picture img{
+    width: 80px;
+}
+#right .content .padding2 .picture>div{
+    padding-top: 30px;
+}
+#right .content .padding2 .picture .img{
+    padding-left: 5%;
+    width: 50%;
+}
+#right .content .padding2 .evaluate{
+    margin-top: 15px;
+    padding-left: 5%;
+}
+/*********第二个浅色框***************/
+/*********第三个浅色框***************/
+#right .content .padding3{
+  margin-top:30px;
+}
+#right .content .padding3 h3{
+  line-height: 40px;
+  font-size: 24px;
+  margin: 15px 0px 0px 20px;
+}
+#right .content .padding3 ul li h5{
+    font-size: 22px;
+    line-height: 46px;
+    width: 18%;
+    height: 46px;
+}
+#right .content .padding3 ul li .line{
+    width: 82%;
+    height: 23px;
+}
+#right .content .padding3 .box div p{
+  line-height: 46px;
+  font-size: 18px;
+}
+/*********第三个浅色框***************/
+/*********第四个浅色框***************/
+#right .content .padding4{
+    margin-top: 30px;
+}
+#right .content .padding4 h3{
+  line-height: 40px;
+  font-size: 24px;
+  margin: 20px 0px 30px 35px;
+}
+#right .content .padding4 .show img{
+    height:80%;
+}
+/*********第四个浅色框***************/
 /*********第五个浅色框***************/
+#right .content .padding5{
+    margin-top:30px;
+    padding-bottom: 50px;
+}
+#right .content .padding5 h3{
+  width: 220px;
+  line-height: 50px;
+  font-size: 26px;
+  margin: 20px 0px 40px 35px;
+}
+#right .content .padding5 ul{
+    width: 80%;
+    border: 1px solid black;
+    margin: 0px auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+#right .content .padding5 ul li{
+    padding: 1%;
+    width: 50%;
+    border: 1px solid black;
+}
+#right .content .padding5 ul li img{
+    width: 100%;
+    max-height: 200px;
+}
+} 
+@media screen and (max-width: 539px) {
+    #right .content .padding .job ul li{
+    font-size: 15px;
+    padding-left: 5%;
+}
+}  
+@media screen and (max-width:500px){
+    .education .imgs img{
+        height: 160px;
+    }
+    #content .title p{
+        font-size: 24px;
+        width: auto;
+        display: inline-block;
+        margin-top: 0px;
+    }
+    .education .imgs p{
+    font-size: 26px;
+    left: 46%;
+    top: 40%;   
+}
+.education .imgs h4{
+    font-size: 16px;
+    left: 45%;
+    top: 66%;
+} 
+#right .content .padding{
+    margin-top:15px;
+    padding: 0px 0px 2% 2%;
+    padding-bottom: 50px
+}
+#right .content .padding h3{
+    line-height: 30px;
+    font-size: 18px;
+    margin-top: 15px;
+}
+#right .content .padding h4{
+    font-size: 16px;
+    padding: 1% 0;
+    margin: 10px 0;
+}
+#right .content .padding p{
+    font-size: 14px;
+    padding-right: 10px;
+    padding-left: 10px;
+    line-height: 40px;
+}
+#right .content .padding .job ul li{
+    font-size: 13px;
+    padding-left: 6%;
+    height: 50px;
+    padding-right: 15px;
+}
+#right .content .padding .job ul li span{
+    margin-right: 0;
+}
+#right .content .padding .job>div:last-child{
+    margin-top: 50px;
+}
+#right .content .padding .job :first-child ul li span{
+    margin-right: 15px;
+}
+/*********第二个浅色框***************/
+#right .content .padding2{
+    margin-top:20px;
+    padding: 0px 0px 20px 20px;
+}
+#right .content .padding2 h3{
+  line-height: 40px;
+  font-size: 18px;
+  margin: 15px 0px 0px 15px;
+}
+#right .content .padding2 .picture p{
+    font-size: 16px;
+    margin-left: 22px;
+}
+#right .content .padding2 .picture img{
+    width: 60px;
+}
+#right .content .padding2 .picture>div{
+    padding-top: 30px;
+}
+#right .content .padding2 .picture .img{
+    padding-left: 5%;
+    width: 50%;
+}
+#right .content .padding2 .evaluate{
+    margin-top: 15px;
+    padding-left: 5%;
+}
+#right .content .padding2 .evaluate p{
+    font-size: 14px;
+    line-height: 40px;
+}
+#right .content .padding2 .evaluate ul li{
+    line-height: 30px;
+    font-size: 13px;
+}
+#right .content .padding2 .evaluate ul li ul{
+    padding-left: 10px;
+}
+/*********第二个浅色框***************/
+/*********第三个浅色框***************/
 
-/*********************content*************************/
-/************************************右边样式********************************************/
-.navBarWrap {
-    position:fixed;
-    top:-40px;
-    z-index: 999;
+#right .content .padding3 h3{
+  line-height: 40px;
+  font-size: 18px;
+  margin: 15px 0px 0px 20px;
+}
+#right .content .padding3 ul li h5{
+    font-size: 16px;
+    line-height: 40px;
+    height: 40px;
+}
+#right .content .padding3 ul li .line{
+    height: 20px;
+}
+#right .content .padding3 .box div p{
+  line-height: 40px;
+  font-size: 14px;
+}
+/*********第三个浅色框***************/
+/*********第四个浅色框***************/
+#right .content .padding4{
+    margin-top: 30px;
+    padding-bottom: 20px;
+}
+#right .content .padding4 h3{
+  font-size: 18px;
+}
+#right .content .padding4 .show img{
+    height:80%;
+}
+/*********第四个浅色框***************/
+/*********第五个浅色框***************/
+#right .content .padding5{
+    margin-top:20px;
+    padding-bottom: 40px;
+}
+#right .content .padding5 h3{
+    width: auto;
+  line-height: 40px;
+  font-size: 18px;
+  margin: 20px 0px 30px 35px;
+}
+#right .content .padding5 ul li{
+    padding: 1%;
+    width: 50%;
+    border: 1px solid black;
+}
+#right .content .padding5 ul li img{
+    width: 100%;
+    max-height: 200px;
+}
+}
+@media screen and (max-width: 340px) {
+#right .content .padding .job div:nth-of-type(2) ul li:nth-child(2){
+    margin-bottom: 40px;
+}   
 }
 </style>
