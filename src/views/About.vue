@@ -126,7 +126,7 @@ export default {
         document.body.scrollHeight -
           window.pageYOffset -
           document.getElementById("footer").offsetHeight >
-          400
+          450
       ) {
         //(window.innerHeight-document.getElementById("footer").offsetHeight) > 400)
         this.navBarFixed = true;
@@ -299,6 +299,7 @@ export default {
   margin-bottom: 1rem;
 }
 .headline {
+  width: fit-content;
   border-bottom: 3px solid rgb(0, 102, 153);
 }
 .listtext {
@@ -308,7 +309,7 @@ export default {
   color: rgb(154, 154, 154);
 }
 .headline p {
-  font-size: 3rem;
+  font-size: 3.3rem;
   color: rgb(0, 102, 153);
   font-weight: 600;
   margin-top: 0px;
