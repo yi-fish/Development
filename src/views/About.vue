@@ -168,10 +168,10 @@ export default {
     margin-right: 20px;
   }
   .leftmenu{
-    width: 190px!important;
+    width: 180px!important;
   }
   .navBarWrap {
-    width: 190px!important;
+    width: 180px!important;
   }
   .navBarWrap{
     margin-left: 0px!important;
@@ -267,7 +267,7 @@ export default {
     display: none!important;
   }
   .navBarWrap {
-    width: 90px!important;
+    width: 84px!important;
   }
   .navBarWrap{
     margin-left: 0px!important;
@@ -404,7 +404,7 @@ export default {
   margin-top: 100px;
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: flex-start;
 }
 .rightcontent {
   margin-top: 60px;

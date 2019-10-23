@@ -87,12 +87,6 @@
   }
 }
 
-@media screen and (max-width: 479px) {
-  html {
-    font-size: 3px !important;
-  }
-}
-
 @media only screen and (min-width: 479px) {
   #nav {
     width: 100% !important;
@@ -216,7 +210,7 @@
 
 <script>
 /* eslint-disable */
-
+document.getElementsByTagName("html")[0].style.fontSize=document.body.clientWidth/200+'px'
 export default {
   name: "app",
   data() {
@@ -228,6 +222,7 @@ export default {
   mounted() {
     const that = this;
     window.onresize = () => {
+      console.log("object");
       return (() => {
         window.screenWidth = document.body.clientWidth;
         that.screenWidth = window.screenWidth;
