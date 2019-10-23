@@ -78,7 +78,6 @@
                 </ul>
             </div>
         </div>
-    
     </div>
     <home-footer></home-footer>
  </div>

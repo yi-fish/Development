@@ -3,7 +3,7 @@
     <swiperr :message="message"></swiperr>
     <div id="sale" class="liubai">
       <p class="saletitle">致力于互联网创新技术服务</p>
-      <p class="salecontent">技术更跨界、创意更自由、服务更贴心</p>
+      <p class="salecontent" style="height:22px;">技术更跨界、创意更自由、服务更贴心</p>
       <div class="sale_content_son">
         <div v-for="(item, index) in saleArray" :key="index" class="pianyi-center">
           <div id="box1">
@@ -31,28 +31,28 @@
     >
       <div id="pianyi" class="pianyi-center">
         <div class="blurrflex">
-          <p>3</p>
-          <p>年</p>
+          <p style="width:28px;height:48px;">3</p>
+          <p style="width:20px;height:30px;">年</p>
         </div>
         <div class="blurrtext">多年互联网创新服务经验</div>
       </div>
       <div class="pianyi-center">
         <div class="blurrflex">
-          <p style="letter-spacing: 0.4px;">20</p>
-          <p>+</p>
+          <p style="letter-spacing: 0.4px;width:54px;height:48px;">20</p>
+          <p style="width:20px;height:30px;">+</p>
         </div>
         <div class="blurrtext">提供多样化服务类型</div>
       </div>
       <div class="pianyi-center">
         <div class="blurrflex">
-          <p style="letter-spacing: 0.4px;">40</p>
-          <p>+</p>
+          <p style="letter-spacing: 0.4px;width:54px;height:48px;">40</p>
+          <p style="width:20px;height:30px;">+</p>
         </div>
         <div class="blurrtext">持续服务更多用户</div>
       </div>
       <div class="pianyi-center">
         <div class="blurrflex">
-          <p style="letter-spacing: 1px;">12000</p>
+          <p style="letter-spacing: 1px;width:143px;height:48px;">12000</p>
           <p></p>
         </div>
         <div class="blurrtext">互联网创新业务市场庞大</div>
@@ -62,7 +62,7 @@
     <div id="bigexploit">
       <div id="exploit" class="liubai">
         <p class="saletitle">全新的开发模式</p>
-        <p class="salecontent">高效、快速、减少花费</p>
+        <p class="salecontent" style="height:22px">高效、快速、减少花费</p>
         <div id="exploit-Box" style="display:flex;justify-content:space-between; flex-wrap:wrap;">
           <div id="box2">
             <div id="box2-Up">
@@ -95,10 +95,10 @@
     <div style="background-color: #FFFFFF;padding-top:80px;">
       <div id="fee" class="liubai">
         <p class="saletitle" style="margin-bottom:6px">崭新的收费模式</p>
-        <p class="salecontent" style="margin-bottom:20px">确保收费简洁化、透明化</p>
+        <p class="salecontent" style="margin-bottom:20px;height:22px;">确保收费简洁化、透明化</p>
         <div id="box3">
           <div id="box3-Left">
-            <img src="..\components\img\fee-left.png" alt />
+            <img src="..\components\img\fee-left.png" alt style="width:585px;height:303px;"/>
           </div>
           <div id="box3-Right">
             <div class="box3-Right-li">
@@ -124,7 +124,7 @@
     <div style="background-image: linear-gradient(0deg, #0057cb 0%, #007bff 100%);">
       <div id="train" class="liubai">
         <p id="train-title1">灵活的人才培养方案</p>
-        <p id="train-content1">免费的实习生培训计划、严格的实习生管理制度、真实的项目实战锻炼</p>
+        <p id="train-content1" style="height:22px;">免费的实习生培训计划、严格的实习生管理制度、真实的项目实战锻炼</p>
         <div class="train-pic-copy">
           <div id="train-pic" v-for="(item, index) in trainPicArry" :key="index">
             <div class="train-pic-con">
@@ -355,7 +355,7 @@ div#sale {
   font-size: 16px;
   letter-spacing: 0;
   line-height: 26px;
-  margin-top: 3px;
+  /* margin-top: 3px; */
   width: 20px;
 }
 #blurr .blurrtext {
@@ -435,6 +435,10 @@ div#box1-Up {
   letter-spacing: 0;
   text-align: center;
   line-height: 28px;
+}
+#box1-Up img{
+  width: 44px;
+  height: 44px;
 }
 div#box1-Dn {
   font-family: PingFangSC-Light;
@@ -706,7 +710,7 @@ export default {
           src: require("../assets/1.png"),
           title: "助力新零售",
           content: [
-            { con: "结合优秀硬件团队" },
+            { con: "结合优秀硬结合优秀硬件团队" },
             { con: "利用互联网优势" },
             { con: "完成基于物联网技术的新零售体系建立或推广" }
           ]

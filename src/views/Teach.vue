@@ -386,7 +386,7 @@ export default {
 }
 #right .content .padding .job ul li{
     font-size: 22px;
-    height: 50px;
+    /* height: 50px; */
     line-height: 50px;
     padding-left: 6%;
 }
@@ -996,14 +996,10 @@ display: inline-block;
 #right .content .padding .job ul li{
     font-size: 13px;
     padding-left: 6%;
-    height: 50px;
     padding-right: 15px;
 }
 #right .content .padding .job ul li span{
     margin-right: 0;
-}
-#right .content .padding .job>div:last-child{
-    margin-top: 50px;
 }
 #right .content .padding .job :first-child ul li span{
     margin-right: 15px;
@@ -1100,10 +1096,5 @@ display: inline-block;
     width: 100%;
     max-height: 200px;
 }
-}
-@media screen and (max-width: 340px) {
-#right .content .padding .job div:nth-of-type(2) ul li:nth-child(2){
-    margin-bottom: 40px;
-}   
 }
 </style>
