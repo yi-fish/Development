@@ -245,6 +245,14 @@ export default {
     margin-left: 0% !important;
     width: 103% !important;
   }
+  .imgrow{
+    flex-direction: column!important;
+  }
+  .imgrow img{
+    width: 95%!important;
+    margin: auto!important;
+    margin-bottom: 1rem!important;
+  }
   .rightcontent{
     margin-top: 1rem!important;
   }
