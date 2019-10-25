@@ -690,6 +690,8 @@ import Carousel from "@/components/carousel.vue";
 import Swiperr from "@/components/swiperr.vue";
 
 import animated from "animate.css";
+import global_api_address from './global.vue';
+import Qs from "qs"
 
 export default {
   name: "home",
@@ -700,24 +702,25 @@ export default {
   },
   data() {
     return {
+      api_address:global_api_address.api_address,                //请求接口的地址
       timer: null, //定时器
       mark: 0, //比对图片索引的变量
       //轮播图数据
-      message: [img1, img2, img3],
+      message: [img1,img2,img3],
       imgArray: [img1, img2, img3],
       saleArray: [
         {
-          src: require("../assets/1.png"),
-          title: "助力新零售",
+          src: "",
+          title: "",
           content: [
-            { con: "结合优秀硬结合优秀硬件团队" },
-            { con: "利用互联网优势" },
-            { con: "完成基于物联网技术的新零售体系建立或推广" }
+            { con: "结合优秀硬结合优秀硬件团队1" },
+            { con: "利用互联网优势1" },
+            { con: "完成基于物联网技术的新零售体系建立或推广1" }
           ]
         },
         {
-          src: require("../assets/2.png"),
-          title: "政府信息化建设",
+          src: "",
+          title: "",
           content: [
             { con: "以精湛的互联网技术" },
             { con: "推动政府信息化建设" },
@@ -725,8 +728,8 @@ export default {
           ]
         },
         {
-          src: require("../assets/3.png"),
-          title: "传统互联网转型",
+          src: "",
+          title: "",
           content: [
             { con: "深入了解传统行业" },
             { con: "打破只做网络营销的传统思维" },
@@ -735,8 +738,8 @@ export default {
           ]
         },
         {
-          src: require("../assets/4.png"),
-          title: "自有产品",
+          src: "",
+          title: "",
           content: [
             { con: "股票自动交易系统" },
             { con: "汽车行业互联网舆情监控系统" }
@@ -807,7 +810,8 @@ export default {
         //     src: require("../assets/携程.png")
         //   }
         // ]
-      ]
+      ],
+      newList:[]
     };
   },
   //点击切换图片
@@ -830,6 +834,58 @@ export default {
   },
   created() {
     this.play();
-  }
+  },
+  mounted(){
+    let vm=this;
+    let time=new Date().getTime()+'';        //计算出验证用的时间戳
+    let api="api_servertype";               //验证用的字符串
+    let md5Str=this.$md5(api+time);          //验证用的md5函数
+    let sendParam = {
+        "timestamp":time,
+        "method":api,
+        "sign":md5Str
+        }
+    this.axios.post(this.api_address+"/api/api.php",Qs.stringify(sendParam)
+    ).then((res)=>{ 
+        let saleArray=[];
+        let text=[];
+        let index=[];
+        let saleArray_content=[];
+        let arrIndex; 
+        let conIndex;
+        vm.newList=res.data
+
+        for(let i=0;i<res.data.data.length;i++){
+          saleArray[i]=JSON.parse(res.data.data[i]);
+        }  
+          // console.log(saleArray)
+        for(let j=0;j<saleArray.length;j++){
+          text[j]=saleArray[j].data
+        }
+        for(let k=0;k<text.length;k++){
+          index[k]=text[k]
+        }
+        // console.log(index) 
+        saleArray_content=index[2]
+        for(let m=0;m<index[0].length;m++){
+          // console.log(index[0][m])
+          arrIndex=index[0][m].id-1;
+          vm.saleArray[arrIndex].title=index[0][m].title
+          vm.saleArray[arrIndex].src=vm.api_address+"/"+index[0][m].picture
+        }
+        // console.log(saleArray_content)
+        // for(let n=0;n<saleArray_content.length;n++){
+        //   arrIndex=saleArray_content[n].id-1
+        //   conIndex=saleArray_content[n].cid%saleArray_content[n].id;
+        //   // console.log(conIndex)
+        //   this.saleArray[arrIndex].content[conIndex]
+        //   .con=saleArray_content[n].title
+        //   console.log(this.saleArray[arrIndex].content[conIndex].con)
+        //   console.log(this.saleArray)
+        // }
+    }).catch(error=>{
+        console.log(error)
+    })
+}
 };
 </script>

@@ -1,7 +1,7 @@
 <template>
 <div class="serve">
     <div class="imgs">
-        <img src=".//images//u136.jpg" alt="服务">
+        <img :src="navImg" alt="服务">
         <p>做你创业路上的</p>
         <h4>技术合伙人</h4>
     </div>
@@ -92,10 +92,14 @@ import workImg3 from './/images/work3.png';
 import methodImg1 from './images/u147.png';
 import methodImg2 from './images/u148.png';
 import methodImg3 from './images/u149.png';
+import Qs from "qs"
+import global_api_address from './global.vue';
 export default {
   name: 'serve',
   data(){
       return{
+          api_address:global_api_address.api_address,
+          navImg:'',
           "workImg1":workImg1,
           "workImg2":workImg2,
           "workImg3":workImg3,
@@ -170,12 +174,33 @@ export default {
                     }
                 ]
               }
-          ]
-      }
+          ],
+          "newList":[1,2]
+      }    
   },
     components:{
       HomeFooter
-  }
+  },
+mounted(){
+    let vm=this;
+    let time=new Date().getTime()+'';        //计算出验证用的时间戳
+    let api="api_get_picture";               //验证用的字符串
+    let md5Str=this.$md5(api+time);          //验证用的md5函数
+    let sendParam = {
+        "timestamp":time,
+        "method":api,
+        "sign":md5Str
+        }
+    this.axios.post(this.api_address+"/api/api.php",Qs.stringify(sendParam)
+    ).then((res)=>{ 
+        vm.newList=res.data
+        // console.log(vm.newList.data) 
+        // console.log(typeof vm.newList) 
+        this.navImg=this.api_address+"/"+res.data.data[1].url 
+    }).catch(error=>{
+        console.log(error)
+    })
+}
 }
 </script>
 

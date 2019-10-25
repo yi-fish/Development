@@ -3,7 +3,12 @@ import App from './App.vue'
 import '..//lib/bootstrap-3.3.7-dist/css/bootstrap.css'
 import router from './router'
 import './registerServiceWorker'
-
+import axios from "axios"
+import VueAxios from 'vue-axios'
+Vue.prototype.axios = axios;
+Vue.use(VueAxios,axios)
+import md5 from "js-md5"
+Vue.prototype.$md5=md5
 Vue.config.productionTip = false
 
 new Vue({

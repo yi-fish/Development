@@ -2,7 +2,7 @@
   <div class="swiper-container">
     <div class="swiper-wrapper">
       <div class="swiper-slide" v-for="(item, index) in message" :key="index">
-        <img :src="item" alt="" />
+        <img :src="item" alt="1" />
       </div>
     </div>
     <div class="swiper-button-next">
