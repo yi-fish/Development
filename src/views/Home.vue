@@ -3,19 +3,29 @@
     <swiperr :message="message"></swiperr>
     <div id="sale" class="liubai">
       <p class="saletitle">致力于互联网创新技术服务</p>
-      <p class="salecontent" style="height:22px;">技术更跨界、创意更自由、服务更贴心</p>
+      <p class="salecontent" style="height:22px;">
+        技术更跨界、创意更自由、服务更贴心
+      </p>
       <div class="sale_content_son">
-        <div v-for="(item, index) in saleArray" :key="index" class="pianyi-center">
+        <div
+          v-for="(item, index) in saleArray"
+          :key="index"
+          class="pianyi-center"
+        >
           <div id="box1">
             <div id="box1-Up">
               <img :src="item.src" alt style="margin-top: 38px" />
-              <p style="margin-top: 20px; margin-bottom:20px;">{{ item.title }}</p>
+              <p style="margin-top: 20px; margin-bottom:20px;">
+                {{ item.title }}
+              </p>
             </div>
             <div id="box1-Dn">
               <ul>
                 <li v-for="(itemson, index) in item.content" :key="index">
                   <div class="yuandian"></div>
-                  <span style="display:block;text-align:left">{{ itemson.con }}</span>
+                  <span style="display:block;text-align:left">{{
+                    itemson.con
+                  }}</span>
                 </li>
               </ul>
             </div>
@@ -29,65 +39,64 @@
       class="liubai"
       style="display:flex;justify-content:space-between; flex-wrap:wrap;"
     >
-      <div id="pianyi" class="pianyi-center">
+      <div v-for="(item, index) in saleArray2" :key="index">
+        <div class="pianyi-center">
+          <div class="blurrflex">
+            <p style="height:48px;">{{ item.title }}</p>
+            <p style="width:20px;height:30px;">{{ item.titleNote }}</p>
+          </div>
+          <div class="blurrtext">{{ item.subhead }}</div>
+        </div>
+      </div>
+      <!--
+        <div id="pianyi" class="pianyi-center">
         <div class="blurrflex">
           <p style="width:28px;height:48px;">3</p>
           <p style="width:20px;height:30px;">年</p>
         </div>
         <div class="blurrtext">多年互联网创新服务经验</div>
-      </div>
-      <div class="pianyi-center">
+       </div>
+       <div class="pianyi-center">
         <div class="blurrflex">
           <p style="letter-spacing: 0.4px;width:54px;height:48px;">20</p>
           <p style="width:20px;height:30px;">+</p>
         </div>
         <div class="blurrtext">提供多样化服务类型</div>
-      </div>
-      <div class="pianyi-center">
-        <div class="blurrflex">
-          <p style="letter-spacing: 0.4px;width:54px;height:48px;">40</p>
-          <p style="width:20px;height:30px;">+</p>
-        </div>
-        <div class="blurrtext">持续服务更多用户</div>
-      </div>
-      <div class="pianyi-center">
-        <div class="blurrflex">
-          <p style="letter-spacing: 1px;width:143px;height:48px;">12000</p>
-          <p></p>
-        </div>
-        <div class="blurrtext">互联网创新业务市场庞大</div>
-      </div>
+          </div>
+          <div class="pianyi-center">
+            <div class="blurrflex">
+              <p style="letter-spacing: 0.4px;width:54px;height:48px;">40</p>
+              <p style="width:20px;height:30px;">+</p>
+            </div>
+            <div class="blurrtext">持续服务更多用户</div>
+          </div>
+          <div class="pianyi-center">
+            <div class="blurrflex">
+              <p style="letter-spacing: 1px;width:143px;height:48px;">12000</p>
+              <p></p>
+            </div>
+            <div class="blurrtext">互联网创新业务市场庞大</div>
+          </div> -->
     </div>
 
     <div id="bigexploit">
       <div id="exploit" class="liubai">
         <p class="saletitle">全新的开发模式</p>
         <p class="salecontent" style="height:22px">高效、快速、减少花费</p>
-        <div id="exploit-Box" style="display:flex;justify-content:space-between; flex-wrap:wrap;">
-          <div id="box2">
+        <div
+          id="exploit-Box"
+          style="display:flex;justify-content:space-between; flex-wrap:wrap;"
+        >
+        <div v-for="(item, index) in box2Arry" :key="index">
+            <div id="box2">
             <div id="box2-Up">
-              <img src="..\components\img\exploitpic1.png" alt />
+              <img :src="item.src" alt />
             </div>
             <div id="box2-Dn">
-              <p>一流的开发团队</p>
+              <p>{{item.con}}</p>
             </div>
           </div>
-          <div id="box2">
-            <div id="box2-Up">
-              <img src="..\assets\插画2.png" alt />
-            </div>
-            <div id="box2-Dn">
-              <p>可见的项目成本</p>
-            </div>
-          </div>
-          <div id="box2">
-            <div id="box2-Up">
-              <img src="..\assets\插画3.png" alt />
-            </div>
-            <div id="box2-Dn">
-              <p>可控的项目质量</p>
-            </div>
-          </div>
+        </div>
         </div>
       </div>
     </div>
@@ -95,10 +104,16 @@
     <div style="background-color: #FFFFFF;padding-top:80px;">
       <div id="fee" class="liubai">
         <p class="saletitle" style="margin-bottom:6px">崭新的收费模式</p>
-        <p class="salecontent" style="margin-bottom:20px;height:22px;">确保收费简洁化、透明化</p>
+        <p class="salecontent" style="margin-bottom:20px;height:22px;">
+          确保收费简洁化、透明化
+        </p>
         <div id="box3">
           <div id="box3-Left">
-            <img src="..\components\img\fee-left.png" alt style="width:585px;height:303px;"/>
+            <img
+              src="..\components\img\fee-left.png"
+              alt
+              style="width:585px;height:303px;"
+            />
           </div>
           <div id="box3-Right">
             <div class="box3-Right-li">
@@ -111,8 +126,8 @@
             <div class="box3-Right-li">
               <div v-for="(item, index) in box3Arry" :key="index">
                 <ul>
-                  <li>{{item.con}}</li>
-                  <li>{{item.zhu}}</li>
+                  <li>{{ item.con }}</li>
+                  <li>{{ item.zhu }}</li>
                 </ul>
               </div>
             </div>
@@ -121,12 +136,20 @@
       </div>
     </div>
 
-    <div style="background-image: linear-gradient(0deg, #0057cb 0%, #007bff 100%);">
+    <div
+      style="background-image: linear-gradient(0deg, #0057cb 0%, #007bff 100%);"
+    >
       <div id="train" class="liubai">
         <p id="train-title1">灵活的人才培养方案</p>
-        <p id="train-content1" style="height:22px;">免费的实习生培训计划、严格的实习生管理制度、真实的项目实战锻炼</p>
+        <p id="train-content1" style="height:22px;">
+          免费的实习生培训计划、严格的实习生管理制度、真实的项目实战锻炼
+        </p>
         <div class="train-pic-copy">
-          <div id="train-pic" v-for="(item, index) in trainPicArry" :key="index">
+          <div
+            id="train-pic"
+            v-for="(item, index) in trainPicArry"
+            :key="index"
+          >
             <div class="train-pic-con">
               <img :src="item.src" alt />
               <div class="duanhengxian"></div>
@@ -143,9 +166,13 @@
         <p
           class="salecontent"
           style="margin-bottom:40px;margin-top:6px;height: 22px;"
-        >SERVIER BRAND CUSTOMERS</p>
+        >
+          SERVIER BRAND CUSTOMERS
+        </p>
         <div id="client-Pic">
-          <div style="display:flex;justify-content:space-between; flex-wrap:wrap;">
+          <div
+            style="display:flex;justify-content:space-between; flex-wrap:wrap;"
+          >
             <div v-for="(item, index) in clientArry" :key="index">
               <img :src="item.src" alt />
             </div>
@@ -153,7 +180,6 @@
         </div>
       </div>
     </div>
-
     <home-footer></home-footer>
   </div>
 </template>
@@ -251,6 +277,7 @@
   }
   #box3-Left img {
     width: 137px !important;
+    height: 80px !important;
   }
   .piclog {
     width: 40px !important;
@@ -332,9 +359,9 @@ div#sale {
   margin-right: 62px;
   margin-bottom: 66px;
 }
-#pianyi {
+/* #blurr div:nth-child(1) {
   margin-left: 62px;
-}
+} */
 .blurrflex {
   display: flex;
   justify-content: center;
@@ -436,7 +463,7 @@ div#box1-Up {
   text-align: center;
   line-height: 28px;
 }
-#box1-Up img{
+#box1-Up img {
   width: 44px;
   height: 44px;
 }
@@ -690,8 +717,8 @@ import Carousel from "@/components/carousel.vue";
 import Swiperr from "@/components/swiperr.vue";
 
 import animated from "animate.css";
-import global_api_address from './global.vue';
-import Qs from "qs"
+import global_api_address from "./global.vue";
+import Qs from "qs";
 
 export default {
   name: "home",
@@ -702,190 +729,202 @@ export default {
   },
   data() {
     return {
-      api_address:global_api_address.api_address,                //请求接口的地址
-      timer: null, //定时器
-      mark: 0, //比对图片索引的变量
+      api_address: global_api_address.api_address, //请求接口的地址
       //轮播图数据
-      message: [img1,img2,img3],
-      imgArray: [img1, img2, img3],
-      saleArray: [
-        {
-          src: "",
-          title: "",
-          content: [
-            { con: "结合优秀硬结合优秀硬件团队1" },
-            { con: "利用互联网优势1" },
-            { con: "完成基于物联网技术的新零售体系建立或推广1" }
-          ]
-        },
-        {
-          src: "",
-          title: "",
-          content: [
-            { con: "以精湛的互联网技术" },
-            { con: "推动政府信息化建设" },
-            { con: "提高行政效能" }
-          ]
-        },
-        {
-          src: "",
-          title: "",
-          content: [
-            { con: "深入了解传统行业" },
-            { con: "打破只做网络营销的传统思维" },
-            { con: "设计开发全新业务模式" },
-            { con: "依托传统产业原有资源" }
-          ]
-        },
-        {
-          src: "",
-          title: "",
-          content: [
-            { con: "股票自动交易系统" },
-            { con: "汽车行业互联网舆情监控系统" }
-          ]
-        }
-      ],
-      trainPicArry: [
-        {
-          src: require("../assets/量身打造.png"),
-          con1: "量身打造",
-          con2:
-            "面向互联网所需众多岗位，上班时间根据实习生自身情况决定，通过考核后在校也能办公。"
-        },
-        {
-          src: require("../assets/严格.png"),
-          con1: "严格管理",
-          con2:
-            "周六公司固定例会时间，多方位知识面为实习生开拓视野，每天工作时间实时线上记录打卡。"
-        },
-        {
-          src: require("../assets/严格管理.png"),
-          con1: "严格管理",
-          con2:
-            "知识培训外加真实项目实践，并有一对一导师指导，让实习生快速成长，独当一面。"
-        }
-      ],
-      box3Arry: [
-        {
-          con: "平台工作者劳务费",
-          zhu: "注：参与项目的所有工作者的赏月劳务费总和。"
-        },
-        {
-          con: "平台工作者劳务费",
-          zhu: "注：参与项目的所有工作者的赏月劳务费总和。"
-        },
-        {
-          con: "平台工作者劳务费",
-          zhu: "注：参与项目的所有工作者的赏月劳务费总和。"
-        }
-      ],
-      clientArry: [
-        {
-          src: require("../assets/携程.png")
-        },
-        { src: require("../assets/李宁.png") },
-        { src: require("../assets/金.png") },
-        { src: require("../assets/广发.png") },
-        {
-          src: require("../assets/朗新.png")
-        },
-        { src: require("../assets/云.png") },
-        { src: require("../assets/金关.png") },
-        { src: require("../assets/携程.png") }
-
-        // content: [
-        //   {
-        //     src: require("../assets/携程.png"),
-        //     src: require("../assets/李宁.png"),
-        //     src: require("../assets/金.png"),
-        //     src: require("../assets/广发.png")
-        //   }
-        // ],
-        // content: [
-        //   {
-        //     src: require("../assets/朗新.png"),
-        //     src: require("../assets/云.png"),
-        //     src: require("../assets/金关.png"),
-        //     src: require("../assets/携程.png")
-        //   }
-        // ]
-      ],
-      newList:[]
+      // message: [img1, img2, img3],
+      message: [],
+      saleArray: [],
+      saleArray2: [],
+      trainPicArry: [],
+      box2Arry: [],
+      box3Arry: [],
+      clientArry: []
     };
   },
   //点击切换图片
   methods: {
-    autoPlay() {
-      this.mark++;
-      if (this.mark === this.imgArray.length) {
-        this.mark = 0;
+    sortBy: function(attr, rev) {
+      //第二个参数没有传递 默认升序排列
+      if (rev == undefined) {
+        rev = 1;
+      } else {
+        rev = rev ? 1 : -1;
       }
-    },
-    play() {
-      this.timer = setInterval(this.autoPlay, 1500);
-    },
-    stop() {
-      clearInterval(this.timer);
-    },
-    move() {
-      this.timer = setInterval(this.autoPlay, 1500);
+
+      return function(a, b) {
+        a = a[attr];
+        b = b[attr];
+        if (a < b) {
+          return rev * -1;
+        }
+        if (a > b) {
+          return rev * 1;
+        }
+        return 0;
+      };
     }
   },
-  created() {
-    this.play();
-  },
-  mounted(){
-    let vm=this;
-    let time=new Date().getTime()+'';        //计算出验证用的时间戳
-    let api="api_servertype";               //验证用的字符串
-    let md5Str=this.$md5(api+time);          //验证用的md5函数
-    let sendParam = {
-        "timestamp":time,
-        "method":api,
-        "sign":md5Str
-        }
-    this.axios.post(this.api_address+"/api/api.php",Qs.stringify(sendParam)
-    ).then((res)=>{ 
-        let saleArray=[];
-        let text=[];
-        let index=[];
-        let saleArray_content=[];
-        let arrIndex; 
-        let conIndex;
-        vm.newList=res.data
+  created() {},
+  mounted() {
+    let vm = this;
+    let time = new Date().getTime() + ""; //计算出验证用的时间戳
+    let api1 = "api_servertype"; //验证用的字符串
+    let api2 = "api_get_picture";
+    let api3 = "api_brandcustomer";
+    let api4 = "api_developmenttype";
+    let api5 = "api_get_money";
+    let api6 = "api_training_plan";
 
-        for(let i=0;i<res.data.data.length;i++){
-          saleArray[i]=JSON.parse(res.data.data[i]);
-        }  
-          // console.log(saleArray)
-        for(let j=0;j<saleArray.length;j++){
-          text[j]=saleArray[j].data
+    let md5Str1 = this.$md5(api1 + time); //验证用的md5函数
+    let sendParam = {timestamp: time,method: api1,sign: md5Str1};
+    this.axios
+      .post(this.api_address + "/api/api.php", Qs.stringify(sendParam))
+      .then(res => {
+        let saleArrayTemp = [];
+        let text = [];
+        //数据格式更改
+        for (let i = 0; i < res.data.data.length; i++) {
+          saleArrayTemp[i] = JSON.parse(res.data.data[i]);
         }
-        for(let k=0;k<text.length;k++){
-          index[k]=text[k]
+        //替换为text[]
+        for (let j = 0; j < saleArrayTemp.length; j++) {
+          text[j] = saleArrayTemp[j].data;
         }
-        // console.log(index) 
-        saleArray_content=index[2]
-        for(let m=0;m<index[0].length;m++){
-          // console.log(index[0][m])
-          arrIndex=index[0][m].id-1;
-          vm.saleArray[arrIndex].title=index[0][m].title
-          vm.saleArray[arrIndex].src=vm.api_address+"/"+index[0][m].picture
+        //根据weight升序重排text[0]
+        text[0] = text[0].sort(this.sortBy("weight", true));
+        //取title src
+        for (let i = 0; i < text[0].length; i++) {
+          this.saleArray.push({
+            title: text[0][i].title,
+            src: vm.api_address + "/" + text[0][i].picture
+          });
         }
-        // console.log(saleArray_content)
-        // for(let n=0;n<saleArray_content.length;n++){
-        //   arrIndex=saleArray_content[n].id-1
-        //   conIndex=saleArray_content[n].cid%saleArray_content[n].id;
-        //   // console.log(conIndex)
-        //   this.saleArray[arrIndex].content[conIndex]
-        //   .con=saleArray_content[n].title
-        //   console.log(this.saleArray[arrIndex].content[conIndex].con)
-        //   console.log(this.saleArray)
-        // }
-    }).catch(error=>{
-        console.log(error)
-    })
-}
+        //取 3  20  40 12000
+        for (let i = 0; i < text[1].length; i++) {
+          this.saleArray2.push({
+            title: text[1][i].title,
+            subhead: text[1][i].subhead,
+            titleNote: text[1][i].titleNote
+          });
+        }
+        //取box1_down内容  text[2]
+        let contentTemp1 = [],
+          contentTemp2 = [],
+          contentTemp3 = [],
+          contentTemp4 = [];
+        for (let i = 0; i < text[2].length; i++) {
+          if (text[2][i].id == 1) {
+            contentTemp1.push({
+              con: text[2][i].content
+            });
+            this.saleArray[0].content = contentTemp1;
+            continue;
+          } else if (text[2][i].id == 2) {
+            contentTemp2.push({
+              con: text[2][i].content
+            });
+            this.saleArray[1].content = contentTemp2;
+            continue;
+          } else if (text[2][i].id == 3) {
+            contentTemp3.push({
+              con: text[2][i].content
+            });
+            this.saleArray[2].content = contentTemp3;
+            continue;
+          } else {
+            contentTemp4.push({
+              con: text[2][i].content
+            });
+            this.saleArray[3].content = contentTemp4;
+            continue;
+          }
+        }
+      })
+      .catch(error => {
+        console.log(error);
+      });
+
+    let md5Str2 = this.$md5(api2 + time); //验证用的md5函数
+    let sendParam2 = { timestamp: time, method: api2, sign: md5Str2 };
+    this.axios
+      .post(this.api_address + "/api/api.php", Qs.stringify(sendParam2))
+      .then(res => {
+        for (let i = 0; i < res.data.data.length; i++) {
+          this.message[i] = this.api_address + "/" + res.data.data[i].url;
+        }
+        // console.log(this.message);
+      })
+      .catch(error => {
+        console.log(error);
+      });
+
+    let md5Str3 = this.$md5(api3 + time); //验证用的md5函数
+    let sendParam3 = { timestamp: time, method: api3, sign: md5Str3 };
+    this.axios
+      .post(this.api_address + "/api/api.php", Qs.stringify(sendParam3))
+      .then(res => {
+        res.data.data = res.data.data.sort(this.sortBy("weight", true));
+        for (let i = 0; i < res.data.data.length; i++) {
+          this.clientArry.push({
+            src: this.api_address + "/" + res.data.data[i].url
+          });
+        }
+      })
+      .catch(error => {
+        console.log(error);
+      });
+
+    let md5Str4 = this.$md5(api4 + time); //验证用的md5函数
+    let sendParam4 = { timestamp: time, method: api4, sign: md5Str4 };
+    this.axios
+      .post(this.api_address + "/api/api.php", Qs.stringify(sendParam4))
+      .then(res => {
+        res.data.data = res.data.data.sort(this.sortBy("weight", true));
+        for (let i = 0; i < res.data.data.length; i++) {
+          this.box2Arry.push({
+            src: this.api_address + "/" + res.data.data[i].picture,
+            con: res.data.data[i].content
+          });
+        }
+      })
+      .catch(error => {
+        console.log(error);
+      });
+
+    let md5Str5 = this.$md5(api5 + time); //验证用的md5函数
+    let sendParam5 = { timestamp: time, method: api5, sign: md5Str5 };
+    this.axios
+      .post(this.api_address + "/api/api.php", Qs.stringify(sendParam5))
+      .then(res => {
+        res.data.data = res.data.data.sort(this.sortBy("weight", true));
+        for (let i = 0; i < res.data.data.length; i++) {
+          this.box3Arry.push({
+            con: res.data.data[i].title,
+            zhu: res.data.data[i].content
+          });
+        }
+      })
+      .catch(error => {
+        console.log(error);
+      });
+
+    let md5Str6 = this.$md5(api6 + time); //验证用的md5函数
+    let sendParam6 = { timestamp: time, method: api6, sign: md5Str6 };
+    this.axios
+      .post(this.api_address + "/api/api.php", Qs.stringify(sendParam6))
+      .then(res => {
+        res.data.data = res.data.data.sort(this.sortBy("weight", true));
+        for (let i = 0; i < res.data.data.length; i++) {
+          this.trainPicArry.push({
+            src: this.api_address + "/" + res.data.data[i].picture,
+            con1: res.data.data[i].title,
+            con2: res.data.data[i].content
+          });
+        }
+      })
+      .catch(error => {
+        console.log(error);
+      });
+  }
 };
 </script>

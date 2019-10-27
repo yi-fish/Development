@@ -28,6 +28,7 @@ export default {
     };
   },
   mounted() {
+    // console.log(this.message)
     var swiper = new Swiper(".swiper-container", {
       slidesPerView: 1,
       spaceBetween: 30,
@@ -73,9 +74,14 @@ export default {
   margin-top: 0px;
 }
 
-.swiper-wrapper img {
+.swiper-wrapper {
   width: 100%;
   height: 100%;
+}
+
+.swiper-wrapper img {
+  width: 100%;
+  height: 400px;
 }
 
 .swiper-button-next {
