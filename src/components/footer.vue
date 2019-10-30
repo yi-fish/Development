@@ -228,5 +228,8 @@ export default {
 .footer .top .tit1 div p{
     font-size: 13px;
 }
+.footer .bottom h4{
+    font-size: 12px;
+}
 }
 </style>
