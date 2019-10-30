@@ -57,7 +57,9 @@
     height: 40px !important;
     backgroundColor: blue;
   }
-
+  html{
+    font-size:5px !important;
+  }
   #nav {
     height: 40px !important;
   }
@@ -210,7 +212,8 @@
 
 <script>
 /* eslint-disable */
-document.getElementsByTagName("html")[0].style.fontSize=document.body.clientWidth/200+'px'
+// document.getElementsByTagName("html")[0].style.fontSize =
+//   document.body.clientWidth / 200 + "px";
 export default {
   name: "app",
   data() {
@@ -219,17 +222,6 @@ export default {
       screenWidth: document.body.clientWidth
     };
   },
-  mounted() {
-    const that = this;
-    window.onresize = () => {
-      console.log("object");
-      return (() => {
-        window.screenWidth = document.body.clientWidth;
-        that.screenWidth = window.screenWidth;
-        document.getElementsByTagName("html")[0].style.fontSize=screenWidth/200+'px';
-      })();
-    };
-  },
-};
 
+};
 </script>

@@ -193,7 +193,7 @@ export default {
     float: left !important;
   }
   .righttext h2{
-    margin-top: -7rem!important;
+    margin-top: -6rem!important;
   }
   .headline {
     margin-left: 45% !important;
@@ -317,7 +317,7 @@ export default {
   color: rgb(154, 154, 154);
 }
 .headline p {
-  font-size: 3.3rem;
+  font-size: 3.1rem;
   color: rgb(0, 102, 153);
   font-weight: 600;
   margin-top: 0px;
@@ -373,8 +373,9 @@ export default {
   padding-bottom: 7px;
 }
 .head p {
-  width: 125px;
-  padding-left: 18px;
+  width: 10rem;
+  padding-left: 1.2rem;
+  font-size: 2.2rem;
   display: flex;
   justify-content: flex-start;
   border-bottom: 1px solid rgb(121, 121, 121);
@@ -401,13 +402,13 @@ export default {
   width: 200px;
   /* width: 20%; */
   /* margin-left: 20px; */
-  margin-top: 100px;
+  margin-top: 8rem;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
 }
 .rightcontent {
-  margin-top: 60px;
+  margin-top: 5rem;
   width: 80%;
 }
 .leftmenu img {
