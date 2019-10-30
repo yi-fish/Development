@@ -242,9 +242,6 @@
     margin-top: 0px !important;
     overflow: auto;
   }
-  #blurr .blurrtext {
-    width: 138px !important;
-  }
 }
 @media only screen and (max-width: 1440px) {
   .liubai {
@@ -727,7 +724,7 @@ export default {
       this.axios
         .post(this.api_address + "/api/api.php", Qs.stringify(sendParam))
         .then(res => {
-          res.data.data.sort(this.sortBy("order", false));
+          res.data.data.sort(this.sortBy("order", true));
           for (let i = 0; i < res.data.data.length; i++) {
             this.messageParent.push({
               src: this.api_address + "/" + res.data.data[i].url
