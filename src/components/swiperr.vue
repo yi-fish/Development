@@ -1,15 +1,15 @@
 <template>
   <div class="swiper-container">
     <div class="swiper-wrapper">
-      <div class="swiper-slide" v-for="(item, index) in message" :key="index">
-        <img :src="item" alt="1" />
+      <div class="swiper-slide" v-for="(item,index) in message" :key="index">
+        <img :src="item.src" alt="1" />
       </div>
     </div>
     <div class="swiper-button-next">
-      <img src="..\assets\back2.png" alt="" />
+      <img src="..\assets\back2.png" alt />
     </div>
     <div class="swiper-button-prev">
-      <img src="..\assets\back1.png" alt="" />
+      <img src="..\assets\back1.png" alt />
     </div>
   </div>
 </template>
@@ -24,30 +24,40 @@ export default {
   props: ["message"],
   data() {
     return {
-      msg: "Welcome to Your Vue.js App"
+      newMessage: []
     };
   },
-  mounted() {
-    // console.log(this.message)
-    var swiper = new Swiper(".swiper-container", {
-      slidesPerView: 1,
-      spaceBetween: 30,
-      loop: true,
-      spaceBetween: 30,
-      centeredSlides: true,
-      autoplay: {
-        delay: 2500,
-        disableOnInteraction: false
+  methods: {
+    init() {
+      let swipper = new Swiper(".swiper-container", {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        loop: true,
+        spaceBetween: 30,
+        centeredSlides: true,
+        autoplay: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev"
+        }
+      });
+    }
+  },
+  watch: {
+    message: {
+      immediate: true,
+      handler(newValue, oldValue) {
+        this.$nextTick(() => {
+          this.init(); //当数据到来的时候， DOM 更新循环结束之后，立即执行函数
+        });
+        // Vue.set(this.newMessage, this.newMessage, newValue)
       },
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true
-      },
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev"
-      }
-    });
+      deep: true
+    }
   }
 };
 </script>
@@ -55,21 +65,11 @@ export default {
 <style lang="stylus" scoped>
 @import '../assets/swiper.min.css';
 
-@media only screen and (max-width: 479px) {
-  .swiper-button-next img {
-    width: 16px !important;
-    height: 16px !important;
-  }
-  .swiper-button-prev img {
-    width: 16px !important;
-    height: 16px !important;
-  }
-}
 .swiper-button-next:after, .swiper-button-prev:after {
   display: none;
 }
 
-.swiper-button-next, .swiper-button-prev{
+.swiper-button-next, .swiper-button-prev {
   height: auto;
   margin-top: 0px;
 }
@@ -137,5 +137,20 @@ body {
   -ms-flex-align: center;
   -webkit-align-items: center;
   align-items: center;
+}
+@media only screen and (max-width: 479px) {
+  .swiper-button-next img {
+    width: 16px !important;
+    height: 16px !important;
+  }
+
+  .swiper-button-prev img {
+    width: 16px !important;
+    height: 16px !important;
+  }
+  .swiper-wrapper img {
+    width: 100%;
+    height: 150px;
+}
 }
 </style>

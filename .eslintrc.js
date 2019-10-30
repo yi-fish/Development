@@ -15,6 +15,14 @@ module.exports = {
         "no-unused-vars": 'off',
         //  去掉此项警告
         "indent": ["off", 2],
+        'space-before-function-paren': [
+            'error',
+            {
+              anonymous: 'always',
+              named: 'always',
+              asyncArrow: 'always',
+            },
+          ]
 
 
     },

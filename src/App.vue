@@ -174,7 +174,7 @@
 
 #home_tab {
   display: flex;
-  justify-content: space-between;
+  // justify-content: space-between;
 }
 
 #nav-a {
@@ -188,7 +188,7 @@
     color: #4A4A4A;
     letter-spacing: 0;
     text-decoration: none;
-    width: 100px;
+    width: 110px;
     height: 80px;
     text-align: center;
 
@@ -207,6 +207,7 @@
   height: 36px;
   margin-top: 15px;
   margin-bottom: 29px;
+  margin-right: 515px;
 }
 </style>
 
@@ -222,6 +223,5 @@ export default {
       screenWidth: document.body.clientWidth
     };
   },
-
 };
 </script>

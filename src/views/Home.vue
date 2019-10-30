@@ -1,31 +1,25 @@
 <template>
   <div class="home">
-    <swiperr :message="message"></swiperr>
+    <swiperr :message="messageParent"></swiperr>
     <div id="sale" class="liubai">
       <p class="saletitle">致力于互联网创新技术服务</p>
-      <p class="salecontent" style="height:22px;">
-        技术更跨界、创意更自由、服务更贴心
-      </p>
+      <p class="salecontent" style="height:22px;">技术更跨界、创意更自由、服务更贴心</p>
       <div class="sale_content_son">
-        <div
-          v-for="(item, index) in saleArray"
-          :key="index"
-          class="pianyi-center"
-        >
+        <div v-for="(item, index) in saleArray" :key="index" class="pianyi-center">
           <div id="box1">
             <div id="box1-Up">
               <img :src="item.src" alt style="margin-top: 38px" />
-              <p style="margin-top: 20px; margin-bottom:20px;">
-                {{ item.title }}
-              </p>
+              <p style="margin-top: 20px; margin-bottom:20px;">{{ item.title }}</p>
             </div>
             <div id="box1-Dn">
               <ul>
                 <li v-for="(itemson, index) in item.content" :key="index">
                   <div class="yuandian"></div>
-                  <span style="display:block;text-align:left">{{
+                  <span style="display:block;text-align:left">
+                    {{
                     itemson.con
-                  }}</span>
+                    }}
+                  </span>
                 </li>
               </ul>
             </div>
@@ -33,11 +27,10 @@
         </div>
       </div>
     </div>
-
     <div
       id="blurr"
       class="liubai"
-      style="display:flex;justify-content:space-between; flex-wrap:wrap;"
+      style="display:flex;justify-content:space-between; flex-wrap:wrap;padding-left:62px"
     >
       <div v-for="(item, index) in saleArray2" :key="index">
         <div class="pianyi-center">
@@ -48,72 +41,32 @@
           <div class="blurrtext">{{ item.subhead }}</div>
         </div>
       </div>
-      <!--
-        <div id="pianyi" class="pianyi-center">
-        <div class="blurrflex">
-          <p style="width:28px;height:48px;">3</p>
-          <p style="width:20px;height:30px;">年</p>
-        </div>
-        <div class="blurrtext">多年互联网创新服务经验</div>
-       </div>
-       <div class="pianyi-center">
-        <div class="blurrflex">
-          <p style="letter-spacing: 0.4px;width:54px;height:48px;">20</p>
-          <p style="width:20px;height:30px;">+</p>
-        </div>
-        <div class="blurrtext">提供多样化服务类型</div>
-          </div>
-          <div class="pianyi-center">
-            <div class="blurrflex">
-              <p style="letter-spacing: 0.4px;width:54px;height:48px;">40</p>
-              <p style="width:20px;height:30px;">+</p>
-            </div>
-            <div class="blurrtext">持续服务更多用户</div>
-          </div>
-          <div class="pianyi-center">
-            <div class="blurrflex">
-              <p style="letter-spacing: 1px;width:143px;height:48px;">12000</p>
-              <p></p>
-            </div>
-            <div class="blurrtext">互联网创新业务市场庞大</div>
-          </div> -->
     </div>
-
     <div id="bigexploit">
       <div id="exploit" class="liubai">
         <p class="saletitle">全新的开发模式</p>
         <p class="salecontent" style="height:22px">高效、快速、减少花费</p>
-        <div
-          id="exploit-Box"
-          style="display:flex;justify-content:space-between; flex-wrap:wrap;"
-        >
-        <div v-for="(item, index) in box2Arry" :key="index">
+        <div id="exploit-Box" style="display:flex;justify-content:space-between; flex-wrap:wrap;">
+          <div v-for="(item, index) in box2Arry" :key="index">
             <div id="box2">
-            <div id="box2-Up">
-              <img :src="item.src" alt />
-            </div>
-            <div id="box2-Dn">
-              <p>{{item.con}}</p>
+              <div id="box2-Up">
+                <img :src="item.src" alt />
+              </div>
+              <div id="box2-Dn">
+                <p>{{item.con}}</p>
+              </div>
             </div>
           </div>
         </div>
-        </div>
       </div>
     </div>
-
     <div style="background-color: #FFFFFF;padding-top:80px;">
       <div id="fee" class="liubai">
         <p class="saletitle" style="margin-bottom:6px">崭新的收费模式</p>
-        <p class="salecontent" style="margin-bottom:20px;height:22px;">
-          确保收费简洁化、透明化
-        </p>
+        <p class="salecontent" style="margin-bottom:20px;height:22px;">确保收费简洁化、透明化</p>
         <div id="box3">
           <div id="box3-Left">
-            <img
-              src="..\components\img\fee-left.png"
-              alt
-              style="width:585px;height:303px;"
-            />
+            <img src="..\components\img\fee-left.png" alt style="width:585px;height:303px;" />
           </div>
           <div id="box3-Right">
             <div class="box3-Right-li">
@@ -135,21 +88,12 @@
         </div>
       </div>
     </div>
-
-    <div
-      style="background-image: linear-gradient(0deg, #0057cb 0%, #007bff 100%);"
-    >
+    <div style="background-image: linear-gradient(0deg, #0057cb 0%, #007bff 100%);">
       <div id="train" class="liubai">
         <p id="train-title1">灵活的人才培养方案</p>
-        <p id="train-content1" style="height:22px;">
-          免费的实习生培训计划、严格的实习生管理制度、真实的项目实战锻炼
-        </p>
+        <p id="train-content1" style="height:22px;">免费的实习生培训计划、严格的实习生管理制度、真实的项目实战锻炼</p>
         <div class="train-pic-copy">
-          <div
-            id="train-pic"
-            v-for="(item, index) in trainPicArry"
-            :key="index"
-          >
+          <div id="train-pic" v-for="(item, index) in trainPicArry" :key="index">
             <div class="train-pic-con">
               <img :src="item.src" alt />
               <div class="duanhengxian"></div>
@@ -166,13 +110,9 @@
         <p
           class="salecontent"
           style="margin-bottom:40px;margin-top:6px;height: 22px;"
-        >
-          SERVIER BRAND CUSTOMERS
-        </p>
+        >SERVIER BRAND CUSTOMERS</p>
         <div id="client-Pic">
-          <div
-            style="display:flex;justify-content:space-between; flex-wrap:wrap;"
-          >
+          <div style="display:flex;justify-content:space-between; flex-wrap:wrap;">
             <div v-for="(item, index) in clientArry" :key="index">
               <img :src="item.src" alt />
             </div>
@@ -296,16 +236,11 @@
     margin-bottom: 20px !important;
   }
   .box3-Right-li ul li {
-    /* overflow: hidden; */
-    /* text-overflow: ellipsis; */
     white-space: nowrap;
-    width: 100px;
+    /* width: 100px !important; */
     font-size: 13px !important;
     margin-top: 0px !important;
     overflow: auto;
-  }
-  #blurr .blurrtext {
-    width: 138px !important;
   }
 }
 @media only screen and (max-width: 1440px) {
@@ -359,9 +294,6 @@ div#sale {
   margin-right: 62px;
   margin-bottom: 66px;
 }
-/* #blurr div:nth-child(1) {
-  margin-left: 62px;
-} */
 .blurrflex {
   display: flex;
   justify-content: center;
@@ -378,12 +310,30 @@ div#sale {
   letter-spacing: 2.44px;
   line-height: 48px;
 }
-#blurr p:nth-child(2) {
+#blurr div:nth-child(1) p:nth-child(2) {
   font-size: 16px;
   letter-spacing: 0;
   line-height: 26px;
-  /* margin-top: 3px; */
-  width: 20px;
+}
+#blurr div:nth-child(2) p:nth-child(2) {
+  font-size: 28px;
+  letter-spacing: 0;
+  line-height: 26px;
+}
+#blurr div:nth-child(3) p:nth-child(2) {
+  font-size: 28px;
+  letter-spacing: 0;
+  line-height: 26px;
+}
+#blurr div:nth-child(4) p:nth-child(1) {
+  letter-spacing: 1px;
+  width: 143px;
+}
+#blurr div:nth-child(3) p:nth-child(1) {
+  letter-spacing: 0.4px;
+}
+#blurr div:nth-child(2) p:nth-child(1) {
+  letter-spacing: 0.4px;
 }
 #blurr .blurrtext {
   font-family: PingFangSC-Light;
@@ -474,11 +424,12 @@ div#box1-Dn {
   letter-spacing: 0;
   text-align: justify;
   line-height: 26px;
-  /* padding: 22px 28px; */
 }
 div#box1-Dn ul {
   margin: 20px 28px 22px 28px;
   padding-left: 0px;
+  height: 104px;
+  overflow: auto;
 }
 div#box1-Dn ul li {
   list-style: none;
@@ -531,11 +482,10 @@ div#box2-Dn p {
 }
 div#box3 {
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   flex-wrap: wrap;
 }
 div#box3-Left {
-  width: 40%;
   height: 303px;
   float: left;
   margin: 67px 107px 110px 0px;
@@ -593,6 +543,8 @@ div#box3-Right ul :nth-child(2) {
   text-align: justify;
   line-height: 22px;
   margin-top: 12px;
+  width: 338px;
+  overflow: auto;
 }
 #train-title1 {
   font-family: PingFangSC-Regular;
@@ -707,16 +659,10 @@ div#box3-Right ul :nth-child(2) {
 <script>
 /* eslint-disable */
 // @ is an alias to /src
-
-import img1 from "../assets/banner.png";
-import img2 from "../assets/banner2.png";
-import img3 from "../assets/banner3.png";
-import HelloWorld from "@/components/HelloWorld.vue";
 import HomeFooter from "../components/footer.vue";
-import Carousel from "@/components/carousel.vue";
 import Swiperr from "@/components/swiperr.vue";
-
 import animated from "animate.css";
+
 import global_api_address from "./global.vue";
 import Qs from "qs";
 
@@ -724,21 +670,26 @@ export default {
   name: "home",
   components: {
     HomeFooter,
-    Carousel,
     Swiperr
   },
   data() {
     return {
       api_address: global_api_address.api_address, //请求接口的地址
       //轮播图数据
-      // message: [img1, img2, img3],
-      message: [],
+      messageParent: [],
       saleArray: [],
       saleArray2: [],
       trainPicArry: [],
       box2Arry: [],
       box3Arry: [],
-      clientArry: []
+      clientArry: [],
+      api1: "api_servertype",
+      api2: "api_get_picture",
+      api3: "api_brandcustomer",
+      api4: "api_developmenttype",
+      api5: "api_get_money",
+      api6: "api_training_plan",
+      time: new Date().getTime() + ""
     };
   },
   //点击切换图片
@@ -762,169 +713,196 @@ export default {
         }
         return 0;
       };
+    },
+    getSwiperRequest: function() {
+      let md5Str1 = this.$md5(this.api2 + this.time); //验证用的md5函数
+      let sendParam = {
+        timestamp: this.time,
+        method: this.api2,
+        sign: md5Str1
+      };
+      this.axios
+        .post(this.api_address + "/api/api.php", Qs.stringify(sendParam))
+        .then(res => {
+          res.data.data.sort(this.sortBy("order", true));
+          for (let i = 0; i < res.data.data.length; i++) {
+            this.messageParent.push({
+              src: this.api_address + "/" + res.data.data[i].url
+            });
+          }
+        })
+        .catch(error => {});
+    },
+    getServertypeRequest: function() {
+      let md5Str1 = this.$md5(this.api1 + this.time); //验证用的md5函数
+      let sendParam = {
+        timestamp: this.time,
+        method: this.api1,
+        sign: md5Str1
+      };
+      this.axios
+        .post(this.api_address + "/api/api.php", Qs.stringify(sendParam))
+        .then(res => {
+          let saleArrayTemp = [];
+          let text = [];
+          //数据格式更改
+          for (let i = 0; i < res.data.data.length; i++) {
+            saleArrayTemp[i] = JSON.parse(res.data.data[i]);
+          }
+          //替换为text[]
+          for (let j = 0; j < saleArrayTemp.length; j++) {
+            text[j] = saleArrayTemp[j].data;
+          }
+          //根据weight升序重排text[0]
+          text[0].sort(this.sortBy("weight", true));
+          //取title src
+          for (let i = 0; i < text[0].length; i++) {
+            this.saleArray.push({
+              title: text[0][i].title,
+              src: this.api_address + "/" + text[0][i].picture
+            });
+          }
+          //取 3  20  40 12000
+          for (let i = 0; i < text[1].length; i++) {
+            this.saleArray2.push({
+              title: text[1][i].title,
+              subhead: text[1][i].subhead,
+              titleNote: text[1][i].titleNote
+            });
+          }
+          //取box1_down内容  text[2]
+          let contentTemp1 = [],
+            contentTemp2 = [],
+            contentTemp3 = [],
+            contentTemp4 = [];
+          for (let i = 0; i < text[2].length; i++) {
+            if (text[2][i].id == 1) {
+              contentTemp1.push({
+                con: text[2][i].content
+              });
+              this.saleArray[0].content = contentTemp1;
+              continue;
+            } else if (text[2][i].id == 2) {
+              contentTemp2.push({
+                con: text[2][i].content
+              });
+              this.saleArray[1].content = contentTemp2;
+              continue;
+            } else if (text[2][i].id == 3) {
+              contentTemp3.push({
+                con: text[2][i].content
+              });
+              this.saleArray[2].content = contentTemp3;
+              continue;
+            } else {
+              contentTemp4.push({
+                con: text[2][i].content
+              });
+              this.saleArray[3].content = contentTemp4;
+              continue;
+            }
+          }
+        })
+        .catch(error => {
+          console.log(error);
+        });
+    },
+    getBrandcustomerRequest: function() {
+      let md5Str1 = this.$md5(this.api3 + this.time); //验证用的md5函数
+      let sendParam = {
+        timestamp: this.time,
+        method: this.api3,
+        sign: md5Str1
+      };
+      this.axios
+        .post(this.api_address + "/api/api.php", Qs.stringify(sendParam))
+        .then(res => {
+          res.data.data.sort(this.sortBy("weight", true));
+          for (let i = 0; i < res.data.data.length; i++) {
+            this.clientArry.push({
+              src: this.api_address + "/" + res.data.data[i].url
+            });
+          }
+        })
+        .catch(error => {
+          console.log(error);
+        });
+    },
+    getDevelopmenttypeRequest: function() {
+      let md5Str1 = this.$md5(this.api4 + this.time); //验证用的md5函数
+      let sendParam = {
+        timestamp: this.time,
+        method: this.api4,
+        sign: md5Str1
+      };
+      this.axios
+        .post(this.api_address + "/api/api.php", Qs.stringify(sendParam))
+        .then(res => {
+          res.data.data.sort(this.sortBy("weight", true));
+          for (let i = 0; i < res.data.data.length; i++) {
+            this.box2Arry.push({
+              src: this.api_address + "/" + res.data.data[i].picture,
+              con: res.data.data[i].content
+            });
+          }
+        })
+        .catch(error => {
+          console.log(error);
+        });
+    },
+    getGet_moneyRequest: function() {
+      let md5Str1 = this.$md5(this.api5 + this.time); //验证用的md5函数
+      let sendParam = {
+        timestamp: this.time,
+        method: this.api5,
+        sign: md5Str1
+      };
+      this.axios
+        .post(this.api_address + "/api/api.php", Qs.stringify(sendParam))
+        .then(res => {
+          res.data.data.sort(this.sortBy("weight", true));
+          for (let i = 0; i < res.data.data.length; i++) {
+            this.box3Arry.push({
+              con: res.data.data[i].title,
+              zhu: res.data.data[i].content
+            });
+          }
+        })
+        .catch(error => {
+          console.log(error);
+        });
+    },
+    getTraining_planRequest: function() {
+      let md5Str1 = this.$md5(this.api6 + this.time); //验证用的md5函数
+      let sendParam = {
+        timestamp: this.time,
+        method: this.api6,
+        sign: md5Str1
+      };
+      this.axios
+        .post(this.api_address + "/api/api.php", Qs.stringify(sendParam))
+        .then(res => {
+          res.data.data.sort(this.sortBy("weight", true));
+          for (let i = 0; i < res.data.data.length; i++) {
+            this.trainPicArry.push({
+              src: this.api_address + "/" + res.data.data[i].picture,
+              con1: res.data.data[i].title,
+              con2: res.data.data[i].content
+            });
+          }
+        })
+        .catch(error => {
+          console.log(error);
+        });
     }
   },
-  created() {},
   mounted() {
-    let vm = this;
-    let time = new Date().getTime() + ""; //计算出验证用的时间戳
-    let api1 = "api_servertype"; //验证用的字符串
-    let api2 = "api_get_picture";
-    let api3 = "api_brandcustomer";
-    let api4 = "api_developmenttype";
-    let api5 = "api_get_money";
-    let api6 = "api_training_plan";
-
-    let md5Str1 = this.$md5(api1 + time); //验证用的md5函数
-    let sendParam = {timestamp: time,method: api1,sign: md5Str1};
-    this.axios
-      .post(this.api_address + "/api/api.php", Qs.stringify(sendParam))
-      .then(res => {
-        let saleArrayTemp = [];
-        let text = [];
-        //数据格式更改
-        for (let i = 0; i < res.data.data.length; i++) {
-          saleArrayTemp[i] = JSON.parse(res.data.data[i]);
-        }
-        //替换为text[]
-        for (let j = 0; j < saleArrayTemp.length; j++) {
-          text[j] = saleArrayTemp[j].data;
-        }
-        //根据weight升序重排text[0]
-        text[0] = text[0].sort(this.sortBy("weight", true));
-        //取title src
-        for (let i = 0; i < text[0].length; i++) {
-          this.saleArray.push({
-            title: text[0][i].title,
-            src: vm.api_address + "/" + text[0][i].picture
-          });
-        }
-        //取 3  20  40 12000
-        for (let i = 0; i < text[1].length; i++) {
-          this.saleArray2.push({
-            title: text[1][i].title,
-            subhead: text[1][i].subhead,
-            titleNote: text[1][i].titleNote
-          });
-        }
-        //取box1_down内容  text[2]
-        let contentTemp1 = [],
-          contentTemp2 = [],
-          contentTemp3 = [],
-          contentTemp4 = [];
-        for (let i = 0; i < text[2].length; i++) {
-          if (text[2][i].id == 1) {
-            contentTemp1.push({
-              con: text[2][i].content
-            });
-            this.saleArray[0].content = contentTemp1;
-            continue;
-          } else if (text[2][i].id == 2) {
-            contentTemp2.push({
-              con: text[2][i].content
-            });
-            this.saleArray[1].content = contentTemp2;
-            continue;
-          } else if (text[2][i].id == 3) {
-            contentTemp3.push({
-              con: text[2][i].content
-            });
-            this.saleArray[2].content = contentTemp3;
-            continue;
-          } else {
-            contentTemp4.push({
-              con: text[2][i].content
-            });
-            this.saleArray[3].content = contentTemp4;
-            continue;
-          }
-        }
-      })
-      .catch(error => {
-        console.log(error);
-      });
-
-    let md5Str2 = this.$md5(api2 + time); //验证用的md5函数
-    let sendParam2 = { timestamp: time, method: api2, sign: md5Str2 };
-    this.axios
-      .post(this.api_address + "/api/api.php", Qs.stringify(sendParam2))
-      .then(res => {
-        for (let i = 0; i < res.data.data.length; i++) {
-          this.message[i] = this.api_address + "/" + res.data.data[i].url;
-        }
-        // console.log(this.message);
-      })
-      .catch(error => {
-        console.log(error);
-      });
-
-    let md5Str3 = this.$md5(api3 + time); //验证用的md5函数
-    let sendParam3 = { timestamp: time, method: api3, sign: md5Str3 };
-    this.axios
-      .post(this.api_address + "/api/api.php", Qs.stringify(sendParam3))
-      .then(res => {
-        res.data.data = res.data.data.sort(this.sortBy("weight", true));
-        for (let i = 0; i < res.data.data.length; i++) {
-          this.clientArry.push({
-            src: this.api_address + "/" + res.data.data[i].url
-          });
-        }
-      })
-      .catch(error => {
-        console.log(error);
-      });
-
-    let md5Str4 = this.$md5(api4 + time); //验证用的md5函数
-    let sendParam4 = { timestamp: time, method: api4, sign: md5Str4 };
-    this.axios
-      .post(this.api_address + "/api/api.php", Qs.stringify(sendParam4))
-      .then(res => {
-        res.data.data = res.data.data.sort(this.sortBy("weight", true));
-        for (let i = 0; i < res.data.data.length; i++) {
-          this.box2Arry.push({
-            src: this.api_address + "/" + res.data.data[i].picture,
-            con: res.data.data[i].content
-          });
-        }
-      })
-      .catch(error => {
-        console.log(error);
-      });
-
-    let md5Str5 = this.$md5(api5 + time); //验证用的md5函数
-    let sendParam5 = { timestamp: time, method: api5, sign: md5Str5 };
-    this.axios
-      .post(this.api_address + "/api/api.php", Qs.stringify(sendParam5))
-      .then(res => {
-        res.data.data = res.data.data.sort(this.sortBy("weight", true));
-        for (let i = 0; i < res.data.data.length; i++) {
-          this.box3Arry.push({
-            con: res.data.data[i].title,
-            zhu: res.data.data[i].content
-          });
-        }
-      })
-      .catch(error => {
-        console.log(error);
-      });
-
-    let md5Str6 = this.$md5(api6 + time); //验证用的md5函数
-    let sendParam6 = { timestamp: time, method: api6, sign: md5Str6 };
-    this.axios
-      .post(this.api_address + "/api/api.php", Qs.stringify(sendParam6))
-      .then(res => {
-        res.data.data = res.data.data.sort(this.sortBy("weight", true));
-        for (let i = 0; i < res.data.data.length; i++) {
-          this.trainPicArry.push({
-            src: this.api_address + "/" + res.data.data[i].picture,
-            con1: res.data.data[i].title,
-            con2: res.data.data[i].content
-          });
-        }
-      })
-      .catch(error => {
-        console.log(error);
-      });
+    this.getSwiperRequest();
+    this.getServertypeRequest();
+    this.getBrandcustomerRequest();
+    this.getDevelopmenttypeRequest();
+    this.getGet_moneyRequest();
+    this.getTraining_planRequest();
   }
 };
 </script>
